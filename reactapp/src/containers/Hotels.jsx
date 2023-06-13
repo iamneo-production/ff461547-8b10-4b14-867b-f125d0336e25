@@ -1,6 +1,6 @@
 import React from 'react'
-import HotelInput from 'components/hotel/HotelInput';
-import HotelResults from 'components/hotel/HotelResults';
+import HotelInput from '../components/hotel/HotelInput';
+import HotelResults from '../components/hotel/HotelResults';
 
 function Hotels() {
     return (
