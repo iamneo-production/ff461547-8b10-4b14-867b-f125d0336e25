@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 // import { useParams } from 'react-router-dom';
-import Banner from './banner/Banner.js';
-import AccountSettings from './user/AccountSettings.js';
-import YourOrders from './user/YourOrders.js';
+import Banner from './banner/Banner';
+import NavigationBar from '../NavigationBar.jsx'
+import AccountSettings from './user/AccountSettings';
+import YourOrders from './user/YourOrders';
 import './UserProfile.css';
-import './SiseBar.css';
+import './SideBar.css';
 
 const UserProfile = () => {
 
@@ -23,7 +24,8 @@ const UserProfile = () => {
     };
     return (
         <div className='outercontainer'>
-            {/*  <Navbar /> */}
+            
+            <NavigationBar />
             <Banner
                 heading='My profile'
                 image='https://wallpapercave.com/wp/wp2352568.jpg'
