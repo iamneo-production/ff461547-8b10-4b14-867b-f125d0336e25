@@ -15,4 +15,4 @@ function HotelInput() {
     )
 }
 
-export default HotelInput
+export default HotelInput;
