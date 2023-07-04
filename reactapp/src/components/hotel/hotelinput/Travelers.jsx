@@ -10,10 +10,6 @@ function Travelers() {
     const { travelers,rooms } = hotelState;
     const [toggle, setToggle] = useState(false);
 
-    function handleSubmit(){
-        
-    }
-
     function addRoom() {
         const updatedRooms = [...rooms,
             {
@@ -141,7 +137,7 @@ function Travelers() {
             </div>
             <button type='submit' className='bg-red-500 text-white text-base font-medium 
                 border-2 rounded p-2 mt-3 ml-[16rem]'
-                onSubmit={handleSubmit}>Search Hotels</button>
+                >Search Hotels</button>
         </div >
     )
 }
