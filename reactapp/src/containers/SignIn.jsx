@@ -1,4 +1,3 @@
-import React from 'react'
 
 function SignIn() {
     return (
@@ -6,4 +5,4 @@ function SignIn() {
     )
 }
 
-export default SignIn
+export default SignIn;
