@@ -27,8 +27,9 @@ public class Hotel {
     @Column(name = "hotel_name")
     private String hotelName;
 
-    @Column(name = "hotel_location")
-    private String hotelLocation;
+    private String country;
+
+    private String city;
 
     @Column(name = "max_rooms")
     private int maxRooms;
@@ -46,9 +47,9 @@ public class Hotel {
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     @JsonManagedReference
-    private List<Room> roomList=new ArrayList<>();
+    private List<Room> roomList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "hotel",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<BookedHotel> bookedHotel;
 
@@ -56,11 +57,11 @@ public class Hotel {
         super();
     }
 
-    public Hotel(long hotelId, String hotelName, String hotelLocation, int maxRooms, int availableRooms,
-            int pricePerDay, float rating, int numOfRating, List<Room> roomList) {
-        this.hotelId = hotelId;
+    public Hotel(String hotelName, String country, String city, int maxRooms, int availableRooms, int pricePerDay,
+            float rating, int numOfRating, List<Room> roomList) {
         this.hotelName = hotelName;
-        this.hotelLocation = hotelLocation;
+        this.country = country;
+        this.city = city;
         this.maxRooms = maxRooms;
         this.availableRooms = availableRooms;
         this.pricePerDay = pricePerDay;
@@ -69,18 +70,12 @@ public class Hotel {
         this.roomList = roomList;
     }
 
-
-
     public long getHotelId() {
         return hotelId;
     }
 
     public String getHotelName() {
         return hotelName;
-    }
-
-    public String getHotelLocation() {
-        return hotelLocation;
     }
 
     public int getMaxRooms() {
@@ -105,10 +100,6 @@ public class Hotel {
 
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
-    }
-
-    public void setHotelLocation(String hotelLocation) {
-        this.hotelLocation = hotelLocation;
     }
 
     public void setMaxRooms(int maxRooms) {
@@ -137,6 +128,30 @@ public class Hotel {
 
     public void setRoomList(List<Room> roomList) {
         this.roomList = roomList;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public List<BookedHotel> getBookedHotel() {
+        return bookedHotel;
+    }
+
+    public void setBookedHotel(List<BookedHotel> bookedHotel) {
+        this.bookedHotel = bookedHotel;
     }
 
 }

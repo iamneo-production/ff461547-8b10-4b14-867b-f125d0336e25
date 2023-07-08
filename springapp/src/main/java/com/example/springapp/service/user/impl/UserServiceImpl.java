@@ -1,4 +1,4 @@
-package com.example.springapp.service.user;
+package com.example.springapp.service.user.impl;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.springapp.model.user.User;
 import com.example.springapp.repository.user.UserRepository;
+import com.example.springapp.service.user.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -47,4 +48,5 @@ public class UserServiceImpl implements UserService {
         }
         return createdUser;
     }
+
 }

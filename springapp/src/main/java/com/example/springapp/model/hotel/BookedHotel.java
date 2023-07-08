@@ -131,4 +131,5 @@ public class BookedHotel {
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
     }
+
 }
