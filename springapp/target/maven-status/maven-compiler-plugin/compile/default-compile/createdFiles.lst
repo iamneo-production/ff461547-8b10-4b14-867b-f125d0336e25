@@ -1,4 +1,6 @@
 com/example/springapp/SpringappApplication.class
+<<<<<<< HEAD
+=======
 com/example/springapp/repository/hotel/HotelRepository.class
 com/example/springapp/dto/hotel/HotelSearchRequestDto.class
 com/example/springapp/service/hotel/HotelService.class
