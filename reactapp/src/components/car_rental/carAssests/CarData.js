@@ -1,22 +1,22 @@
-// import all images from assets/images directory
-import img01 from "../carAssets/imgs/carList_imgs/tesla.png";
-import img02 from "../carAssets/imgs/carList_imgs/toyota.png";
+
+import img01 from "../carAssets/imgs/carList_imgs/tesla.jpg";
+import img02 from "../carAssets/imgs/carList_imgs/toyota.jpg";
 import img03 from "../carAssets/imgs/carList_imgs/bmw.jpg";
-import img04 from "../carAssets/imgs/carList_imgs/nissan.png";
+import img04 from "../carAssets/imgs/carList_imgs/nissan.jpg";
 import img05 from "../carAssets/imgs/carList_imgs/ferrari.jpg";
 import img06 from "../carAssets/imgs/carList_imgs/benz.jpg";
 import img07 from "../carAssets/imgs/carList_imgs/audi.jpg";
 import img08 from "../carAssets/imgs/carList_imgs/rolls.jpg";
-import img09 from "../carAssets/imgs/carList_imgs/indica.png";
-import img011 from "../carAssets/imgs/carList_imgs/Kia Carnival.jpg";
-import img012 from "../carAssets/imgs/carList_imgs/Maruti Suzuki.jpg";
-import img013 from "../carAssets/imgs/carList_imgs/Toyota innova crysta.png";
-import img014 from "../carAssets/imgs/carList_imgs/Mahindra TUV3009.jpg";
-import img015 from "../carAssets/imgs/carList_imgs/Volkswagen.png";
-import img016 from "../carAssets/imgs/carList_imgs/Hyundai H1.jpg";
-import img017 from "../carAssets/imgs/carList_imgs/Land rover defender.png";
-import img018 from "../carAssets/imgs/carList_imgs/Nissan Minivan.png";
-import img019 from "../carAssets/imgs/carList_imgs/Tempo-Traveler12-18.png";
+import img09 from "../carAssets/imgs/carList_imgs/indica.jpg";
+import img011 from "../carAssets/imgs/carList_imgs/kiacarnival.jpg";
+import img012 from "../carAssets/imgs/carList_imgs/marutisuzuki.jpg";
+import img013 from "../carAssets/imgs/carList_imgs/innova.jpg";
+import img014 from "../carAssets/imgs/carList_imgs/mahindra.jpg";
+import img015 from "../carAssets/imgs/carList_imgs/volkswagen.jpg";
+import img016 from "../carAssets/imgs/carList_imgs/hyundai.jpg";
+import img017 from "../carAssets/imgs/carList_imgs/landrover.jpg";
+import img018 from "../carAssets/imgs/carList_imgs/nissanvan.jpg";
+import img019 from "../carAssets/imgs/carList_imgs/tempotraveller.jpg";
 
 const carData = [
   {
@@ -26,7 +26,7 @@ const carData = [
     carName: "Ferrari F8 Tributo",
     imgUrl: img05,
     model: "Model-2019",
-    price: 50,
+    price: 5000,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 2",
@@ -37,10 +37,10 @@ const carData = [
     id: 2,
     brand: "Toyota",
     rating: 102,
-    carName: "Toyota ",
+    carName: "Toyota",
     imgUrl: img02,
     model: "Model-2022",
-    price: 50,
+    price: 4500,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 4",
@@ -55,7 +55,7 @@ const carData = [
     carName: "BMW X3",
     imgUrl: img03,
     model: "Model-2022",
-    price: 65,
+    price: 3999,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats -5",
@@ -69,7 +69,7 @@ const carData = [
     carName: "Nissan Altima",
     imgUrl: img04,
     model: "Model-2021",
-    price: 70,
+    price: 4000,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 5",
@@ -83,8 +83,8 @@ const carData = [
     rating: 112,
     carName: "Tesla Model S",
     imgUrl: img01,
-    model: "Model 3",
-    price: 60,
+    model: "Model-2019",
+    price: 6050,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 5",
@@ -98,7 +98,7 @@ const carData = [
     carName: "Mercedes-Benz GLC",
     imgUrl: img06,
     model: "Model-2015",
-    price: 85,
+    price: 5000,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 5",
@@ -112,7 +112,7 @@ const carData = [
     carName: "Audi e-tron GT",
     imgUrl: img07,
     model: "Model 2021",
-    price: 90,
+    price: 6500,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 5",
@@ -126,8 +126,8 @@ const carData = [
     rating: 52,
     carName: "Rolls Royce Ghost",
     imgUrl: img08,
-    model: "Model 3",
-    price: 50,
+    model: "Model 2020",
+    price: 5000,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 5",
@@ -140,7 +140,7 @@ const carData = [
     carName: "Indica Vista",
     imgUrl: img09,
     model: "Model 2021",
-    price: 50,
+    price: 5000,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats",
@@ -154,7 +154,7 @@ const carData = [
     carName: "Kia Carniva",
     imgUrl: img011,
     model: "Model-2020",
-    price: 100,
+    price: 8000,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats -5",
@@ -169,7 +169,7 @@ const carData = [
     carName: "Maruti Suzuki",
     imgUrl: img012,
     model: "Model-2022",
-    price: 100,
+    price: 8500,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 8",
@@ -184,7 +184,7 @@ const carData = [
     carName: "Toyota innova crysta",
     imgUrl: img013,
     model: "Model-2022",
-    price: 130,
+    price: 9000,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 8",
@@ -199,7 +199,7 @@ const carData = [
     carName: "Mahindra TUV3009",
     imgUrl: img014,
     model: "Model-2022",
-    price: 150,
+    price: 8500,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 11",
@@ -214,7 +214,7 @@ const carData = [
     carName: "Volkswagen",
     imgUrl: img015,
     model: "Model 3",
-    price: 170,
+    price: 8999,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 11",
@@ -229,13 +229,13 @@ const carData = [
     carName: "Hyundai H1",
     imgUrl: img016,
     model: "Model-2022",
-    price: 200,
+    price: 10000,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats -12",
     automatic: "Automatic",
     description:
-      " An iconic and capable SUV with exceptional off-road prowess and rugged elegance."},
+      " An iconic and capable SUV with exceptional off-road process and rugged elegance."},
 
   {
     id: 16,
@@ -243,8 +243,8 @@ const carData = [
     rating: 82,
     carName: "Land rover defender",
     imgUrl: img017,
-    model: "Model 3",
-    price: 250,
+    model: "Model-2020",
+    price: 10250,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 12",
@@ -258,8 +258,8 @@ const carData = [
     rating: 52,
     carName: "Nissan Minivan",
     imgUrl: img018,
-    model: "Model 3",
-    price: 280,
+    model: "Model 2020",
+    price: 10580,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 20",
@@ -272,8 +272,8 @@ const carData = [
     rating: 100,
     carName: "Tempo-Traveler",
     imgUrl: img019,
-    model: "Model 2",
-    price: 280,
+    model: "Model-2019",
+    price: 11000,
     speed: "20kmpl",
     gps: "GPS Navigation",
     seatType: "Heated seats - 15",
