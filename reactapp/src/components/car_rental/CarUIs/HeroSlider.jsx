@@ -27,6 +27,10 @@ const HeroSlider = () => {
             <button className="btn reserve__btn mt-4">
               <Link  to="/cars/search">FIND CAR</Link>
             </button>
+            <br></br>
+             <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >
+                <Link to="/rental-cars/manage">Manage Booking</Link>
+              </button>
           </div>
         </Container>
       </div>
@@ -39,6 +43,10 @@ const HeroSlider = () => {
             <button className="btn reserve__btn mt-4">
               <Link to="/cars/search">FIND CAR</Link>
             </button>
+            <br></br>
+             <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >
+                <Link to="/rental-cars/manage">Manage Booking</Link>
+              </button>
           </div>
         </Container>
       </div>
@@ -51,6 +59,10 @@ const HeroSlider = () => {
             <button className="btn reserve__btn mt-4">
               <Link to="/cars/search">FIND CAR</Link>
             </button>
+            <br></br>
+             <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >
+                <Link to="/rental-cars/manage">Manage Booking</Link>
+              </button>
           </div>
         </Container>
       </div>
@@ -62,6 +74,10 @@ const HeroSlider = () => {
             <button className="btn reserve__btn mt-4">
               <Link to="/cars/search">FIND CAR</Link>
             </button>
+            <br></br>
+             <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >
+                <Link to="/rental-cars/manage">Manage Booking</Link>
+              </button>
           </div>
         </Container>
       </div>
@@ -73,6 +89,10 @@ const HeroSlider = () => {
             <button className="btn reserve__btn mt-4">
               <Link to="/cars/search">FIND CAR</Link>
             </button>
+            <br></br>
+             <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >
+                <Link to="/rental-cars/manage">Manage Booking</Link>
+              </button>
           </div>
         </Container>
       </div>
