@@ -52,7 +52,7 @@ const CarBookingForm = () => {
     const imageName = carName.toLowerCase().replace(/\s+/g, '');
     let imageUrl;
     try {
-      return (imageUrl = require(`../carAssets/imgs/carList_imgs/${imageName}.jpg`));
+      imageUrl = require(`../carAssets/imgs/carList_imgs/${imageName}.jpg`);
     } catch (error) {
       imageUrl = null;
     }
