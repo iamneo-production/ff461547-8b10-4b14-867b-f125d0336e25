@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: com.example.springapp.SpringappApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 6.132 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
+testGetRentalCarAll  Time elapsed: 0.418 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.example.springapp.SpringappApplicationTests.testGetRentalCarAll(SpringappApplicationTests.java:44)
+
+testGetFlightsAll  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.example.springapp.SpringappApplicationTests.testGetFlightsAll(SpringappApplicationTests.java:56)
+
+testGetUserAll  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.example.springapp.SpringappApplicationTests.testGetUserAll(SpringappApplicationTests.java:67)
+
+testGetHotelAll  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.example.springapp.SpringappApplicationTests.testGetHotelAll(SpringappApplicationTests.java:33)
+
+testGetUserById  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.example.springapp.SpringappApplicationTests.testGetUserById(SpringappApplicationTests.java:79)
+
+test_case1  Time elapsed: 0.005 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.example.springapp.SpringappApplicationTests.test_case1(SpringappApplicationTests.java:90)
+
+test_case2  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.example.springapp.SpringappApplicationTests.test_case2(SpringappApplicationTests.java:97)
+
+test_case3  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.example.springapp.SpringappApplicationTests.test_case3(SpringappApplicationTests.java:104)
+
