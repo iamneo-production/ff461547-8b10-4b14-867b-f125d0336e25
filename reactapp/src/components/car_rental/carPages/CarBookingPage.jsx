@@ -4,7 +4,7 @@ import { Form, FormGroup } from "reactstrap";
 import { Link, useParams } from "react-router-dom";
 import axios from 'axios';
 
-import CarImage from '../carAssets/imgs/findcarr.jpeg';
+import CarImage from '../carAssests/img/findcarr.jpeg';
 
 const CarBookingForm = () => {
   const { id } = useParams();
@@ -49,15 +49,11 @@ const CarBookingForm = () => {
 
   // Get img from frontend using carname in the backend
   const getImageUrl = (carName) => {
-    const imageName = carName.toLowerCase().replace(/\s+/g, '');
-    let imageUrl;
-    try {
-      imageUrl = require(`../carAssets/imgs/carList_imgs/${imageName}.jpg`);
-    } catch (error) {
-      imageUrl = null;
-    }
-    return imageUrl ? imageUrl.default : CarImage;
+    const imageName = carName.toLowerCase().replace(/\s+/g, ''); // Convert carName to lowercase and remove spaces
+    const imageUrl = require(`../carAssests/img/carList_imgs/${imageName}.jpg`).default;
+    return imageUrl ? imageUrl : CarImage;
   };
+  
 
   // Get the particular car details by id
   useEffect(() => {

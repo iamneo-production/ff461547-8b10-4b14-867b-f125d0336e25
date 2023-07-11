@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { FaCar, FaWheelchair} from 'react-icons/fa';
 import axios from 'axios';
 import "../../../style/cars_style/car-item.css";
 import { Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
-import CarImage from '../carAssets/imgs/findcarr.jpeg';
+import CarImage from '../carAssests/img/carList_imgs/audi.jpg';
 
 const CarFindForm = () => {
   const [locationQuery, setLocationQuery] = useState('');
@@ -52,18 +51,13 @@ const CarFindForm = () => {
     });
     setFilteredCars(filteredData);
   };
+    // Get img from frontend using carname in the backend
 
-  const getImageUrl = (carName) => {
-    const imageName = carName.toLowerCase().replace(/\s+/g, ''); // Convert carName to lowercase and remove spaces
-    let imageUrl;
-    try {
-      return imageUrl = require(`../carAssets/imgs/carList_imgs/${imageName}.jpg`);
-    } catch (error) {
-      // If the image does not exist, set imageUrl to null
-      imageUrl = null;
-    }
-    return imageUrl ? imageUrl.default : CarImage;
-  };
+    const getImageUrl = (carName) => {
+      const imageName = carName.toLowerCase().replace(/\s+/g, ''); // Convert carName to lowercase and remove spaces
+      const imageUrl = require(`../carAssests/img/carList_imgs/${imageName}.jpg`).default;
+      return imageUrl ? imageUrl : CarImage;
+    };
 
   return (
     <div>
@@ -82,7 +76,6 @@ const CarFindForm = () => {
                     </div>
                     <div className="grid jutify-center space-y-3 pb-10">
                       <div className="relative pt-4">
-                        <FaCar className="text-2xl absolute right-4 top-6" />
                         <p className="font-semibold">LOCATION</p>
                         <input
                           type="text"
@@ -94,7 +87,6 @@ const CarFindForm = () => {
                       </div>
                       <div className="relative pt-3">
                         <p className="font-semibold">SEAT COUNT</p>
-                        <FaWheelchair className="text-2xl absolute right-4 top-4" />
                         <input
                           type="text"
                           value={seatCountQuery}

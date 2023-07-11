@@ -25,7 +25,7 @@ const HeroSlider = () => {
             <h1 className="text-light mb-4">Reserve Now and Get 50% Off</h1>
 
             <button className="btn reserve__btn mt-4">
-              <Link  to="/cars/search">FIND CAR</Link>
+              <Link  to="/rental-cars/search">FIND CAR</Link>
             </button>
             <br></br>
              <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >
@@ -41,7 +41,7 @@ const HeroSlider = () => {
             <h1 className="text-light mb-4">Enjoy the travel with your favourite car</h1>
 
             <button className="btn reserve__btn mt-4">
-              <Link to="/cars/search">FIND CAR</Link>
+              <Link to="/rental-cars/search">FIND CAR</Link>
             </button>
             <br></br>
              <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >
@@ -57,7 +57,7 @@ const HeroSlider = () => {
             <h1 className="text-light mb-4">Driving into adventure, one rental at a time</h1>
 
             <button className="btn reserve__btn mt-4">
-              <Link to="/cars/search">FIND CAR</Link>
+              <Link to="/rental-cars/search">FIND CAR</Link>
             </button>
             <br></br>
              <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >
@@ -72,7 +72,7 @@ const HeroSlider = () => {
             <h1 className="text-light mb-4">Life is once travel and enjoy</h1>
 
             <button className="btn reserve__btn mt-4">
-              <Link to="/cars/search">FIND CAR</Link>
+              <Link to="/rental-cars/search">FIND CAR</Link>
             </button>
             <br></br>
              <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >
@@ -87,7 +87,7 @@ const HeroSlider = () => {
             <h1 className="text-light mb-4">Unveiling new destinations by our rental fleet</h1>
 
             <button className="btn reserve__btn mt-4">
-              <Link to="/cars/search">FIND CAR</Link>
+              <Link to="/rental-cars/search">FIND CAR</Link>
             </button>
             <br></br>
              <button className="btn reserve__btn mt-5 position-absolute top-0 end-0 m-5" >

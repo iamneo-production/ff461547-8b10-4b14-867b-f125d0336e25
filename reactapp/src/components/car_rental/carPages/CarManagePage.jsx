@@ -76,15 +76,17 @@ const ManageBookingForm = () => {
   return (
     <div className="box__item">
       <div className="container">
-        <h2 className="section-title text-center">Manage Booking</h2>
+        <h2 className="section-title text-center">MANAGE YOUR CAR BOOKING</h2>
         <div className="manage-booking-form">
-          <label>Enter your Booking ID:</label><br></br>
-          <input  type="text" value={bookingId} onChange={handleInputChange} />
+          <label>Enter your Booking ID:</label><br></br><br></br>
+          <input className="idbox" type="text" value={bookingId} onChange={handleInputChange} />
+
+          <br></br><br></br>
          
           {error && <h6 className="error-message">{error}</h6>}
 
           {bookingDetails ? (
-            <div className="box__item">
+            <div className="box__items">
               <h3>Booking Details</h3>
               <p>Name: {bookingDetails.fname} {bookingDetails.lname}</p>
               <p>Pick-up Time: {bookingDetails.pick_up_time}</p>
@@ -92,8 +94,8 @@ const ManageBookingForm = () => {
               
             </div>
           ) : null}
-          <button onClick={handleViewBooking} className="w-20 box__btn-view box__item-btn">View</button>
-        <button onClick={handleCancelBooking} className="w-20 box__btn-cancel box__item-btn" >Cancel</button>
+          <button onClick={handleViewBooking} className="w-40 box__btn-view box__item-btn">View Booking</button>
+        <button onClick={handleCancelBooking} className="w-40 box__btn-cancel box__item-btn" >Cancel Booking</button>
 
         </div>
         

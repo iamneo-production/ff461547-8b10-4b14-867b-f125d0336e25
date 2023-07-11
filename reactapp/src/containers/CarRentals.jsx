@@ -1,6 +1,6 @@
 
 import React, { Fragment } from "react";
-import CarHome from "../components/car_rental/carPages/CarHome"
+import CarHome from "../components/car_rental/carPages/CarHomePage"
 
 const CarRentals = () => {
   return (

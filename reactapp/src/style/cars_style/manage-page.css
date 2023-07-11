@@ -1,7 +1,8 @@
 .manage-booking-form{ padding: 8px 15px;
-  border: 1px solid #7c8a972a;
+  border: 5px solid #010a13;
   width: 100%;
   text-align: center;
+  background-color:cornsilk;
   }
 
 .box__item {
@@ -9,6 +10,16 @@
   border-radius: 5px;
   margin:100px;
   
+}
+.box__items {
+  border: 3px solid #010a13;
+  padding: 5px;
+  border-radius: 5px;
+  margin:50px;
+  
+}
+.idbox{
+  border:5%;
 }
 
 .box__item-info span i {
