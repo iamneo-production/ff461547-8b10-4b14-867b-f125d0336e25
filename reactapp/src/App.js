@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import './style/hotel.css';
+import './style/navigationbar.css';
 import NavigationBar from './components/NavigationBar';
 import SelectedHotel from './components/hotel/bookhotel/SelectedHotel';
 import CarRentals from './containers/CarRentals';
