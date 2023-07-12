@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.springapp.dto.error.ErrorJsonDto;
 import com.example.springapp.dto.hotel.HotelSearchRequestDto;
 import com.example.springapp.dto.hotel.HotelSearchResponseDto;
 import com.example.springapp.model.hotel.Hotel;
@@ -40,14 +41,17 @@ public class HotelController {
     }
 
     @GetMapping("/hotels/hotelId")
-    public ResponseEntity<Hotel> getHotelByHotelId(@RequestParam("hotelId") long hotelId) {
+    public ResponseEntity<?> getHotelByHotelId(@RequestParam("hotelId") String hotelId) {
 
-        Hotel hotel = hotelServiceImpl.getHotelByHotelId(hotelId);
+        Hotel hotel = hotelServiceImpl.getHotelByHotelId(Long.valueOf(hotelId));
         if (hotel == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            ErrorJsonDto error=new ErrorJsonDto();
+            error.setMessage("Hotel does not exist");
+            error.setStatus(404);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(hotel);
+        return ResponseEntity.status(HttpStatus.OK).body(hotel);
     }
 
     @PostMapping("/hotels")

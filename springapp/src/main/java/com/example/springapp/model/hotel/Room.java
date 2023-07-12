@@ -39,7 +39,7 @@ public class Room {
 
     @ManyToOne
     @JoinColumn(name = "hotel_id")
-    @JsonBackReference
+    @JsonBackReference(value = "hotel-room")
     private Hotel hotel;
 
     @ManyToOne(cascade = CascadeType.ALL)

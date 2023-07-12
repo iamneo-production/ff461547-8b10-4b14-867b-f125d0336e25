@@ -1,5 +1,8 @@
 package com.example.springapp.model.customer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,10 +10,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.example.springapp.model.review.Review;
 import com.example.springapp.model.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "customers")
@@ -35,6 +42,11 @@ public class Customer {
     private String phone;
 
     private String address;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    @JsonIgnore
+    private List<Review> reviews= new ArrayList<Review>();
 
     public Customer(){
         super();
@@ -102,4 +114,12 @@ public class Customer {
         this.address = address;
     }
 
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+    
 }

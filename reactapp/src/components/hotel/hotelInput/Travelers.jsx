@@ -2,6 +2,8 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useState } from 'react';
 import { HotelActions, HotelContext } from '../HotelContext';
+import { Hotel } from '../../../Constants';
+
 
 function Travelers() {
     
@@ -42,7 +44,7 @@ function Travelers() {
                 ...updatedRooms[index],
                 child: count + 1
             };
-        } else if (count <= Hotel.ADULTS_ALLOWED) {
+        } else if (count < Hotel.ADULTS_ALLOWED) {
             updatedRooms[index] = {
                 ...updatedRooms[index],
                 adult: count + 1
@@ -123,7 +125,7 @@ function Travelers() {
                                 </div>
                             </div>
                             <div className="flex gap-2 mt-3">
-                                {rooms.length <= ROOM_SIZE &&
+                                {rooms.length <= Hotel.ROOM_SIZE &&
                                     <button type='button' className="btn btn-outline-success !text-sm"
                                         onClick={() => addRoom()}>Add Room</button>
                                 }
