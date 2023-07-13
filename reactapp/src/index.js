@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+<<<<<<< HEAD
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,4 +15,25 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+=======
+import axios from 'axios';
+import { BrowserRouter } from 'react-router-dom';
+import { baseUrl } from './Constants';
+
+import "remixicon/fonts/remixicon.css";
+import "slick-carousel/slick/slick-theme.css"; //to hide the section separation in car_rental page
+import "slick-carousel/slick/slick.css"; //to avoid unwanted spaces in pages in car_rental page
+
+axios.defaults.baseURL = baseUrl;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </>
+);
+
+>>>>>>> main
 reportWebVitals();
