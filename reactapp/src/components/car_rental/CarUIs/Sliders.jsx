@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import { Container } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import "../../../style/cars_style/hero-slider.css";
+import "../../../style/cars_style/sliders.css";
 
 const HeroSlider = () => {
   const settings = {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import "../../../style/cars_style/car-item.css";
+import "../../../style/cars_style/car.css";
 import { Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import CarImage from '../carAssests/img/carList_imgs/audi.jpg';
