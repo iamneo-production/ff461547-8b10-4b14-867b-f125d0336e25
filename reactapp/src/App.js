@@ -10,6 +10,7 @@ import Home from './containers/Home';
 import Hotels from './containers/Hotels';
 import Register from './containers/Register';
 import SignIn from './containers/SignIn';
+import UserProfile from './containers/UserProfile';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/car-rentals" element={<CarRentals />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/user-profile" element={<UserProfile />} />
         </Routes>
       </Router>
     </>

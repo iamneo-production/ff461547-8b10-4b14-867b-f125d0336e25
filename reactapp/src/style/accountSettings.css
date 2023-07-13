@@ -6,11 +6,6 @@
 
 #settings {
     position: relative;
-
-}
-
-input {
-    width: 30vw;
 }
 
 #save {
@@ -25,10 +20,13 @@ label {
     color: black;
 }
 
+input {
+    width: 100%;
+}
+
 .accountsettings {
     display: flex;
     flex-direction: column;
-    width: 70%;
     margin: 50px;
 
 }
@@ -41,8 +39,6 @@ label {
 .accountsettings .form {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 100%;
     padding: 10px 20px;
 }
@@ -50,7 +46,6 @@ label {
 .accountsettings .form .form-group {
     display: flex;
     flex-direction: column;
-    width: 45%;
     margin: 10px;
 }
 
@@ -85,7 +80,6 @@ label {
     .accountsettings .form .form-group {
         display: flex;
         flex-direction: column;
-        width: 97%;
         margin: 10px;
     }
 
