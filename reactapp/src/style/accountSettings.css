@@ -67,6 +67,11 @@ input {
 }
 
 
+.changepassword #save {
+    color: black;
+}
+
+
 @media (max-width: 800px) {
     .accountsettings .form {
         display: flex;
