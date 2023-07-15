@@ -19,6 +19,10 @@ import com.example.springapp.service.car.CarFindService;
 import com.example.springapp.model.car.CarFind;
 
 
+import com.example.springapp.model.car.CarBookingForm;
+import com.example.springapp.service.car.CarBookingFormService;
+
+
 @CrossOrigin
 @RestController
 public class CarController {
@@ -59,7 +63,37 @@ public class CarController {
 		@ResponseBody
 		public Optional<CarFind> getCarById(Long carid) {
 		    return carFindService.getCarFindById(carid);
-		}}
+		}
+		@Autowired
+		CarBookingFormService carBookingFormService;
+	
+		@Autowired
+		public CarController(CarBookingFormService carBookingFormService, CarFindService carFindService) {
+			this.carBookingFormService = carBookingFormService;
+			this.carFindService = carFindService;
+		}
+	
+		// Store customer data from the car booking form
+		@PostMapping("/bookform")
+		public String storeBookingForm(@RequestBody CarBookingForm carBookingForm) {
+			carBookingFormService.saveCarBookingForm(carBookingForm);
+			return "Data Stored";
+		}
+	
+		@GetMapping("/bookingDetails")
+		@ResponseBody
+		public Optional<CarBookingForm> getBookingDetails(String booking_id) {
+			return carBookingFormService.getBookingFormById(booking_id);
+		}
+	
+		@DeleteMapping("/cancelBooking")
+		@ResponseBody
+		public String deleteBooking(String booking_id) {
+			carBookingFormService.deleteBookingFormById(booking_id);
+			return "Deleted";
+		}
+
+	}
 
 	
 	

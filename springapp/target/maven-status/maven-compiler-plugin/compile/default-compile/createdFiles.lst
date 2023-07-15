@@ -23,7 +23,10 @@ com/example/springapp/repository/booking/BookingRepository.class
 com/example/springapp/repository/review/ReviewRepository.class
 com/example/springapp/repository/hotel/RoomRepository.class
 com/example/springapp/service/user/UserService.class
+com/example/springapp/repository/car/CarBookingFormRepo.class
+com/example/springapp/model/car/CarBookingForm.class
 com/example/springapp/repository/hotel/BookedHotelRepository.class
 com/example/springapp/dto/hotel/HotelSearchResponseDto.class
 com/example/springapp/model/review/Review.class
+com/example/springapp/service/car/CarBookingFormService.class
 com/example/springapp/model/hotel/Hotel.class
