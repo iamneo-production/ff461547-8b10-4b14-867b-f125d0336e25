@@ -12,6 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Where;
+
+import com.example.springapp.model.review.Review;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
@@ -27,8 +30,9 @@ public class Hotel {
     @Column(name = "hotel_name")
     private String hotelName;
 
-    @Column(name = "hotel_location")
-    private String hotelLocation;
+    private String country;
+
+    private String city;
 
     @Column(name = "max_rooms")
     private int maxRooms;
@@ -45,31 +49,38 @@ public class Hotel {
     private int numOfRating;
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<Room> roomList=new ArrayList<>();
+    @Where(clause = "status = 'booked'")
+    @JsonManagedReference(value = "hotel-room")
+    private List<Room> bookedRoomList = new ArrayList<Room>();
 
-    @OneToMany(mappedBy = "hotel",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
+    @Where(clause = "status = 'vaccant'")
+    @JsonManagedReference(value = "hotel-room")
+    private List<Room> vaccantRoomList = new ArrayList<Room>();
+
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<BookedHotel> bookedHotel;
+
+    @OneToMany(mappedBy = "hotel" , cascade = CascadeType.ALL)
+    @JsonManagedReference(value = "hotel-reviews")
+    private List<Review> reviews;
 
     public Hotel() {
         super();
     }
 
-    public Hotel(long hotelId, String hotelName, String hotelLocation, int maxRooms, int availableRooms,
-            int pricePerDay, float rating, int numOfRating, List<Room> roomList) {
-        this.hotelId = hotelId;
+    public Hotel(String hotelName, String country, String city, int maxRooms, int availableRooms, int pricePerDay,
+            float rating, int numOfRating) {
         this.hotelName = hotelName;
-        this.hotelLocation = hotelLocation;
+        this.country = country;
+        this.city = city;
         this.maxRooms = maxRooms;
         this.availableRooms = availableRooms;
         this.pricePerDay = pricePerDay;
         this.rating = rating;
         this.numOfRating = numOfRating;
-        this.roomList = roomList;
     }
-
-
 
     public long getHotelId() {
         return hotelId;
@@ -77,10 +88,6 @@ public class Hotel {
 
     public String getHotelName() {
         return hotelName;
-    }
-
-    public String getHotelLocation() {
-        return hotelLocation;
     }
 
     public int getMaxRooms() {
@@ -107,10 +114,6 @@ public class Hotel {
         this.hotelName = hotelName;
     }
 
-    public void setHotelLocation(String hotelLocation) {
-        this.hotelLocation = hotelLocation;
-    }
-
     public void setMaxRooms(int maxRooms) {
         this.maxRooms = maxRooms;
     }
@@ -130,13 +133,52 @@ public class Hotel {
     public void setNumOfRating(int numOfRating) {
         this.numOfRating = numOfRating;
     }
-
-    public List<Room> getRoomList() {
-        return roomList;
+    
+    public List<Room> getBookedRoomList() {
+        return bookedRoomList;
     }
 
-    public void setRoomList(List<Room> roomList) {
-        this.roomList = roomList;
+    public void setBookedRoomList(List<Room> bookedRoomList) {
+        this.bookedRoomList = bookedRoomList;
     }
 
+    public List<Room> getVaccantRoomList() {
+        return vaccantRoomList;
+    }
+
+    public void setVaccantRoomList(List<Room> vaccantRoomList) {
+        this.vaccantRoomList = vaccantRoomList;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+    
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public List<BookedHotel> getBookedHotel() {
+        return bookedHotel;
+    }
+
+    public void setBookedHotel(List<BookedHotel> bookedHotel) {
+        this.bookedHotel = bookedHotel;
+    }
 }

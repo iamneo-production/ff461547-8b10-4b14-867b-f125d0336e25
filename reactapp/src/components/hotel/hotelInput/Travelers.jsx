@@ -2,6 +2,7 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useState } from 'react';
 import { HotelActions, HotelContext } from '../HotelContext';
+import { Hotel } from '../../../Constants';
 
 
 function Travelers() {
@@ -38,19 +39,19 @@ function Travelers() {
 
     function increment(index, count, key) {
         const updatedRooms = [...rooms];
-        if (key === "child" && count <= 2) {
+        if (key === "child" && count < Hotel.CHILD_ALLOWED) {
             updatedRooms[index] = {
                 ...updatedRooms[index],
                 child: count + 1
             };
-        } else if (count <= 2) {
+        } else if (count < Hotel.ADULTS_ALLOWED) {
             updatedRooms[index] = {
                 ...updatedRooms[index],
                 adult: count + 1
             };
         }
         hotelDispatch({ type: HotelActions.SET_ROOMS, payload: updatedRooms });
-        if (count <= 2) {
+        if (count < Hotel.ADULTS_ALLOWED) {
             hotelDispatch({ type: HotelActions.SET_NUMBER_OF_TRAVELERS, payload: travelers + 1 });
         }
     }
@@ -124,7 +125,7 @@ function Travelers() {
                                 </div>
                             </div>
                             <div className="flex gap-2 mt-3">
-                                {rooms.length <= 4 &&
+                                {rooms.length <= Hotel.ROOM_SIZE &&
                                     <button type='button' className="btn btn-outline-success !text-sm"
                                         onClick={() => addRoom()}>Add Room</button>
                                 }

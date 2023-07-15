@@ -13,6 +13,7 @@ const initialState = {
         }
     ],
     travelers: 1,
+    searchResponseData:{}
 };
 export const HotelActions = {
     SET_CHECK_IN_DATE: 'SET_CHECK_IN_DATE',
@@ -20,10 +21,12 @@ export const HotelActions = {
     SET_COUNTRY: 'SET_COUNTRY',
     SET_CITY: 'SET_CITY',
     SET_ROOMS: 'SET_ROOMS',
-    SET_NUMBER_OF_TRAVELERS: 'SET_NUMBER_OF_TRAVELERS'
+    SET_NUMBER_OF_TRAVELERS: 'SET_NUMBER_OF_TRAVELERS',
+    SET_SEARCH_RESPONSE: 'SET_SEARCH_RESPONSE_DATA',
 }
 
 const reducer = (state, action) => {
+    
     switch (action.type) {
         case HotelActions.SET_CHECK_IN_DATE: {
             const newCheckOutDate = moment(action.payload).add(1, 'day');
@@ -43,6 +46,9 @@ const reducer = (state, action) => {
         }
         case HotelActions.SET_NUMBER_OF_TRAVELERS: {
             return { ...state, travelers: action.payload };
+        }
+        case HotelActions.SET_SEARCH_RESPONSE: {
+            return {...state, searchResponseData: action.payload }
         }
         default: {
             return state;

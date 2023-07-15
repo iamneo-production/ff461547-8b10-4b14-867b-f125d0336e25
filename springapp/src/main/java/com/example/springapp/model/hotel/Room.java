@@ -25,7 +25,7 @@ public class Room {
     @Column(name = "room_type")
     private String roomType;
 
-    @Column(name = "room_number",unique = true)
+    @Column(name = "room_number")
     private int roomNumber;
 
     @Column(name="num_beds")
@@ -39,7 +39,7 @@ public class Room {
 
     @ManyToOne
     @JoinColumn(name = "hotel_id")
-    @JsonBackReference
+    @JsonBackReference(value = "hotel-room")
     private Hotel hotel;
 
     @ManyToOne(cascade = CascadeType.ALL)
@@ -113,5 +113,5 @@ public class Room {
 
     public void setHotel(Hotel hotel) {
         this.hotel = hotel;
-    }   
+    }
 }

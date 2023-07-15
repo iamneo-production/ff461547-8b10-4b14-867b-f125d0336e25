@@ -43,6 +43,10 @@ public class TravelAgent {
     @JsonManagedReference
     private List<Booking> bookings=new ArrayList<>();
 
+    public void removeTravelAgent(){
+        this.setUser(null);
+    }
+
     public TravelAgent(){
         super();
     }
