@@ -1,6 +1,5 @@
 package com.example.springapp;
 
-<<<<<<< HEAD
 import static org.junit.Assert.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -104,16 +103,4 @@ class SpringappApplicationTests {
       File directory = new File(directoryPath);
       assertTrue(directory.exists() && directory.isDirectory());;
       }
-=======
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class SpringappApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
->>>>>>> c3be8b4b4f31a3a5f24b5d03552621729748d86c
 }
