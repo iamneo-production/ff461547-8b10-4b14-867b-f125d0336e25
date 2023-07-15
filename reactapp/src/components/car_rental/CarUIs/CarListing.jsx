@@ -58,9 +58,10 @@ const CarListing = () => {
                 
               </div>
               <button className="w-100 car__item-btn car__btn-rent">
-                      <Link to={`/cars/booking/${car.carid}`}>Book Now</Link>
+                      <Link to={`/rental-cars/booking/${car.carid}`}>Book Now</Link>
               </button>
             </div>
+
 
         
           </div>
