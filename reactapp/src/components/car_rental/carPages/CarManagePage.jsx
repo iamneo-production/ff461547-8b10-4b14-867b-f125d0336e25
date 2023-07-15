@@ -18,7 +18,7 @@ const ManageBookingForm = () => {
       return;
     }
   
-    axios.get(`http://localhost:8080/bookingDetails?booking_id=${bookingId}`)
+    axios.get(`/bookingDetails?booking_id=${bookingId}`)
       .then((response) => {
         if (response.data) {
           setBookingDetails(response.data);
@@ -59,7 +59,7 @@ const ManageBookingForm = () => {
       const confirmCancel = window.confirm("Are you sure you want to cancel this booking?");
       if (confirmCancel) {
         axios
-          .delete(`http://localhost:8080/cancelBooking?booking_id=${bookingId}`)
+          .delete(`/cancelBooking?booking_id=${bookingId}`)
           .then((response) => {
             console.log(response);
             alert("Your booking has been successfully cancelled.");
