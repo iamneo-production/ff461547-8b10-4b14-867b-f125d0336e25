@@ -1,6 +1,6 @@
 import React from 'react';
-import HeroSlider from "../carUIs/HeroSlider";
-import CarList from '../carUIs/CarListing';
+import HeroSlider from "../CarUIs/HeroSlider";
+import CarList from '../CarUIs/CarListing';
 
 const CarHome = () => {
  

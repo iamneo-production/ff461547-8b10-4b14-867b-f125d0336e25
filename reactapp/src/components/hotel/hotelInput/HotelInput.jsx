@@ -1,10 +1,10 @@
+import axios from 'axios'
+import { Country } from 'country-state-city'
 import React, { useContext, useState } from 'react'
 import Form from 'react-bootstrap/Form'
-import Travelers from './Travelers'
-import HotelInputHelper from './HotelInputHelper'
-import axios from 'axios'
 import { HotelActions, HotelContext } from '../HotelContext'
-import { Country } from 'country-state-city'
+import HotelInputHelper from './HotelInputHelper'
+import Travelers from './Travelers'
 
 
 function HotelInput() {
@@ -13,9 +13,9 @@ function HotelInput() {
     const [errorMessage, setErrorMessage] = useState('');
 
 
-
     function handleFormSubmit(e) {
         e.preventDefault();
+
         if (country === '' || city === '') {
             alert("Please Select Country and City");
 

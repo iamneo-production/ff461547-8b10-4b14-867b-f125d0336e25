@@ -1,5 +1,5 @@
 import React from 'react'
-import HotelInput from '../components/hotel/hotelinput/HotelInput';
+import HotelInput from '../components/hotel/hotelInput/HotelInput';
 import HotelResults from '../components/hotel/hotelresult/HotelResults';
 import { HotelProvider } from '../components/hotel/HotelContext';
 

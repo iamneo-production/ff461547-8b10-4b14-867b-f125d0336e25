@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Row,Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import CarImage from '../carAssets/imgs/findcarr.jpeg';
+import CarImage from '../carAssests/img/findcarr.jpeg';
 
 const CarListing = () => {
     const [cars, setCars] = useState([]);
@@ -27,14 +27,8 @@ const CarListing = () => {
   
     const getImageUrl = (carName) => {
       const imageName = carName.toLowerCase().replace(/\s+/g, ''); // Convert carName to lowercase and remove spaces
-      let imageUrl;
-      try {
-        return imageUrl = require(`../carAssets/imgs/carList_imgs/${imageName}.jpg`);
-      } catch (error) {
-        // If the image does not exist, set imageUrl to null
-        imageUrl = null;
-      }
-      return imageUrl ? imageUrl.default : CarImage;
+      const imageUrl = require(`../carAssests/img/carList_imgs/${imageName}.jpg`).default;
+      return imageUrl ? imageUrl : CarImage;
     };
 
 

@@ -36,8 +36,6 @@ public class HotelServiceImpl implements HotelService {
         Hotel hotel = null;
         try {
             hotel = hotelRepository.findById(hotelId).get();
-        } catch (NoSuchElementException e) {
-            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -84,12 +82,11 @@ public class HotelServiceImpl implements HotelService {
 
             hotels = hotels.stream()
                     .filter(hotel -> {
-                        for (Room room : hotel.getRoomList()) {
+                        for (Room room : hotel.getVaccantRoomList()) {
                             for (int i = 0; i < roomCapacity.size(); i++) {
-                                if (roomCapacity.get(i) <= room.getRoomCapacity() &&
-                                        room.getRoomStatus().equals("vaccant")) {
+                                if (roomCapacity.get(i) <= room.getRoomCapacity()) {
                                     roomCapacity.remove(i);
-                                    hotel.getRoomList().remove(room);
+                                    hotel.getVaccantRoomList().remove(room);
                                     return true;
                                 }
                             }
