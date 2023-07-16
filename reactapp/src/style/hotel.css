@@ -1,0 +1,21 @@
+.hotel-search {
+    margin: 4rem 2rem 0 4rem;
+}
+
+.left-side {
+    min-height: 37rem;
+    @apply p-5 rounded-2xl bg-white max-w-md basis-1/3 shadow-3xl;
+}
+
+.main-heading,
+.form-label {
+
+    text-align: left;
+    color: #333;
+    letter-spacing: .4px;
+    font-weight: 500;
+}
+
+.icon-button {
+    @apply text-gray-500 p-3 cursor-pointer;
+}
