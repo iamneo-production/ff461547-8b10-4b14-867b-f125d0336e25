@@ -43,7 +43,7 @@ public class Hotel {
     @Column(name = "price_per_day")
     private int pricePerDay;
 
-    private float rating;
+    private float rating=0.0f;
 
     @Column(name = "num_rating")
     private int numOfRating;
@@ -63,7 +63,7 @@ public class Hotel {
     private List<BookedHotel> bookedHotel;
 
     @OneToMany(mappedBy = "hotel" , cascade = CascadeType.ALL)
-    @JsonManagedReference(value = "hotel-reviews")
+    @JsonIgnore
     private List<Review> reviews;
 
     public Hotel() {

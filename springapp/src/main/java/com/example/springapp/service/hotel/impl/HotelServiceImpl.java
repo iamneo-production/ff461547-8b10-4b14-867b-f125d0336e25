@@ -8,10 +8,12 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.springapp.dto.error.ErrorJsonDto;
 import com.example.springapp.dto.hotel.HotelSearchRequestDto;
 import com.example.springapp.dto.hotel.HotelSearchResponseDto;
 import com.example.springapp.model.hotel.Hotel;
 import com.example.springapp.model.hotel.Room;
+import com.example.springapp.model.review.Review;
 import com.example.springapp.repository.hotel.HotelRepository;
 import com.example.springapp.service.hotel.HotelService;
 
@@ -117,6 +119,6 @@ public class HotelServiceImpl implements HotelService {
             hotelSearchResponseDtos.add(hotelSearchResponseDto);
         }
         return hotelSearchResponseDtos;
-    }
+    }   
 
 }

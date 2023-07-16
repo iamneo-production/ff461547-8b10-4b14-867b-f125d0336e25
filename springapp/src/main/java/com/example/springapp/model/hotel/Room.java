@@ -61,8 +61,6 @@ public class Room {
         this.hotel = hotel;
     }
 
-
-
     public void setRoomType(String roomType) {
         this.roomType = roomType;
     }
@@ -113,5 +111,5 @@ public class Room {
 
     public void setHotel(Hotel hotel) {
         this.hotel = hotel;
-    }
+    }    
 }

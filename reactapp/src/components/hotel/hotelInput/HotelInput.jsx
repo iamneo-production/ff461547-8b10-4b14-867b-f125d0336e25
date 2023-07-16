@@ -27,7 +27,6 @@ function HotelInput() {
     const searchHotels = async (searchCriteria) => {
         try {
             const responseData = await (axios.post("/hotels/search", searchCriteria)).then(response => response.data);
-            console.log(responseData);
             hotelDispatch({ type: HotelActions.SET_SEARCH_RESPONSE, payload: responseData })
         } catch (error) {
             setErrorMessage(error.message);

@@ -112,7 +112,5 @@ public class Booking {
 
     public void setTravelAgent(TravelAgent travelAgent) {
         this.travelAgent = travelAgent;
-    }
-
-    
+    }  
 }

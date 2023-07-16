@@ -15,6 +15,7 @@ import javax.persistence.OneToOne;
 
 import com.example.springapp.model.booking.Booking;
 import com.example.springapp.model.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
@@ -25,8 +26,9 @@ public class TravelAgent {
     @Column(name = "travel_agent_id")
     private long travelAgentId;
     
-    @JoinColumn(name = "user_id")
     @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    @JsonIgnore
     private User user;
 
     @Column(name = "first_name")
@@ -43,7 +45,7 @@ public class TravelAgent {
     @JsonManagedReference
     private List<Booking> bookings=new ArrayList<>();
 
-    public void removeTravelAgent(){
+    public void removeUserRef(){
         this.setUser(null);
     }
 

@@ -17,7 +17,6 @@ import javax.persistence.Table;
 import com.example.springapp.model.review.Review;
 import com.example.springapp.model.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "customers")
@@ -29,6 +28,7 @@ public class Customer {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
+    @JsonIgnore
     private User user;
 
     @Column(name = "first_name")
@@ -44,7 +44,6 @@ public class Customer {
     private String address;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-    @JsonManagedReference
     @JsonIgnore
     private List<Review> reviews= new ArrayList<Review>();
 
