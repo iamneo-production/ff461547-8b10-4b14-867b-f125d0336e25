@@ -40,24 +40,16 @@ const CarBookingForm = () => {
       "drop_off_date": nine
     };
 
-    axios.post("http://localhost:8080/bookform", json)
+    axios.post("/bookform", json)
       .then(response => {
         alert(`Booking ID: ${bookingId}. Note down this ID for viewing and managing your car booking.`);
       })
       .catch(err => console.log(err));
   };
 
-  // Get img from frontend using carname in the backend
-  const getImageUrl = (carName) => {
-    const imageName = carName.toLowerCase().replace(/\s+/g, ''); // Convert carName to lowercase and remove spaces
-    const imageUrl = require(`../carAssests/img/carList_imgs/${imageName}.jpg`).default;
-    return imageUrl ? imageUrl : CarImage;
-  };
-  
-
   // Get the particular car details by id
   useEffect(() => {
-    axios.get(`http://localhost:8080/findcarbyId?carid=${id}`)
+    axios.get(`/findcarbyId?carid=${id}`)
       .then((response) => {
         setCar(response.data);
       })
@@ -88,10 +80,11 @@ const CarBookingForm = () => {
           <div className="car-details">
             <h2>Car Details:</h2>
             <h6>Car Name: {car.carname}</h6>
-            <h6>Car Rent: {car.price}/Day</h6>
+            <h6>Car Rent: {car.price}/Hr</h6>
+            <p>[Exclusive of Fuel charges + Extra Charges may include after 1 Hour (Rs.300/Hr)] </p>
             <h6>Seats: {car.no_of_seat-1}</h6>
             <h6>Pick-Up Location: {car.location}</h6>
-            <img src={getImageUrl(car.carname)} alt="Car" className="w-100" />
+            <img src={require(`../carAssests/img/carList_imgs/${car.carname.toLowerCase().replace(/\s+/g, '')}.jpg`)} alt={CarImage} className="w-100" />
           </div>
         </div>
         <div className="col-md-6">
@@ -129,7 +122,7 @@ const CarBookingForm = () => {
               <FormGroup className="booking__form">
                 <label>Pick Up Time:</label>
                 <input
-                 id="seven"
+                  id="seven"
                   type="time"
                   value={pickupTime}
                   onChange={(e) => setPickupTime(e.target.value)}
