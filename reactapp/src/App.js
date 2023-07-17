@@ -15,6 +15,8 @@ import Hotels from './containers/Hotels';
 import PageNotFound from './containers/PageNotFound';
 import Register from './containers/Register';
 import SignIn from './containers/SignIn';
+import { HeaderComp } from './components/flight/FlightHomePage/HeaderComp';
+import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight';
 
 
 function App() {
@@ -41,6 +43,12 @@ function App() {
         <Route path="/rental-cars/search" element={<CarFindForm />} />
         <Route path="/rental-cars/booking/:id" element={<CarBookingForm />} />
         <Route path="/rental-cars/manage" element={<CarManage />} />
+
+        {/*flight booking routes */}
+
+        <Route path="/" element={<HeaderComp />} />
+        <Route path="SearchFlight" element={<SearchFlight />} />
+       
 
 
       </Routes>

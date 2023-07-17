@@ -14,8 +14,8 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/hotel/RoomRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/travelagent/TravelAgent.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/user/impl/UserServiceImpl.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/customer/CustomerRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/user/UserService.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/customer/CustomerRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/booking/BookingRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/car/CarFindService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/hotel/HotelRepository.java
