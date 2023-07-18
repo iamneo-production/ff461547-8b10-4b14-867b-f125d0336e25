@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSlider from "../CarUIs/HeroSlider";
+import Slider from "../CarUIs/Sliders";
 import CarList from '../CarUIs/CarListing';
 
 const CarHome = () => {
@@ -8,7 +8,7 @@ const CarHome = () => {
     <div>
       {/* ============= hero section =========== */}
       <section className="p-0 hero__slider-section">
-        <HeroSlider />
+        <Slider />
       </section>
 
       {/* =========== car list section ============= */}
