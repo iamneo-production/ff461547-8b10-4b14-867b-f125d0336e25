@@ -66,7 +66,7 @@ export const SearchFlight =()=>{
                                                     placeholder="Enter Your Departure"
                                                     className="w-full p-2 h-15 rounded-lg border border-gray-300"
                                                 />                                    
-                                                <FaPlaneDeparture className="text-2xl absolute right-4 top-12"/>
+                                                <FaPlaneDeparture className="text-2xl absolute right-4 top-24"/>
                                             </div>
                                         </div>
                                         <div>
@@ -79,7 +79,7 @@ export const SearchFlight =()=>{
                                                     placeholder="Enter Your Arrival"
                                                     className="w-full p-2  rounded-lg border border-gray-300"
                                                 />                                   
-                                                <FaPlaneArrival className="text-2xl absolute right-4 top-12"/>
+                                                <FaPlaneArrival className="text-2xl absolute right-4 top-16"/>
                                             </div>
                                         </div>
                                         <div>
@@ -117,35 +117,37 @@ export const SearchFlight =()=>{
                 </div>             
                         
             <div className="col-span-2">
-                <div>
-                    <p className="bg-gray-300  border border-gray-600">     
-                        <div className="grid grid-cols-7 gap-2">
-                            <div className="p-5 h-11">
-                                <p className="text-black font-semibold">Sorted By:</p>
-                    
-                            </div>
-                            <div className="p-5 h-11">    
-                                <p className="text-black font-semibold flex  justify-center items-center">Flight Name</p>
-                            </div>  
-                            <div className="p-5 h-11">    
-                                <p className="text-black font-semibold flex  justify-center items-center">Departure</p>
-                            </div> 
-                            <div className="p-5 h-11">
-                                <p className="text-black font-semibold flex  justify-center items-center">Duration</p>
-                            </div> 
-                            <div className="p-5 h-11">
-                                <p className="text-black font-semibold flex  justify-center items-center">Arrival</p>
-                            </div> 
-                            <div className="p-3 h-15">
-                                <p className="text-black font-semibold flex  ">Price 
-                                <br></br>per travelling</p>
-                            </div>
-                            <div className="pt-5 h-11">
-                                <p className="text-black font-semibold">Booking</p>
-                            </div>
-                        </div>            
-                    </p>
-                </div>
+            <div>
+                <div className="bg-gray-300 border border-black-800">
+                    <div className="grid grid-cols-7 gap-2 ">
+                        <div className="p-5 h-11  flex items-center justify-center">
+                            <p className="text-black font-semibold">Sorted By:</p>
+      </div>
+      <div className="p-5 h-11 flex items-center justify-center">
+        <p className="text-black font-semibold">Flight Name</p>
+      </div>  
+      <div className="p-5 h-11 flex items-center justify-center">
+        <p className="text-black font-semibold">Departure</p>
+      </div> 
+      <div className="p-5 h-11 flex items-center justify-center">
+        <p className="text-black font-semibold">Duration</p>
+      </div> 
+      <div className="p-5 h-11 flex items-center justify-center">
+        <p className="text-black font-semibold">Arrival</p>
+      </div> 
+      <div className="p-3 h-15 flex items-center justify-center">
+        <p className="text-black font-semibold">
+          Price 
+          <br />
+          per travelling
+        </p>
+      </div>
+      <div className="pt-5 h-11 flex items-center justify-center">
+        <p className="text-black font-semibold">Booking</p>
+      </div>
+    </div>            
+  </div>
+</div>
               {/* Ticket Listing Code */}
 
                 <div className=" pl-5 pr-5 pt-5 pb-5 mt-5"> 
