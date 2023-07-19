@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>>>>>>> 0e58691aa41c25524a3560348b56761d2bd53b1f
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>2.7.10</version>
 		<relativePath /> <!-- lookup parent from repository -->
+=======
+		<version>2.7.13</version>
+		<relativePath/> <!-- lookup parent from repository -->
+>>>>>>> 0e58691aa41c25524a3560348b56761d2bd53b1f
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>springapp</artifactId>
@@ -29,15 +38,23 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
+=======
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+>>>>>>> 0e58691aa41c25524a3560348b56761d2bd53b1f
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+<<<<<<< HEAD
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -75,6 +92,12 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.24</version>
 			<scope>provided</scope>
+=======
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+>>>>>>> 0e58691aa41c25524a3560348b56761d2bd53b1f
 		</dependency>
 	</dependencies>
 
