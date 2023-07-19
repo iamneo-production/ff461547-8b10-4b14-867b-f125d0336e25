@@ -1,3 +1,4 @@
+com/example/springapp/controller/FlightController.class
 com/example/springapp/dto/hotel/HotelSearchRequestDto.class
 com/example/springapp/service/car/CarFindService.class
 com/example/springapp/service/hotel/HotelService.class
@@ -27,6 +28,8 @@ com/example/springapp/repository/car/CarBookingFormRepo.class
 com/example/springapp/model/car/CarBookingForm.class
 com/example/springapp/repository/hotel/BookedHotelRepository.class
 com/example/springapp/dto/hotel/HotelSearchResponseDto.class
+com/example/springapp/model/flight/Search.class
 com/example/springapp/model/review/Review.class
 com/example/springapp/service/car/CarBookingFormService.class
+com/example/springapp/repository/flight/SearchRepository.class
 com/example/springapp/model/hotel/Hotel.class

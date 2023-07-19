@@ -17,6 +17,8 @@ import Register from './containers/Register';
 import SignIn from './containers/SignIn';
 import { HeaderComp } from './components/flight/FlightHomePage/HeaderComp';
 import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight';
+import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
+
 
 
 function App() {
@@ -48,6 +50,8 @@ function App() {
 
         <Route path="/" element={<HeaderComp />} />
         <Route path="SearchFlight" element={<SearchFlight />} />
+        <Route path="PassengerDetails" element={<PassengerDetails />} />
+
        
 
 
