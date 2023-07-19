@@ -1,34 +1,57 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import './style/navigationbar.css'
-import './style/hotel.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavigationBar from './components/NavigationBar'
+import './style/hotel.css';
+import './style/navigationbar.css';
+import NavigationBar from './components/NavigationBar';
+import SelectedHotel from './components/hotel/bookhotel/SelectedHotel';
 import CarRentals from './containers/CarRentals';
+import CarFindForm from './components/car_rental/carPages/CarSearchPage';
+import CarBookingForm from './components/car_rental/carPages/CarBookingPage';
+import CarManage from './components/car_rental/carPages/CarManagePage';
 import Flights from './containers/Flights';
 import Home from './containers/Home';
 import Hotels from './containers/Hotels';
+import PageNotFound from './containers/PageNotFound';
 import Register from './containers/Register';
 import SignIn from './containers/SignIn';
+import { HeaderComp } from './components/flight/FlightHomePage/HeaderComp';
+import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight';
+
 
 function App() {
   return (
     <>
-    
-      <Router>
-        <header className='header'>
-          <NavigationBar />
+      <header className='header'>
+        <NavigationBar />
+      </header>
 
-        </header>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/hotels" element={<Hotels />} />
-          <Route path="/flight" element={<Flights />} />
-          <Route path="/car-rentals" element={<CarRentals />} />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Router>
+      <Routes>
+        {/* main navigation  */}
+
+        <Route path="/" element={<Home />} />
+        <Route path="search-hotel" element={<Hotels />} />
+        <Route path="flight" element={<Flights />} />
+        <Route path="car-rentals" element={<CarRentals />} />
+        <Route path="sign-in" element={<SignIn />} />
+        <Route path="register" element={<Register />} />
+        <Route path='selected-hotel/:hotelId' element={<SelectedHotel />} />
+        <Route path='*' element={<PageNotFound />} />
+
+        {/* car rental routes */}
+
+        <Route path="/rental-cars/search" element={<CarFindForm />} />
+        <Route path="/rental-cars/booking/:id" element={<CarBookingForm />} />
+        <Route path="/rental-cars/manage" element={<CarManage />} />
+
+        {/*flight booking routes */}
+
+        <Route path="/" element={<HeaderComp />} />
+        <Route path="SearchFlight" element={<SearchFlight />} />
+       
+
+
+      </Routes>
     </>
   );
 }

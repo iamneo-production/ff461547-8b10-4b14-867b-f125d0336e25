@@ -13,20 +13,20 @@ function NavigationBar() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
             <Container>
-                <Navbar.Brand as={Link} to={'/home'}>Travel.com</Navbar.Brand>
+                <Navbar.Brand as={Link} to={'/'}>Travel.com</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link className='nav-icon' as={Link} to={'/home'}>{homeIcon} Home</Nav.Link>
-                        <Nav.Link className='nav-icon' as={Link} to={'/hotels'}>{hotelIcon} Hotels</Nav.Link>
-                        <Nav.Link className='nav-icon' as={Link} to={'/flight'}>{flightIcon} Flights</Nav.Link>
-                        <Nav.Link className='nav-icon' as={Link} to={'/car-rentals'}>{carIcon} Car Rentals</Nav.Link>
+                        <Nav.Link className='nav-icon' as={Link} to={'/'}>{homeIcon} Home</Nav.Link>
+                        <Nav.Link className='nav-icon' as={Link} to={'search-hotel'}>{hotelIcon} Hotels</Nav.Link>
+                        <Nav.Link className='nav-icon' as={Link} to={'flight'}>{flightIcon} Flights</Nav.Link>
+                        <Nav.Link className='nav-icon' as={Link} to={'car-rentals'}>{carIcon} Car Rentals</Nav.Link>
 
                     </Nav>
                     <Nav>
-                        <Nav.Link as={Link} to={'/sign-in'}>Sign in</Nav.Link>
+                        <Nav.Link as={Link} to={'sign-in'}>Sign in</Nav.Link>
                         <Navbar.Text className='seperator'>{'|'}</Navbar.Text>
-                        <Nav.Link as={Link} to={'/register'}>Register</Nav.Link>
+                        <Nav.Link as={Link} to={'register'}>Register</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
