@@ -3,8 +3,8 @@ import axios from 'axios';
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
 import { useNavigate } from 'react-router-dom';
-import './Styles.css';
-import Config from '../../Config';
+import "../../../style/flight_style/Styles.css";
+
 
 
 function isValidEmail(email) {
@@ -59,7 +59,7 @@ export default function PassengerContacts({ handleNext} ) {
   const storePassengerDetails = () => {
     passengers.forEach((passenger) => {
       axios
-        .post(`${Config.backendURL}/api/details`, passenger)
+        .post(`/api/details`, passenger)
         .then((response) => {
           console.log('Passenger details stored successfully:', response.data);
         })
@@ -108,13 +108,7 @@ export default function PassengerContacts({ handleNext} ) {
     setContactName(event.target.value);
   };
 
-  // const clearContactFields = () => {
-  //   setContactName('');
-  //   setEmail('');
-  //   setPhoneNums('');
-  //   setContactClass('');
-  // };
-
+ 
   const handleSaveContact = () => {
     if (contactName !== '' && email !== '' && phoneNums!=='' && contactClass!=='') {
       
@@ -126,7 +120,7 @@ export default function PassengerContacts({ handleNext} ) {
     };
 
     axios
-      .post(`${Config.backendURL}/api/contacts`, newContact)
+      .post(`/api/contacts`, newContact)
       .then((response) => {
         console.log('Contact details stored successfully:', response.data);
         setSaveButtonClicked(true); 
