@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faIndianRupeeSign, faCircleCheck, faTicket, faSuitcase, faSuitcaseRolling, faMoneyBill } from '@fortawesome/free-solid-svg-icons'
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../../style/yourOrders.css';
-import indigo from '../../assests/indigo.jpg'
 
 const Flights = () => {
 
@@ -24,8 +23,7 @@ const Flights = () => {
                     <div className='row'>
                         <div className='col-lg-9 col-md-7 col-sm-12'>
                             <h4>Source - Destination</h4>
-                            <p>Booking ID - xxxxxxx ~ Booked Date<br /><br />
-                                <img src={indigo} />  AirlineName - FlightNo.</p>
+                            <p>Booking ID - xxxxxxx ~ Booked Date<br /><br />AirlineName - FlightNo.</p>
                         </div>
                         <div className='col-lg-3 col-md-5 col-sm-12'>
                             <button type="button" class="btn btn-light" onClick={toggleDetails}>View & Manage</button><br />

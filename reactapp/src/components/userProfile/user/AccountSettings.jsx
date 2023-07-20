@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../../style/accountSettings.css'
+import '../../../style/accountSettings.css';
 
 const AccountSettings = () => {
 

@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCar, faHotel, faUser, faPlaneUp } from '@fortawesome/free-solid-svg-icons'
 import { Banner, AccountSettings, Flights, Cars, Hotels } from '../components/userProfile/index'
-import '../../style/banner.css';
-import '../../style/sideBar.css'
+import '../style/banner.css';
+import '../style/userProfile.css';
+import '../style/sideBar.css';
 
 const UserProfile = () => {
 
