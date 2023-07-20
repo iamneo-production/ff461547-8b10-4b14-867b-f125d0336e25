@@ -3,13 +3,13 @@
     flex-direction: column;
 }
 
-.container {
+/* .container {
     display: flex;
     width: 100%;
     /* justify-content: center; */
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
 
-}
+} */
 
 .outercontainer .container .left {
     border: 1px solid rgb(207, 207, 207);
