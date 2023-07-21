@@ -40,12 +40,12 @@ const UserProfile = () => {
         setShowHotels(true);
     };
     return (
-        <div className='outercontainer'>
+        <div className='outercontainer bannercontainer'>
             <Banner
                 heading='My profile'
                 image='https://wallpapercave.com/wp/wp2352568.jpg'
             />
-            <div class='container'>
+            <div class='container secondcontainer'>
                 <div class='left col-md-3'>
                     <div className='sideBar'>
                         <div className={`s1 ${showAccount ? 'active' : 'active'}`} id='account' onClick={handleAccountClick}>

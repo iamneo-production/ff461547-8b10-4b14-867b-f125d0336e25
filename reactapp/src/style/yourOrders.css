@@ -17,16 +17,11 @@
     margin-bottom: 20px;
 }
 
-img {
-    width: 2vw;
-    height: 4vh;
-}
-
-table {
+.cards table {
     width: 100%;
 }
 
-.btn {
+.cards .btn {
     border-radius: 10px;
     width: 100%;
     height: 50px;
@@ -43,12 +38,12 @@ table {
     display: none;
 }
 
-th {
+.cards th {
     font-weight: 100;
     font-size: 12px;
 }
 
-td {
+.cards td {
     font-weight: 500;
 }
 
@@ -59,7 +54,7 @@ td {
     margin-bottom: 20px;
 }
 
-ul li {
+.cards ul li {
     list-style-type: none;
     float: left;
     margin-top: 25px;
@@ -80,7 +75,7 @@ ul li {
     margin-top: 20px;
 }
 
-a {
+.cards a {
     text-decoration: none;
     color: #d96657;
 }
@@ -92,16 +87,11 @@ a {
         display: flex;
     }
 
-    h4 {
+    .cards h4 {
         font-size: 20px;
     }
 
-    img {
-        width: 4vw;
-        height: 4vh;
-    }
-
-    p {
+    .cards p {
         font-size: 14px;
     }
 
@@ -114,20 +104,15 @@ a {
         flex-direction: column;
     }
 
-    h5 {
+    .cards h5 {
         font-size: 18px;
     }
 
-    img {
-        width: 5vw;
-        height: 4vh;
-    }
-
-    p {
+    .cards p {
         font-size: 12px;
     }
 
-    th {
+    .cards th {
         font-size: 12.5px;
     }
 
@@ -136,7 +121,7 @@ a {
         flex-direction: column;
     }
 
-    ul li {
+    .cards ul li {
         width: 100%;
     }
 
