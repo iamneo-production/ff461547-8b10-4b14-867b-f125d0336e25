@@ -3,6 +3,7 @@
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 .secondcontainer {
     display: flex;
     width: 100%;
@@ -10,6 +11,13 @@
     margin-top: 3rem;
 }
 
+=======
+.outercontainer .container .left {
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    min-height: 50vh;
+}
+>>>>>>> 1d58b95521aecd9df3f5e9bfce886c471348be0b
 
 .bannercontainer .secondcontainer .left,
 .bannercontainer .secondcontainer .right {
