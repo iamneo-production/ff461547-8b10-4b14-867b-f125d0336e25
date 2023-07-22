@@ -43,7 +43,7 @@ public class Room {
     private Hotel hotel;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name ="hotel_booking_id",nullable = true)
+    @JoinColumn(name = "hotel_booking_id")
     @JsonIgnore
     private BookedHotel bookedHotel;
 
@@ -111,5 +111,21 @@ public class Room {
 
     public void setHotel(Hotel hotel) {
         this.hotel = hotel;
-    }    
+    }
+
+    public BookedHotel getBookedHotel() {
+        return bookedHotel;
+    }
+
+    public void setBookedHotel(BookedHotel bookedHotel) {
+        this.bookedHotel = bookedHotel;
+    }
+
+    @Override
+    public String toString() {
+        return "Room [roomId=" + roomId + ", roomType=" + roomType + ", roomNumber=" + roomNumber + ", numOfbeds="
+                + numOfbeds + ", roomCapacity=" + roomCapacity + ", roomStatus=" + roomStatus + ", hotel=" + hotel
+                + ", bookedHotel=" + bookedHotel + "]";
+    }
+    
 }

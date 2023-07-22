@@ -1,5 +1,7 @@
 package com.example.springapp.service.travelagent.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,17 @@ public class TravelAgentServiceImpl implements TravelAgentService{
     
     @Autowired
     UserRepository userRepository;
+
+    @Override
+    public List<TravelAgent> getAllTravelAgents() {
+        List<TravelAgent> result=null;
+        try {
+            result=travelAgentRepository.findAll();
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+        return result;
+    }
 
     @Override
     public boolean addTravelAgent(long userId, TravelAgent travelAgent) {

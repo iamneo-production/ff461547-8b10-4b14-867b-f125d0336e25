@@ -14,6 +14,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.example.springapp.model.booking.Booking;
 import com.example.springapp.model.review.Review;
 import com.example.springapp.model.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -46,6 +47,10 @@ public class Customer {
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Review> reviews= new ArrayList<Review>();
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Booking> bookings =new ArrayList<>();
 
     public Customer(){
         super();

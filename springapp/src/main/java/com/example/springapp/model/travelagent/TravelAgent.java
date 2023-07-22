@@ -16,7 +16,6 @@ import javax.persistence.OneToOne;
 import com.example.springapp.model.booking.Booking;
 import com.example.springapp.model.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class TravelAgent {
@@ -42,7 +41,7 @@ public class TravelAgent {
     private String phone;
 
     @OneToMany(mappedBy = "travelAgent", cascade = CascadeType.ALL)
-    @JsonManagedReference
+    @JsonIgnore
     private List<Booking> bookings=new ArrayList<>();
 
     public void removeUserRef(){

@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.OrderBy;
 import org.hibernate.annotations.Where;
 
 import com.example.springapp.model.review.Review;
@@ -50,11 +51,12 @@ public class Hotel {
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     @Where(clause = "status = 'booked'")
-    @JsonManagedReference(value = "hotel-room")
+    @JsonIgnore
     private List<Room> bookedRoomList = new ArrayList<Room>();
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     @Where(clause = "status = 'vaccant'")
+    @OrderBy(clause = "capacity ASC")
     @JsonManagedReference(value = "hotel-room")
     private List<Room> vaccantRoomList = new ArrayList<Room>();
 
@@ -181,4 +183,5 @@ public class Hotel {
     public void setBookedHotel(List<BookedHotel> bookedHotel) {
         this.bookedHotel = bookedHotel;
     }
+
 }

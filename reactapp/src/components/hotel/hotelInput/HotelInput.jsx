@@ -1,16 +1,16 @@
-import axios from 'axios'
-import { Country } from 'country-state-city'
 import React, { useContext, useState } from 'react'
+import { Country } from 'country-state-city'
 import Form from 'react-bootstrap/Form'
+import axios from 'axios'
 import { HotelActions, HotelContext } from '../HotelContext'
 import HotelInputHelper from './HotelInputHelper'
 import Travelers from './Travelers'
-
+import ErrorPage from '../../../containers/ErrorPage'
 
 function HotelInput() {
     const { hotelState, hotelDispatch } = useContext(HotelContext);
     const { country, city, rooms } = hotelState;
-    const [errorMessage, setErrorMessage] = useState('');
+    const [error, setError] = useState({});
 
 
     function handleFormSubmit(e) {
@@ -20,6 +20,7 @@ function HotelInput() {
             alert("Please Select Country and City");
 
         } else {
+            console.log(hotelState)
             const searchCriteria = createSearchCriteria(country, city, rooms);
             searchHotels(searchCriteria);
         }
@@ -29,7 +30,7 @@ function HotelInput() {
             const responseData = await (axios.post("/hotels/search", searchCriteria)).then(response => response.data);
             hotelDispatch({ type: HotelActions.SET_SEARCH_RESPONSE, payload: responseData })
         } catch (error) {
-            setErrorMessage(error.message);
+            setError(error.response.data);
             alert('Something Went Wrong , Please Try Again...');
         }
     }
@@ -43,13 +44,20 @@ function HotelInput() {
         return { ...searchCriteria, roomCapacity };
     }
     return (
-        <div className='left-side'>
-            <h5>Book Best Hotels At Ease</h5>
-            <Form onSubmit={handleFormSubmit}>
-                <HotelInputHelper />
-                <Travelers />
-            </Form>
-        </div>
+        <>
+            {
+                error.message ? <ErrorPage error={error} /> :
+                    <>
+                        <div className='left-side'>
+                            <h5>Book Best Hotels At Ease</h5>
+                            <Form onSubmit={handleFormSubmit}>
+                                <HotelInputHelper />
+                                <Travelers />
+                            </Form>
+                        </div>
+                    </>
+            }
+        </>
     )
 }
 

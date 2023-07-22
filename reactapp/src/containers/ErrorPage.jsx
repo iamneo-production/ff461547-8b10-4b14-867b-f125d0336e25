@@ -10,4 +10,4 @@ function ErrorPage({error}) {
   )
 }
 
-export default Error
+export default ErrorPage;
