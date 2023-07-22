@@ -15,7 +15,7 @@ export const SearchFlight =()=>{
     useEffect(() => {
         // Fetch ticket data from the backend
         axios
-          .get(`/api/flights`)
+          .get('/api/flights')
           .then(response => {
             setTickets(response.data);
           })
