@@ -1,4 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: com.example.springapp.SpringappApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.25 s - in com.example.springapp.SpringappApplicationTests
+Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 10.653 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
+testGetRentalCarAll  Time elapsed: 0.251 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.example.springapp.SpringappApplicationTests.testGetRentalCarAll(SpringappApplicationTests.java:44)
+
+testGetFlightsAll  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.example.springapp.SpringappApplicationTests.testGetFlightsAll(SpringappApplicationTests.java:56)
+
+testGetUserAll  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.example.springapp.SpringappApplicationTests.testGetUserAll(SpringappApplicationTests.java:67)
+
+testGetUserById  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at com.example.springapp.SpringappApplicationTests.testGetUserById(SpringappApplicationTests.java:79)
+
