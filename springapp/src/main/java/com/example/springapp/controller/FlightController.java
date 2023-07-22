@@ -18,7 +18,10 @@ public class FlightController {
     @Autowired
     SearchRepository searchRepository;
 
-
+    @GetMapping("/flights/search")
+    public List<Search>getAllFlights(){
+        return searchRepository.findAll();
+    }
     @PostMapping("/flights")
     public String createNewSearch(@RequestBody Search search) {
         searchRepository.save(search);
