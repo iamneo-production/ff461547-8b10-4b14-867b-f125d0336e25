@@ -21,11 +21,7 @@
     "react-datetime": "^3.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-<<<<<<< HEAD
-    "react-pdf": "^7.1.3",
-=======
     "react-phone-input-2": "^2.15.1",
->>>>>>> 8824155928e70d89615528cf5b969fd82cb95b23
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
