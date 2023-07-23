@@ -15,7 +15,7 @@ export const PassengerDetails = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="flight_container">
         <h2>Flight Details</h2>
         {flight ? (
           <div>

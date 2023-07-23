@@ -1,4 +1,4 @@
-.container {
+.flight_container {
     max-width: 900px;
     margin: 0 auto;
     border: 2px solid #1a1a1cc5;
@@ -6,45 +6,45 @@
     border-radius: 5px;
   }
   
-  .title{
+  .flight_title{
     text-align: center;
   }
   
-  .title-1{
+  .flight_title-1{
     color: #007bff;
   }
   
-  .form-box {
+  .flight_form-box {
     padding: 20px;
   }
   
-  .form-group {
+  .flight_form-group {
     margin-bottom: 10px;
     padding: 20px;
   }
   
-  .phone{
+  .flight_phone{
     padding: 40px;
   }
   
-  .phone .rpi-input-flag {
+  .flight_phone .rpi-input-flag {
     background-size: 20px !important;
   }
   
   
   
   
-  .react-phone-input .rpi-input {
+  .flight_react-phone-input .rpi-input {
     width: 200px; 
     height: 40px; 
   }
   
-  .react-phone-input .rpi-flag-container {
+  .flight_react-phone-input .rpi-flag-container {
     width: 40px; 
     height: 40px; 
   }
   
-  .form-control {
+  .flight_form-control {
     width: 50%;
     padding: 5px;
     font-size: 16px;
@@ -52,7 +52,7 @@
     border: 1px solid #ccc;
   }
   
-  .textarea-control {
+  .flight_textarea-control {
     width: 50%;
     padding: 50px;
     font-size: 16px;
@@ -62,11 +62,11 @@
   }
   
   
-  .passenger-details {
+  .flight_passenger-details {
     margin-top: 20px;
   }
   
-  .passenger-box {
+  .flight_passenger-box {
     border: 1px solid black;
     padding: 10px;
     border-radius: 5px;
@@ -74,7 +74,7 @@
   }
   
   
-  .form-group {
+  .flight_form-group {
     margin-bottom: 1rem;
   }
   
@@ -92,11 +92,11 @@
     border-radius: 4px;
   }
   
-  .num {
+  .flight_num {
     margin-bottom: 1rem;
   }
  
-  .container1 {
+  .flight_container1 {
     max-width: 900px;
     margin: 0 auto;
     border: 2px solid #1a1a1cc5;
@@ -104,17 +104,17 @@
     border-radius: 5px;
   }
   
-  .container1 .form-group {
+  .flight_container1 .form-group {
     margin-bottom: 1rem;
   }
   
-  .container1 label {
+  .flight_container1 label {
     display: block;
     margin-bottom: 0.5rem;
   }
   
-  .container1 input[type='text'],
-  .container1 input[type='email'] {
+  .flight_container1 input[type='text'],
+  .flight_container1 input[type='email'] {
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
@@ -122,7 +122,7 @@
     border-radius: 4px;
   }
   
-  .container1 .num {
+  .flight_container1 .num {
     margin-bottom: 1rem;
   }
   
