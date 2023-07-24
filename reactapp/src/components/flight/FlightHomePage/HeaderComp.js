@@ -28,9 +28,7 @@ export const HeaderComp = () =>{
                 </p>
                 <div className="flex">
                 <button onClick={()=>navigate('/SearchFlight')}>
-                  <div className="flex items-center justify-center py-2 px-4 bg-rose-700" style={{ marginTop: '30px' }}>
-                    <p className="text-white">FIND FLIGHTS</p>
-                  </div>
+                <div className="uppercase rounded-lg bg-rose-700 text-white font-semibold px-4 py-2">Find Flights</div>
                 </button>
                 </div>
             </div>

@@ -19,7 +19,7 @@ import UserProfile from './containers/UserProfile';
 import { HeaderComp } from './components/flight/FlightHomePage/HeaderComp';
 import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight';
 import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
-
+import {PreviewPage} from './components/flight/FlightResultPage/PreviewPage';
 
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
         <Route path="/" element={<HeaderComp />} />
         <Route path="SearchFlight" element={<SearchFlight />} />
         <Route path="PassengerDetails" element={<PassengerDetails />} />
-
+        <Route path="PreviewPage" element={<PreviewPage />} />
        
 
 
