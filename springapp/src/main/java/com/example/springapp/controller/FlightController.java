@@ -1,6 +1,7 @@
 package com.example.springapp.controller;
 import com.example.springapp.model.flight.Search;
 import com.example.springapp.repository.flight.SearchRepository;
+import com.example.springapp.service.flight.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,11 +18,14 @@ public class FlightController {
 
     @Autowired
     SearchRepository searchRepository;
+    @Autowired
+	private FlightService flightService;
 
     @GetMapping("/flights/search")
     public List<Search>getAllFlights(){
         return searchRepository.findAll();
     }
+    
     @PostMapping("/flights")
     public String createNewSearch(@RequestBody Search search) {
         searchRepository.save(search);
