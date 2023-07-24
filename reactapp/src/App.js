@@ -21,7 +21,6 @@ import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight'
 import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
 import ErrorPage from './containers/ErrorPage';
 
-
 function App() {
   return (
     <>
