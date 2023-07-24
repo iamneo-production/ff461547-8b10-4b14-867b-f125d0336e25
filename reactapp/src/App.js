@@ -21,6 +21,7 @@ import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight'
 import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
 import {PreviewPage} from './components/flight/FlightResultPage/PreviewPage';
 import ErrorPage from './containers/ErrorPage';
+import AdminHome from './components/Admin/AdminHome';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path='/ErrorPage' element={<ErrorPage/>} />
         <Route path='*' element={<PageNotFound />} />
+        <Route path="/admin" element={<AdminHome/>}/>
 
         {/* Hotel routes */}
         <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
