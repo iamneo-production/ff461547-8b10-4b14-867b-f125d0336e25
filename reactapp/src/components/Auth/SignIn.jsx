@@ -61,7 +61,7 @@ export const Login = () => {
   return (
     <div className="register-outer-container">
       <div className="register-container">
-        <h2><b>SIGN IN</b></h2>
+        <h2><b>Sign In</b></h2>
         <form onSubmit={handleAdminLogin}>
           <div className="input-container">
             <input

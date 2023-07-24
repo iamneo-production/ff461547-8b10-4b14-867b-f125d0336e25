@@ -39,7 +39,7 @@ const Register = (props) => {
     setPasswordsMatch(true);
 
     // Make a POST request to the backend API for user registration
-    axios.post("/api/auth/signup", formData)
+    axios.post("/auth/signup", formData)
       .then(res => {
         console.log(res.data);
         navigate("/login");
