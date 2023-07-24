@@ -33,7 +33,7 @@ const CarListing = () => {
               <div className="car__item-content mt-4">
               <h4 className="section__title text-center">{car.carname}</h4>
               <h6 className="rent__price text-center mt-">
-                Rs: {car.price}.00 <span>/ Day</span>
+                Rs: {car.price}.00 <span>/ Hour</span>
               </h6>
 
               <div className="car__item-info d-flex align-items-center justify-content-between mt-3 mb-4">

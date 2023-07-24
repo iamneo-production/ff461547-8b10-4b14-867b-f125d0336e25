@@ -1,5 +1,5 @@
 import React from 'react'
-import './Banner.css'
+import '../../../style/banner.css'
 
 const Banner = ({ image, heading }) => {
     return (

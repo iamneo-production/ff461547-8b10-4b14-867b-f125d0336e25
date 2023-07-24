@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Login from '../components/Auth/SignIn';
 
 function SignIn() {
     return (
-        <div>SignIn</div>
+        <Login/>
     )
 }
 

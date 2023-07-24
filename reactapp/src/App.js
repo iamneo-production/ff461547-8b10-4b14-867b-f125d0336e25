@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import './style/hotel.css';
 import './style/navigationbar.css';
-import NavigationBar from './components/NavigationBar';
+import NavigationBar from './components/navigationbar/NavigationBar';
 import SelectedHotel from './components/hotel/bookhotel/SelectedHotel';
 import CarRentals from './containers/CarRentals';
 import CarFindForm from './components/car_rental/carPages/CarSearchPage';
@@ -15,8 +15,13 @@ import Hotels from './containers/Hotels';
 import PageNotFound from './containers/PageNotFound';
 import Register from './containers/Register';
 import SignIn from './containers/SignIn';
+import UserProfile from './containers/UserProfile';
 import { HeaderComp } from './components/flight/FlightHomePage/HeaderComp';
 import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight';
+import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
+import {PreviewPage} from './components/flight/FlightResultPage/PreviewPage';
+import ErrorPage from './containers/ErrorPage';
+import AdminHome from './components/Admin/AdminHome';
 
 
 function App() {
@@ -30,13 +35,18 @@ function App() {
         {/* main navigation  */}
 
         <Route path="/" element={<Home />} />
-        <Route path="search-hotel" element={<Hotels />} />
+        <Route path="/search-hotel" element={<Hotels />} />
         <Route path="flight" element={<Flights />} />
         <Route path="car-rentals" element={<CarRentals />} />
         <Route path="sign-in" element={<SignIn />} />
         <Route path="register" element={<Register />} />
-        <Route path='selected-hotel/:hotelId' element={<SelectedHotel />} />
+        <Route path="/user-profile" element={<UserProfile />} />
+        <Route path='/ErrorPage' element={<ErrorPage/>} />
         <Route path='*' element={<PageNotFound />} />
+        <Route path="/admin" element={<AdminHome/>}/>
+
+        {/* Hotel routes */}
+        <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
 
         {/* car rental routes */}
 
@@ -48,6 +58,8 @@ function App() {
 
         <Route path="/" element={<HeaderComp />} />
         <Route path="SearchFlight" element={<SearchFlight />} />
+        <Route path="PassengerDetails" element={<PassengerDetails />} />
+        <Route path="PreviewPage" element={<PreviewPage />} />
        
 
 

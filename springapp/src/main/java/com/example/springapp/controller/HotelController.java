@@ -17,6 +17,7 @@ import com.example.springapp.dto.error.ErrorJsonDto;
 import com.example.springapp.dto.hotel.HotelSearchRequestDto;
 import com.example.springapp.dto.hotel.HotelSearchResponseDto;
 import com.example.springapp.model.hotel.Hotel;
+import com.example.springapp.model.review.Review;
 import com.example.springapp.service.hotel.HotelService;
 
 @CrossOrigin
@@ -45,7 +46,7 @@ public class HotelController {
 
         Hotel hotel = hotelServiceImpl.getHotelByHotelId(Long.valueOf(hotelId));
         if (hotel == null) {
-            ErrorJsonDto error=new ErrorJsonDto();
+            ErrorJsonDto error = new ErrorJsonDto();
             error.setMessage("Hotel does not exist");
             error.setStatus(404);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
