@@ -18,8 +18,7 @@ public class FlightController {
 
     @Autowired
     SearchRepository searchRepository;
-    @Autowired
-	private FlightService flightService;
+    
 
     @GetMapping("/flights/search")
     public List<Search>getAllFlights(){
