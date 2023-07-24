@@ -59,7 +59,7 @@ export default function PassengerContacts({ handleNext} ) {
   const storePassengerDetails = () => {
     passengers.forEach((passenger) => {
       axios
-        .post(`/api/details`, passenger)
+        .post(`/details`, passenger)
         .then((response) => {
           console.log('Passenger details stored successfully:', response.data);
         })
@@ -120,7 +120,7 @@ export default function PassengerContacts({ handleNext} ) {
     };
 
     axios
-      .post(`/api/contacts`, newContact)
+      .post(`/contacts`, newContact)
       .then((response) => {
         console.log('Contact details stored successfully:', response.data);
         setSaveButtonClicked(true); 
