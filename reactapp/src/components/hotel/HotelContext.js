@@ -1,7 +1,7 @@
 import moment from 'moment';
 import React, { createContext, useReducer } from 'react';
 
-const initialState = {
+export const initialState = {
     checkInDate: moment(),
     checkOutDate: moment().add(1, 'day'),
     country: '',
