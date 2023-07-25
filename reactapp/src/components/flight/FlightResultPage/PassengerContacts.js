@@ -3,7 +3,7 @@ import axios from 'axios';
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
 import { useNavigate } from 'react-router-dom';
-import "../../../style/flight_style/Styles.css";
+import "../../../style/flight_style/flight_styles.css";
 
 
 
@@ -59,7 +59,7 @@ export default function PassengerContacts({ handleNext} ) {
   const storePassengerDetails = () => {
     passengers.forEach((passenger) => {
       axios
-        .post(`/api/details`, passenger)
+        .post(`/details`, passenger)
         .then((response) => {
           console.log('Passenger details stored successfully:', response.data);
         })
@@ -120,7 +120,7 @@ export default function PassengerContacts({ handleNext} ) {
     };
 
     axios
-      .post(`/api/contacts`, newContact)
+      .post(`/contacts`, newContact)
       .then((response) => {
         console.log('Contact details stored successfully:', response.data);
         setSaveButtonClicked(true); 
@@ -156,28 +156,28 @@ export default function PassengerContacts({ handleNext} ) {
   
 
   return (
-      <div className='container1'>
-        <div className='container'>
-        <div className='form-group'>
-          <div className='uppercase font-bold text-5sm text-center'>
-            <h1>Who's Flying?</h1>
+      <div className='flight_container1'>
+        <div className='flight_container'>
+        <div className='flight_form-group'>
+          <div className='uppercase font-bold text-sm text-center'>
+            <h4>Who's Flying?</h4>
           </div>
-          <div className='font-semibold'>
-            <h1>Contact Details</h1>
+          <div className='font-semibold text-lg'>
+            <h5>Contact Details</h5>
           </div>
-          <div className='form-group'>
+          <div className='flight_form-group'>
             <label>Name:</label>
             <input
               value={contactName}
               onChange={handleName}
-              className='form-control'
+              className='flight_form-control'
               required
             />
           </div>
-          <div className='form-group'>
+          <div className='flight_form-group'>
             <label>Email: </label>
             <input
-              className='form-control'
+              className='flight_form-control'
               id='email'
               name='email'
               value={email}
@@ -187,8 +187,8 @@ export default function PassengerContacts({ handleNext} ) {
             {error && <h2 style={{ color: 'red' }}>{error}</h2>}
           </div>
         </div>
-        <div className='form-group'>
-          <div className='num'>
+        <div className='flight_form-group'>
+          <div className='flight_num'>
             <label>
               Phone Number:
               <PhoneInput
@@ -200,12 +200,12 @@ export default function PassengerContacts({ handleNext} ) {
             </label>
           </div>
         </div>
-        <div className="form-group">
+        <div className="flight_form-group">
           <label>Class:</label>
             <select
               value={contactClass}
               onChange={(event) => setContactClass(event.target.value)}
-              className="form-control"
+              className="flight_form-control"
               required
             >
               <option value="">Select</option>
@@ -214,50 +214,50 @@ export default function PassengerContacts({ handleNext} ) {
             </select>
         </div>
         <button onClick={handleSaveContact}>
-          <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg'>
-            <p className='text-white'>SAVE</p>
+          <div className='py-2 px-2 bg-rose-400 text-xl m-3 rounded-lg text-white '>
+            SAVE
           </div>
         </button>
         {saveButtonClicked && (
-           <div className="font-semibold ">
+           <div style={{ fontSize: '1px' }} className="font-semibold text-xxs ">
              <h2 className="text-red-600">Submitted Successfully!</h2>
            </div>
         )}
       </div>  
       <br />
-    <div className='container'>
-        <div className='font-semibold'>
-          <h2>Passenger Details</h2>
+    <div className='flight_container'>
+        <div className='font-semibold text-lg'>
+          <h5>Passenger Details</h5>
         </div>
     
         {showPassengerList ? (
           <>
             <form onSubmit={handleFormSubmit}>
-              <div className='form-box'>
-                <div className='form-group'>
+              <div className='flight_form-box'>
+                <div className='flight_form-group'>
                   <label>First Name:</label>
                   <input
                     value={firstName}
                     onChange={(event) => setFirstName(event.target.value)}
-                    className='form-control'
+                    className='flight_form-control'
                     required
                   />
                 </div>
-                <div className='form-group'>
+                <div className='flight_form-group'>
                   <label>Last Name:</label>
                   <input
-                    className='form-control'
+                    className='flight_form-control'
                     value={lastName}
                     onChange={(event) => setLastName(event.target.value)}
                     required
                   />
                 </div>
-                <div className="form-group">
+                <div className="flight_form-group">
                   <label>Gender:</label>
                     <select
                       value={gender}
                       onChange={(event) => setGender(event.target.value)}
-                      className="form-control"
+                      className="flight_form-control"
                       required
                     >
                       <option value="">Select</option>
@@ -266,12 +266,12 @@ export default function PassengerContacts({ handleNext} ) {
                       <option value="other">Other</option>
                     </select>
                 </div>
-                <div className="form-group">
+                <div className="flight_form-group">
                   <label>Passenger Type:</label>
                   <select
                     value={passType}
                     onChange={(event) => setPassType(event.target.value)}
-                    className="form-control"
+                    className="flight_form-control"
                     required
                   >
                     <option value="">Select</option>
@@ -279,23 +279,23 @@ export default function PassengerContacts({ handleNext} ) {
                     <option value="Child">Child(below 18)</option>
                   </select>
                 </div>
-                <div className='form-group'>
+                <div className='flight_form-group'>
                   <button type='submit'>
-                    <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg'>
-                      <p className='text-white'>View Details</p>
+                    <div className='py-2 px-2 bg-rose-400 text-xl m-3 rounded-lg text-white'>
+                      View Details
                     </div>
                   </button>
                   <button type='button' onClick={addPassenger}>
-                    <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg'>
-                      <p className='text-white'>Add Passenger</p>
+                    <div className='py-2 px-2 bg-rose-400 text-xl m-3 rounded-lg text-white'>
+                      Add Passenger
                     </div>
                   </button>
                 </div>
               </div>
             </form>
             {passengers.length > 0 && (
-              <div className='passenger-details'>
-                <h2>Passenger List</h2>
+              <div className='flight_passenger-details'>
+                <h5>Passenger List</h5>
                 {passengers.map((passenger, index) => (
                   <div className="border border-black p-4 rounded-md mb-4" key={index}>
                     <p>First Name: {passenger.first_name}</p>
@@ -325,10 +325,10 @@ export default function PassengerContacts({ handleNext} ) {
                 <h2 className="text-red-600">Submitted Successfully!</h2>
               </div>
             )}
-            <div className='passenger-details'>
+            <div className='flight_passenger-details'>
           <h2>Passenger List</h2>
           {passengers.map((passenger, index) => (
-            <div className='passenger-box' key={index}>
+            <div className='flight_passenger-box' key={index}>
               <p>First Name: {passenger.first_name}</p>
               <p>Last Name: {passenger.last_name}</p>
               <p>Gender: {passenger.gender}</p>
