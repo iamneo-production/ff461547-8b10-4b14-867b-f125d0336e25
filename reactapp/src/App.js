@@ -23,6 +23,8 @@ import {PreviewPage} from './components/flight/FlightResultPage/PreviewPage';
 import ErrorPage from './containers/ErrorPage';
 import AdminHome from './components/Admin/AdminHome';
 import CarAdmin from './components/Admin/CarAdmin'
+import { FlightAdmin } from './components/Admin/FlightAdmin';
+import { BoardingPass } from './components/flight/FlightResultPage/BoardingPass';
 
 
 function App() {
@@ -45,6 +47,7 @@ function App() {
         <Route path='/ErrorPage' element={<ErrorPage/>} />
         <Route path='*' element={<PageNotFound />} />
         <Route path="/admin" element={<AdminHome/>}/>
+        <Route path='/flightAdmin' elemenr={<FlightAdmin/>}/>
 
         {/* Hotel routes */}
         <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
@@ -61,6 +64,7 @@ function App() {
         <Route path="SearchFlight" element={<SearchFlight />} />
         <Route path="PassengerDetails" element={<PassengerDetails />} />
         <Route path="PreviewPage" element={<PreviewPage />} />
+        <Route path='BoardingPass' element={<BoardingPass/>}/>
        
 
 
