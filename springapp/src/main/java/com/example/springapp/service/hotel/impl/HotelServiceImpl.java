@@ -1,8 +1,9 @@
 package com.example.springapp.service.hotel.impl;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +11,20 @@ import org.springframework.stereotype.Service;
 
 import com.example.springapp.dto.hotel.HotelSearchRequestDto;
 import com.example.springapp.dto.hotel.HotelSearchResponseDto;
+import com.example.springapp.dto.hotel.bookhotel.HotelBookedDto;
+import com.example.springapp.dto.hotel.bookhotel.HotelBookRequestDto;
+import com.example.springapp.dto.hotel.bookhotel.RoomDto;
+import com.example.springapp.model.booking.Booking;
+import com.example.springapp.model.customer.Customer;
+import com.example.springapp.model.hotel.BookedHotel;
 import com.example.springapp.model.hotel.Hotel;
 import com.example.springapp.model.hotel.Room;
+import com.example.springapp.model.travelagent.TravelAgent;
+import com.example.springapp.repository.customer.CustomerRepository;
+import com.example.springapp.repository.hotel.BookedHotelRepository;
 import com.example.springapp.repository.hotel.HotelRepository;
+import com.example.springapp.repository.hotel.RoomRepository;
+import com.example.springapp.repository.travelagent.TravelAgentRepository;
 import com.example.springapp.service.hotel.HotelService;
 
 @Service
@@ -20,6 +32,12 @@ public class HotelServiceImpl implements HotelService {
 
     @Autowired
     private HotelRepository hotelRepository;
+    @Autowired
+    private CustomerRepository customerRepository;
+    @Autowired
+    private TravelAgentRepository travelAgentRepository;
+    @Autowired
+    private BookedHotelRepository bookedHotelRepository;
 
     public HotelServiceImpl() {
         super();
@@ -77,21 +95,31 @@ public class HotelServiceImpl implements HotelService {
             List<Hotel> hotels = hotelRepository.findHotelsByCountryAndCity(country, city);
 
             hotels = hotels.stream()
-                    .filter(hotel -> hotel.getAvailableRooms() >= numOfRooms)
+                    .filter(hotel -> hotel.getVaccantRoomList().size() >= numOfRooms)
                     .collect(Collectors.toList());
 
             hotels = hotels.stream()
                     .filter(hotel -> {
-                        for (Room room : hotel.getVaccantRoomList()) {
+                        List<Room> vaccantRoomList = hotel.getVaccantRoomList();
+                        int roomFound = 0;
+                        for (int index = 0; index < vaccantRoomList.size(); index++) {
+                            Room room = vaccantRoomList.get(index);
+                            
                             for (int i = 0; i < roomCapacity.size(); i++) {
+                                
                                 if (roomCapacity.get(i) <= room.getRoomCapacity()) {
-                                    roomCapacity.remove(i);
-                                    hotel.getVaccantRoomList().remove(room);
-                                    return true;
+                                    roomFound++;
+
+                                    break;
+                                    
                                 }
+                            }
+                            if (roomFound == roomCapacity.size()) {
+                                return true;
                             }
                         }
                         return false;
+
                     }).collect(Collectors.toList());
 
             searchResult = searcHotelsHelper(hotels);
@@ -119,4 +147,87 @@ public class HotelServiceImpl implements HotelService {
         return hotelSearchResponseDtos;
     }
 
+    @Override
+    public HotelBookedDto addbooking(long customerId, long hotelId, HotelBookRequestDto hotelBookRequestDto) {
+
+        HotelBookedDto hotelBookedDto = null;
+        int numberOfRooms = hotelBookRequestDto.getRooms().size();
+        int numberOfAdults = 0;
+        int numberOfChilds = 0;
+        List<Integer> roomSizes = new ArrayList<>(numberOfRooms);
+        for (RoomDto roomDto : hotelBookRequestDto.getRooms()) {
+            numberOfAdults += roomDto.getAdult();
+            numberOfChilds += roomDto.getChild();
+            roomSizes.add(roomDto.getAdult() + roomDto.getChild());
+        }
+
+        try {
+            Customer customer = customerRepository.findById(customerId).get();
+            Hotel hotel = hotelRepository.findById(hotelId).get();
+            TravelAgent travelAgent = travelAgentRepository.findById(hotelBookRequestDto.getTravelAgent()).get();
+
+            List<Room> selectedRooms = roomSelector(roomSizes, new ArrayList<>(hotel.getVaccantRoomList()));
+
+            Booking booking = new Booking();
+            booking.setBookingType("hotel");
+            booking.setCustomer(customer);
+            booking.setTravelAgent(travelAgent);
+            booking.setBookingDateTime(LocalDateTime.now());
+            booking.setVerficationDocType(hotelBookRequestDto.getIdType());
+            booking.setVerificationNumber(hotelBookRequestDto.getIdNumber());
+
+            BookedHotel bookedHotel = new BookedHotel();
+            bookedHotel.setHotel(hotel);
+            bookedHotel.setCheckInDate(hotelBookRequestDto.getCheckInDate());
+            bookedHotel.setCheckOutDate(hotelBookRequestDto.getCheckOutDate());
+            bookedHotel.setNumOfRoomsBooked(numberOfRooms);
+            bookedHotel.setNumOfAdults(numberOfAdults);
+            bookedHotel.setNumOfChilds(numberOfChilds);
+            bookedHotel.setTotalAmount(hotel.getPricePerDay() * selectedRooms.size());
+            bookedHotel.getRoomList().addAll(selectedRooms);
+            bookedHotel.setBooking(booking);
+            selectedRooms.stream().forEach(room -> {
+                room.setRoomStatus("booked");
+                room.setBookedHotel(bookedHotel);
+            });
+
+            BookedHotel bookedHotel2 = bookedHotelRepository.save(bookedHotel);
+
+            hotelBookedDto = new HotelBookedDto();
+            hotelBookedDto.setBooked(true);
+            hotelBookedDto.setBookingId(bookedHotel2.getBooking().getBookingId());
+            hotelBookedDto.setBookingStatus(bookedHotel2.getBooking().getBookingStatus());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return hotelBookedDto;
+    }
+
+    private List<Room> roomSelector(List<Integer> roomSizes, List<Room> vaccantRoomList) {
+
+        List<Room> selectedRooms = new ArrayList<>();
+        for (int roomSize : roomSizes) {
+            int start = 0;
+            int end = vaccantRoomList.size() - 1;
+            boolean found = false;
+            while (start <= end) {
+                int mid = (start + end) / 2;
+                if (roomSize == vaccantRoomList.get(mid).getRoomCapacity()) {
+                    selectedRooms.add(vaccantRoomList.get(mid));
+                    found = true;
+                    break;
+                } else if (roomSize > vaccantRoomList.get(mid).getRoomCapacity()) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
+            }
+            if (!found) {
+                selectedRooms.add(vaccantRoomList.get(start));
+                vaccantRoomList.remove(start);
+            }
+        }
+        return selectedRooms;
+    }
 }

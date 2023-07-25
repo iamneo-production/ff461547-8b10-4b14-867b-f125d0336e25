@@ -1,4 +1,4 @@
-export const baseUrl = 'https://8080-eeafbfbfaacefaffbedbdcceeaeaadbdbabf.project.examly.io';
+export const baseUrl = 'https://8080-bccfbccaacabcefaffbedbdcceeaeaadbdbabf.project.examly.io';
 
  export const Hotel={
      ROOM_SIZE:4,
