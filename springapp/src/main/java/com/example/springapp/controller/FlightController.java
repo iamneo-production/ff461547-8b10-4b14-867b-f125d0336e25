@@ -1,52 +1,87 @@
 package com.example.springapp.controller;
+import com.example.springapp.model.flight.Search;
+import com.example.springapp.model.ContactDetails;
+import com.example.springapp.model.PassengerDetails;
+import com.example.springapp.repository.flight.SearchRepository;
+import com.example.springapp.repository.ContactRepository;
+import com.example.springapp.repository.PassengerRepository;
+import com.example.springapp.service.flight.FlightService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.example.springapp.model.Booking;
-import com.example.springapp.model.Flight;
-import com.example.springapp.repository.FlightRepo;
 
 @RestController
-@RequestMapping("/flight")
+@CrossOrigin
 public class FlightController {
-	
-	
-	@Autowired
-	FlightRepo flightrepo;
-	
-	@GetMapping("/flight")
-	 List<Flight> getFlightAll(){
-		return flightrepo.findAll();
-	}
-	@PostMapping("/flight")
-	 Flight create(@RequestBody Flight flight) {
-		 return flightrepo.save(flight);
-	 }
-	@GetMapping("/flight/{id}")
-	 Flight getFlightById(@PathVariable("id") Long id) {
-		 return flightrepo.getById(id);
-	 }
-	@PutMapping("/flight/{id}")
-	 Flight update(@PathVariable("id")Long id,@RequestBody Flight flight) {
-		 return flightrepo.updateFlight(id,flight);
-		 
-	 }
-	@DeleteMapping("/flight/{id}")
-	 void deleteFlight(Long id) {
-		 Flight flight=flightrepo.findById(id).get();
-		 if(flight!=null) {
-			 flightrepo.deleteById(id);
-		 }
-	 }
 
+    @Autowired
+    SearchRepository searchRepository;
+
+    @Autowired
+    ContactRepository contactRepository;
+
+    @Autowired
+    PassengerRepository passengerRepository;
+    @Autowired
+	private FlightService flightService;
+
+    @GetMapping("/flights/search")
+		public ResponseEntity<?>getFlightsAll(){
+
+			return ResponseEntity.status(HttpStatus.OK).body(flightService.getAllFlights());
+		}
+
+    @PostMapping("/flights")
+    public String createNewSearch(@RequestBody Search search) {
+        searchRepository.save(search);
+        return "Oneway created.";
+    }
+
+    @CrossOrigin
+    @GetMapping("/flights")
+    public ResponseEntity<List<Search>> getAllEmployees() {
+        List<Search> searchList = new ArrayList<>();
+        searchRepository.findAll().forEach(searchList::add);
+        return new ResponseEntity<List<Search>>(searchList, HttpStatus.OK);
+    }
+
+    @PostMapping("/details")
+    public ResponseEntity<String> createPassengerDetails(@RequestBody PassengerDetails passengerDetails) {
+        try {
+            passengerRepository.save(passengerDetails);
+            return ResponseEntity.ok("Data created successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error storing data");
+        }
+    }
+
+    @PostMapping("/contacts")
+    public ResponseEntity<String> createContactDetails(@RequestBody ContactDetails contactDetails) {
+        try {
+            contactRepository.save(contactDetails);
+            return ResponseEntity.ok("Data created successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error storing data");
+        }
+    }
+
+    @DeleteMapping("/flights/{flightId}")
+    public ResponseEntity<String> deleteFlight(@PathVariable Long flightId) {
+        try {
+            Search search = searchRepository.findById(flightId).orElse(null);
+            if (search == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Flight not found");
+            }
+            searchRepository.delete(search);
+            return ResponseEntity.ok("Flight deleted successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error deleting flight");
+        }
+    }
 }
+

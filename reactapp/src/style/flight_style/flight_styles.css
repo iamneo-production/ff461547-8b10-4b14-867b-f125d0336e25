@@ -1,0 +1,116 @@
+.flight_container {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid #1a1a1cc5;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .flight_title{
+    text-align: center;
+  }
+  
+  .flight_title-1{
+    color: #007bff;
+  }
+  
+  .flight_form-box {
+    padding: 20px;
+  }
+  
+  .flight_form-group {
+    margin-bottom: 0.5rem;
+    padding: 20px;
+  }
+  
+  .flight_phone{
+    padding: 40px;
+  }
+  
+  .flight_phone .rpi-input-flag {
+    background-size: 20px !important;
+  }
+  
+  
+  
+  
+  .flight_react-phone-input .rpi-input {
+    width: 200px; 
+    height: 40px; 
+  }
+  
+  .flight_react-phone-input .rpi-flag-container {
+    width: 40px; 
+    height: 40px; 
+  }
+  
+  .flight_form-control {
+    width: 50%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .flight_textarea-control {
+    width: 50%;
+    padding: 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  
+  .flight_passenger-details {
+    margin-top: 20px;
+  }
+  
+  .flight_passenger-box {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .flight_form-group {
+    margin-bottom: 1rem;
+  }
+  
+
+  
+  .flight_num {
+    margin-bottom: 1rem;
+  }
+ 
+  .flight_container1 {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid #1a1a1cc5;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .flight_container1 .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .flight_container1 label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .flight_container1 input[type='text'],
+  .flight_container1 input[type='email'] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .flight_container1 .num {
+    margin-bottom: 1rem;
+  }
+  
