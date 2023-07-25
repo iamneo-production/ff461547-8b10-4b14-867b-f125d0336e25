@@ -1,6 +1,7 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/SpringappApplication.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/HotelController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/hotel/BookedHotel.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/FlightController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/hotel/HotelService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/travelagent/TravelAgentRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/car/CarBookingFormService.java
@@ -9,6 +10,8 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/car/CarBookingFormRepo.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/car/CarFind.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/hotel/Room.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/flight/SearchRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/flight/Search.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/hotel/HotelSearchRequestDto.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/booking/Booking.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/hotel/RoomRepository.java

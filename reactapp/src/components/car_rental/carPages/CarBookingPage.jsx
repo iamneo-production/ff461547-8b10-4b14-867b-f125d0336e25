@@ -50,7 +50,7 @@ const CarBookingForm = () => {
       eight.trim() === "" ||
       nine.trim() === ""
     ) {
-      alert("Please fill in all the fields.");
+      alert("Please fill all the Details.");
       return;
     }
 
@@ -83,6 +83,7 @@ const CarBookingForm = () => {
       "pick_up_date": eight,
       "drop_off_date": nine
     };
+    
 
     axios.post("/bookform", json)
       .then(response => {
@@ -163,12 +164,14 @@ const CarBookingForm = () => {
             <h2>Car Details:</h2>
             <h6>Car Name: {car.carname}</h6>
             <h6>Car Rent: {car.price}/Hr</h6>
+
             <p>[Exclusive of Fuel charges + Extra Charges may include after 1 Hour (Rs.300/Hr)] </p>
             <h6>Seats: {car.no_of_seat - 1}</h6>
             <h6>Pick-Up Location: {car.location}</h6>
             <img src={require(`../carAssests/img/carList_imgs/${car.carname.toLowerCase().replace(/\s+/g, '')}.jpg`)} alt="Car" className="w-100" />
           </div>
         </div>
+
         <div className="col-md-6">
           <div className="booking-form">
             <Form className="form-container">
@@ -237,6 +240,7 @@ const CarBookingForm = () => {
                   onChange={(e) => setDropoffDate(e.target.value)}
                 />
               </FormGroup>
+              
               <div className="text-center">
               <div className="d-flex justify-content-center align-items-center">
                 <div>
@@ -247,9 +251,8 @@ const CarBookingForm = () => {
                     className="booking__form car__item-btn car__btn-rent"
                     onClick={sub}
                     style={{ flex: "0 0 auto", borderRadius: "5px", minWidth: "200px", margin: "10px" }}
-                    type="button"
-                  >
-                    Pay Now
+                    type="button">
+                  Pay Now
                   </button>
                 </div>
               </div>
