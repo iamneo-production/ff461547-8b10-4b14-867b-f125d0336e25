@@ -19,7 +19,9 @@ import UserProfile from './containers/UserProfile';
 import { HeaderComp } from './components/flight/FlightHomePage/HeaderComp';
 import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight';
 import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
+import {PreviewPage} from './components/flight/FlightResultPage/PreviewPage';
 import ErrorPage from './containers/ErrorPage';
+import AdminHome from './components/Admin/AdminHome';
 
 function App() {
   return (
@@ -40,6 +42,7 @@ function App() {
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path='/ErrorPage' element={<ErrorPage/>} />
         <Route path='*' element={<PageNotFound />} />
+        <Route path="/admin" element={<AdminHome/>}/>
 
         {/* Hotel routes */}
         <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
@@ -55,7 +58,7 @@ function App() {
         <Route path="/" element={<HeaderComp />} />
         <Route path="SearchFlight" element={<SearchFlight />} />
         <Route path="PassengerDetails" element={<PassengerDetails />} />
-
+        <Route path="PreviewPage" element={<PreviewPage />} />
        
 
 
