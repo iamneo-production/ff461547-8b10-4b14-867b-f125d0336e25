@@ -72,6 +72,15 @@ public class CarController {
 		public Optional<CarFind> getCarById(Long carid) {
 		    return carFindService.getCarFindById(carid);
 		}
+
+		@CrossOrigin
+		@DeleteMapping("/deletebyCarId")
+		@ResponseBody
+		public String deleteByCarId(Long carid){
+			carFindService.deleteById(carid);
+			return "deleted";
+		}
+		
 		@Autowired
 		CarBookingFormService carBookingFormService;
 	
