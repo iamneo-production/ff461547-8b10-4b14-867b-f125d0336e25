@@ -22,6 +22,7 @@ import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDe
 import {PreviewPage} from './components/flight/FlightResultPage/PreviewPage';
 import ErrorPage from './containers/ErrorPage';
 import AdminHome from './components/Admin/AdminHome';
+import CarAdmin from './components/Admin/CarAdmin'
 
 
 function App() {
@@ -53,7 +54,7 @@ function App() {
         <Route path="/rental-cars/search" element={<CarFindForm />} />
         <Route path="/rental-cars/booking/:id" element={<CarBookingForm />} />
         <Route path="/rental-cars/manage" element={<CarManage />} />
-
+        <Route path="/admin/car" element={<CarAdmin/>}/>
         {/*flight booking routes */}
 
         <Route path="/" element={<HeaderComp />} />

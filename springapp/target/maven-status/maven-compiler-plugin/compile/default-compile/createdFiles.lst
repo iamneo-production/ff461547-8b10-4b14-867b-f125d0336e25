@@ -28,8 +28,6 @@ com/example/springapp/repository/car/CarFindRepo.class
 com/example/springapp/model/customer/Customer.class
 com/example/springapp/dto/hotel/bookhotel/RoomDto.class
 com/example/springapp/service/user/impl/UserServiceImpl.class
-com/example/springapp/model/booking/Booking.class
-com/example/springapp/model/car/CarFind.class
 com/example/springapp/model/car/CarFind.class
 com/example/springapp/model/booking/Booking.class
 com/example/springapp/controller/CarController.class
