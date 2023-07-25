@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../style/Feedback.css";
+import "./App.css";
+import "./Feedback.css";
 
 const Feedback = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -54,7 +55,7 @@ const Feedback = () => {
   };
 
   return (
-    <div className="center">
+    <div className="feedback-container">
       {submitted ? (
         <div>
           <h2>Thank you for contacting us!</h2>
@@ -63,7 +64,7 @@ const Feedback = () => {
       ) : (
         <form onSubmit={handleSubmit}>
           <h2>Rating & Review</h2>
-          <textarea
+          <textarea className="feedback-item1"
             rows="5"
             cols="50"
             name="message"
@@ -78,12 +79,11 @@ const Feedback = () => {
           </label>
 
           <br />
-          <button type="submit">Submit</button>
+          <button  className="feedback-item2" type="submit">Submit</button>
         </form>
       )}
       <ToastContainer />
     </div>
   );
 };
-
 export default Feedback;
