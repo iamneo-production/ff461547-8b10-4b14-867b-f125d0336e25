@@ -10,8 +10,8 @@ com/example/springapp/repository/PassengerRepository.class
 com/example/springapp/dto/auth/UserResponse.class
 com/example/springapp/model/hotel/Room.class
 com/example/springapp/service/hotel/impl/HotelServiceImpl.class
-com/example/springapp/model/ContactDetails.class
 com/example/springapp/model/auth/AuthCustomer.class
+com/example/springapp/model/ContactDetails.class
 com/example/springapp/SpringappApplication.class
 com/example/springapp/controller/HotelController.class
 com/example/springapp/repository/booking/BookingRepository.class
@@ -33,8 +33,6 @@ com/example/springapp/service/auth/CustomerService.class
 com/example/springapp/service/user/impl/UserServiceImpl.class
 com/example/springapp/model/car/CarFind.class
 com/example/springapp/model/booking/Booking.class
-com/example/springapp/model/booking/Booking.class
-com/example/springapp/model/car/CarFind.class
 com/example/springapp/controller/CarController.class
 com/example/springapp/model/user/User.class
 com/example/springapp/dto/auth/UserChangeRequest.class

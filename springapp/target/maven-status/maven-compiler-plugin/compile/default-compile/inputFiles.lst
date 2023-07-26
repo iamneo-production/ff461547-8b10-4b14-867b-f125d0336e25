@@ -1,3 +1,4 @@
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/AuthController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/SpringappApplication.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/flight/PassengerRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/HotelController.java
@@ -11,12 +12,14 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/flight/SearchRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/flight/Search.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/flight/ContactDetails.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/auth/UserResponse.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/booking/Booking.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/travelagent/TravelAgent.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/user/UserService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/TravelAgentController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/car/CarFindService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/hotel/HotelRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/auth/AuthCustomer.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/flight/FlightService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/user/User.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/hotel/impl/HotelServiceImpl.java
@@ -39,12 +42,16 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/review/ReviewDto.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/flight/ContactRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/review/ReviewService.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/auth/UserChangeRequest.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/customer/CustomerRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/hotel/bookhotel/RoomDto.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/booking/BookingRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/auth/CustomerService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/car/CarBookingForm.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/review/ReviewRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/CarController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/hotel/BookedHotelRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/car/CarFindRepo.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/error/ErrorJsonDto.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/auth/AuthRepository.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/auth/LoginRequest.java
