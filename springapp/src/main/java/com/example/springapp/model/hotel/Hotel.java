@@ -44,7 +44,7 @@ public class Hotel {
     @Column(name = "price_per_day")
     private int pricePerDay;
 
-    private float rating=0.0f;
+    private float rating = 0.0f;
 
     @Column(name = "num_rating")
     private int numOfRating;
@@ -64,16 +64,21 @@ public class Hotel {
     @JsonIgnore
     private List<BookedHotel> bookedHotel;
 
-    @OneToMany(mappedBy = "hotel" , cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Review> reviews;
+
+    private String firstImage;
+
+    private String secondImage;
 
     public Hotel() {
         super();
     }
 
     public Hotel(String hotelName, String country, String city, int maxRooms, int availableRooms, int pricePerDay,
-            float rating, int numOfRating) {
+            float rating, int numOfRating, String firstImage, String secondImage) {
+        super();
         this.hotelName = hotelName;
         this.country = country;
         this.city = city;
@@ -82,6 +87,8 @@ public class Hotel {
         this.pricePerDay = pricePerDay;
         this.rating = rating;
         this.numOfRating = numOfRating;
+        this.firstImage = firstImage;
+        this.secondImage = secondImage;
     }
 
     public long getHotelId() {
@@ -135,7 +142,7 @@ public class Hotel {
     public void setNumOfRating(int numOfRating) {
         this.numOfRating = numOfRating;
     }
-    
+
     public List<Room> getBookedRoomList() {
         return bookedRoomList;
     }
@@ -167,7 +174,7 @@ public class Hotel {
     public void setCity(String city) {
         this.city = city;
     }
-    
+
     public List<Review> getReviews() {
         return reviews;
     }
@@ -184,4 +191,19 @@ public class Hotel {
         this.bookedHotel = bookedHotel;
     }
 
+    public String getFirstImage() {
+        return firstImage;
+    }
+
+    public void setFirstImage(String firstImage) {
+        this.firstImage = firstImage;
+    }
+
+    public String getSecondImage() {
+        return secondImage;
+    }
+
+    public void setSecondImage(String secondImage) {
+        this.secondImage = secondImage;
+    }
 }
