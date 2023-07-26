@@ -11,8 +11,6 @@ import { toast } from 'react-toastify';
 import { initialState } from '../HotelContext';
 import { Hotel } from '../HotelConstant';
 import ErrorPage from '../../../containers/ErrorPage'
-import hotel1 from '../../../resources/img/hotel/hotel1.jpg';
-import hotel3 from '../../../resources/img/hotel/hotel3.jpg';
 
 function SelectedHotel() {
   const props = useLocation().state;
@@ -275,8 +273,8 @@ function SelectedHotel() {
           </div>
           <div className='flex justify-between mt-4 mx-8'>
             <div className='flex gap-3 '>
-              <img src={hotel1} alt="Hotel" className="shadow rounded h-full max-w-lg aspect-[3/2]" />
-              <img src={hotel3} alt="Hotel" className="shadow rounded h-full max-w-lg aspect-[3/2]" />
+              <img src={hotel.firstImage} alt="Hotel" className="shadow rounded h-full max-w-lg aspect-[3/2]" />
+              <img src={hotel.secondImage} alt="Hotel" className="shadow rounded h-full max-w-lg aspect-[3/2]" />
             </div>
             <div className='flex flex-col gap-10'>
               <div className='p-2 h-fit bg-white shadow-sm shadow-sky-500 rounded border-sky-500 border-[1px]'>
