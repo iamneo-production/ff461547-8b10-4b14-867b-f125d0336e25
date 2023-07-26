@@ -3,11 +3,8 @@ import com.example.springapp.model.flight.Search;
 import com.example.springapp.model.ContactDetails;
 import com.example.springapp.model.PassengerDetails;
 import com.example.springapp.repository.flight.SearchRepository;
-<<<<<<< HEAD
-=======
 import com.example.springapp.repository.ContactRepository;
 import com.example.springapp.repository.PassengerRepository;
->>>>>>> 017bfca8596119a53f4e342f2c53530043c4e8af
 import com.example.springapp.service.flight.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

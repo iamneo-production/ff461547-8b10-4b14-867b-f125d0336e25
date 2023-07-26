@@ -24,19 +24,10 @@ com/example/springapp/service/flight/FlightService.class
 com/example/springapp/dto/hotel/HotelSearchRequestDto.class
 com/example/springapp/service/car/CarFindService.class
 com/example/springapp/model/travelagent/TravelAgent.class
-com/example/springapp/repository/user/UserRepository.class
-com/example/springapp/repository/car/CarFindRepo.class
-com/example/springapp/model/customer/Customer.class
-com/example/springapp/repository/customer/CustomerRepository.class
-com/example/springapp/repository/travelagent/TravelAgentRepository.class
-com/example/springapp/service/user/impl/UserServiceImpl.class
-com/example/springapp/dto/error/ErrorJsonDto.class
 com/example/springapp/repository/car/CarFindRepo.class
 com/example/springapp/model/customer/Customer.class
 com/example/springapp/dto/hotel/bookhotel/RoomDto.class
 com/example/springapp/service/user/impl/UserServiceImpl.class
-com/example/springapp/model/booking/Booking.class
-com/example/springapp/model/car/CarFind.class
 com/example/springapp/model/car/CarFind.class
 com/example/springapp/model/booking/Booking.class
 com/example/springapp/controller/CarController.class
@@ -51,17 +42,9 @@ com/example/springapp/service/user/UserService.class
 com/example/springapp/model/PassengerDetails.class
 com/example/springapp/repository/car/CarBookingFormRepo.class
 com/example/springapp/model/car/CarBookingForm.class
-com/example/springapp/dto/hotel/HotelSearchResponseDto.class
-<<<<<<< HEAD
-com/example/springapp/model/flight/Search.class
-com/example/springapp/model/review/Review.class
-com/example/springapp/repository/flight/SearchRepository.class
-com/example/springapp/service/car/CarBookingFormService.class
-com/example/springapp/service/flight/FlightService.class
-=======
 com/example/springapp/dto/hotel/bookhotel/HotelBookRequestDto.class
+com/example/springapp/dto/hotel/HotelSearchResponseDto.class
 com/example/springapp/model/flight/Search.class
 com/example/springapp/repository/flight/SearchRepository.class
->>>>>>> 017bfca8596119a53f4e342f2c53530043c4e8af
 com/example/springapp/model/hotel/Hotel.class
 com/example/springapp/service/travelagent/impl/TravelAgentServiceImpl.class
