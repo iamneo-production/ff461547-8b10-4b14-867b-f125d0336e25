@@ -11,7 +11,7 @@ const CarListing = () => {
     useEffect(() => {
       // Fetch car data from the backend
       axios
-        .get('http://localhost:8080/findcar')
+        .get('/findcar')
         .then(response => {
           const allCars = response.data;
           const filteredData = allCars.filter(car => car.carid >= 1 && car.carid <= 6);
@@ -22,16 +22,6 @@ const CarListing = () => {
         });
     }, []);
     
-  
-   
-  
-    const getImageUrl = (carName) => {
-      const imageName = carName.toLowerCase().replace(/\s+/g, ''); // Convert carName to lowercase and remove spaces
-      const imageUrl = require(`../carAssests/img/carList_imgs/${imageName}.jpg`).default;
-      return imageUrl ? imageUrl : CarImage;
-    };
-
-
   return (
     
     <div className="p-4 col-span-2">
@@ -39,13 +29,11 @@ const CarListing = () => {
       {cars.map(car => (
         <Col lg="4" md="6" sm="12" className="mb-5" key={car.carid}>
           <div className="car__item car__img">
-            <img src={getImageUrl(car.carname)} alt={CarImage} className="w-100" />
-            
-
-            <div className="car__item-content mt-4">
+          <img src={require(`../carAssests/img/carList_imgs/${car.carname.toLowerCase().replace(/\s+/g, '')}.jpg`)} alt={CarImage} className="w-100" />
+              <div className="car__item-content mt-4">
               <h4 className="section__title text-center">{car.carname}</h4>
               <h6 className="rent__price text-center mt-">
-                Rs: {car.price}.00 <span>/ Day</span>
+                Rs: {car.price}.00 <span>/ Hour</span>
               </h6>
 
               <div className="car__item-info d-flex align-items-center justify-content-between mt-3 mb-4">
@@ -70,9 +58,10 @@ const CarListing = () => {
                 
               </div>
               <button className="w-100 car__item-btn car__btn-rent">
-                      <Link to={`/cars/booking/${car.carid}`}>Book Now</Link>
+                      <Link to={`/rental-cars/booking/${car.carid}`}>Book Now</Link>
               </button>
             </div>
+
 
         
           </div>
