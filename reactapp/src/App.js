@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import './style/hotel.css';
 import './style/navigationbar.css';
@@ -20,7 +22,7 @@ import { HeaderComp } from './components/flight/FlightHomePage/HeaderComp';
 import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight';
 import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
 import ErrorPage from './containers/ErrorPage';
-
+import ConfirmBooking from './components/hotel/bookhotel/ConfirmBooking';
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
       <header className='header'>
         <NavigationBar />
       </header>
+      <ToastContainer />
 
       <Routes>
         {/* main navigation  */}
@@ -40,10 +43,11 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path='/ErrorPage' element={<ErrorPage/>} />
-        <Route path='*' element={<PageNotFound />} />
+
 
         {/* Hotel routes */}
         <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
+        <Route path='/book/hotel/confirm/:bookingId' element={<ConfirmBooking />} />
 
         {/* car rental routes */}
 
@@ -57,8 +61,8 @@ function App() {
         <Route path="SearchFlight" element={<SearchFlight />} />
         <Route path="PassengerDetails" element={<PassengerDetails />} />
 
-       
 
+        <Route path='*' element={<PageNotFound />} />
 
       </Routes>
     </>

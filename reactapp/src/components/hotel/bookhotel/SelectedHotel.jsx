@@ -6,9 +6,11 @@ import { Card, Form } from 'react-bootstrap';
 import DatePicker from 'react-datetime';
 import moment from 'moment';
 import axios from 'axios';
+import swal from 'sweetalert';
+import { toast } from 'react-toastify';
 import { initialState } from '../HotelContext';
-import { Hotel } from '../../../Constants';
-import ErrorPage from '../../../containers/ErrorPage';
+import { Hotel } from '../HotelConstant';
+import ErrorPage from '../../../containers/ErrorPage'
 import hotel1 from '../../../resources/img/hotel/hotel1.jpg';
 import hotel3 from '../../../resources/img/hotel/hotel3.jpg';
 
@@ -80,6 +82,9 @@ function SelectedHotel() {
       let { checkInDate, checkOutDate } = props;
       setCriteria({ ...props, checkInDate: moment(checkInDate), checkOutDate: moment(checkOutDate) })
     }
+    return(()=>{
+      document.body.style = "background-color: ";
+    })
   }, []);
 
   //Setting Up constats Values
@@ -173,7 +178,7 @@ function SelectedHotel() {
       }
     }
     else {
-      alert("Maximum number of guests allowed in this room reached");
+      swal("Oops!", "Maximum number of guests allowed in this room reached", "warning");
     }
   }
 
@@ -214,23 +219,29 @@ function SelectedHotel() {
     setTravelAgent(e.target.value);
   }
 
-
+  //User Login is required
   async function handleSubmit(e) {
     e.preventDefault();
     const bookinngDetails = prepareJson();
     console.log(bookinngDetails);
-    let submition = false;
     await (axios.post(`/hotels/book-hotel?hotelId=${hotel.hotelId}&customerId=${customerId.current}`, bookinngDetails))
       .then((response) => {
-        console.log(response.data);
-        submition = true;
+        const data=response.data;
+        toast.info('Booking Process initiated', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        navigate(`/book/hotel/confirm/${data.bookingId}`, { state: { valid: true } })
       }).catch((error) => {
         console.log(error);
         setError(error.response.data);
       })
-    if (submition) {
-      alert("Booking process initiated")
-    }
   }
 
   const prepareJson = () => {
