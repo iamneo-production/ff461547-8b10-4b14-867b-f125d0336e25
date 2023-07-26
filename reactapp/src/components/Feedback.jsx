@@ -1,89 +1,108 @@
-import React, { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { useEffect, useState } from "react";
+import { Button, Form } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
-import "./Feedback.css";
+import swal from "sweetalert";
+import axios from "axios";
+import { toast } from "react-toastify";
 
-const Feedback = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [user, setUser] = useState({
-    message: "",
-  });
-  const [rating, setRating] = useState(0);
+function Feedback() {
+    const { id, type } = useParams()
+    const [rating, setRating] = useState('')
+    const [comment, setComment] = useState('')
+    const navigate = useNavigate();
 
-  const { message } = user;
+    //static custumerid till custemer is not added
+    const customerId = 1;
 
-  const handleChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
+    useEffect(() => {
+        document.title = 'Feedback Page | Travel.com'
+        document.body.style = "background-color: rgb(236 253 245 / 41%)";
 
-  const handleRatingChange = (ratingValue) => {
-    setRating(ratingValue);
-  };
+        return (() => {
+            document.title = 'Travel.com'
+            document.body.style = "background-color: #fff ";
+        })
+    }, [])
 
-  const feedbackData = {
-    ...user,
-    rating,
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (rating <= 5) {
+            const data = {
+                type: "hotel",
+                comment: comment,
+                rating: rating,
+                customerId: customerId,
+                foreignKeyId: id
 
-  const handleSubmit =  (event) => {
-    event.preventDefault();
-    setSubmitted(true);
+            }
 
-     {
-      // Check if a rating has been selected
-      if (rating === 0) {
-        toast.error("Please select a rating.");
-        setSubmitted(false); // Reset submitted state to allow resubmission
-        return;
-      }
-      
+            axios.post('/review', data)
+                .then(res => {
+                    console.log(res.data)
+                    toast.success('Review Added Successfully', {
+                        position: "top-right",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
+
+                    navigate(-1);
+                })
+                .catch(e => {
+                    console.log(e.res.data);
+                    swal("Failed!!", "Failed To Add Review, Please Try Again", "error")
+                })
+        } else {
+            swal("Opps!!", "Rating Should from 0.0 to 5.0", "warning")
+            return;
+        }
+
     }
-  };
 
-  const renderDropdown = () => {
     return (
-      <select value={rating} onChange={(e) => handleRatingChange(Number(e.target.value))} required>
-        <option value={0}>Select rating...</option>
-        <option value={1}>1 star</option>
-        <option value={2}>2 stars</option>
-        <option value={3}>3 stars</option>
-        <option value={4}>4 stars</option>
-        <option value={5}>5 stars</option>
-      </select>
-    );
-  };
+        <>
+            <div className='flex justify-center'>
+                <div className='px-3 py-2 mt-4 rounded-xl shadow bg-white'>
 
-  return (
-    <div className="feedback-container">
-      {submitted ? (
-        <div>
-          <h2>Thank you for contacting us!</h2>
-          <p>We will get back to you as soon as possible.</p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <h2>Rating & Review</h2>
-          <textarea className="feedback-item1"
-            rows="5"
-            cols="50"
-            name="message"
-            value={message}
-            onChange={handleChange}
-            placeholder="Enter your message"
-          />
-          <br />
+                    <Form noValidate onSubmit={handleSubmit} className='flex flex-col'>
+                        <h5 className=''> Reviews and Rating</h5>
+                        <Form.Group className="mb-3" >
+                            <Form.Label>Rate {type}</Form.Label>
+                            <Form.Control
+                                className='capitalize'
+                                type="decimal"
+                                name="rating"
+                                placeholder="0/5.0"
+                                onChange={(e) => { setRating(e.target.value) }}
+                                value={rating}
+                            />
+                            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                        </Form.Group>
 
-          <label>
-            Rating<span className="required-star">*</span>: {renderDropdown()}
-          </label>
+                        <Form.Group className="mb-3 w-96 h-60" >
+                            <Form.Label>Comment</Form.Label>
+                            <Form.Control as="textarea" rows={3}
+                                className="h-4/5"
+                                name="comment"
+                                value={comment}
+                                placeholder="Share your experience with us"
+                                onChange={(e) => { setComment(e.target.value) }}
+                            />
+                        </Form.Group>
 
-          <br />
-          <button  className="feedback-item2" type="submit">Submit</button>
-        </form>
-      )}
-      <ToastContainer />
-    </div>
-  );
+                        <div className='w-full flex justify-between items-center'>
+                            <Button variant="success" type="submit">Submit</Button>
+                        </div>
+                    </Form>
+                </div>
+            </div>
+        </>
+    )
 };
+
 export default Feedback;
