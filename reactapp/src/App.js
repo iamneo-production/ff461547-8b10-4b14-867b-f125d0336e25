@@ -46,7 +46,7 @@ function App() {
         <Route path='/ErrorPage' element={<ErrorPage/>} />
         <Route path='*' element={<PageNotFound />} />
         <Route path="/admin" element={<AdminHome/>}/>
-        <Route path='/flightAdmin' elemenr={<FlightAdmin/>}/>
+        <Route path='/flightAdmin' element={<FlightAdmin/>}/>
 
         {/* Hotel routes */}
         <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
