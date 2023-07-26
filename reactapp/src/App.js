@@ -1,34 +1,74 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import './style/navigationbar.css'
-import './style/hotel.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavigationBar from './components/NavigationBar'
+import './style/hotel.css';
+import './style/navigationbar.css';
+import NavigationBar from './components/navigationbar/NavigationBar';
+import SelectedHotel from './components/hotel/bookhotel/SelectedHotel';
 import CarRentals from './containers/CarRentals';
+import CarFindForm from './components/car_rental/carPages/CarSearchPage';
+import CarBookingForm from './components/car_rental/carPages/CarBookingPage';
+import CarManage from './components/car_rental/carPages/CarManagePage';
 import Flights from './containers/Flights';
 import Home from './containers/Home';
 import Hotels from './containers/Hotels';
+import PageNotFound from './containers/PageNotFound';
 import Register from './containers/Register';
 import SignIn from './containers/SignIn';
+import UserProfile from './containers/UserProfile';
+import { HeaderComp } from './components/flight/FlightHomePage/HeaderComp';
+import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight';
+import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
+import {PreviewPage} from './components/flight/FlightResultPage/PreviewPage';
+import ErrorPage from './containers/ErrorPage';
+import AdminHome from './components/Admin/AdminHome';
+import CarAdmin from './components/Admin/CarAdmin'
+import { FlightAdmin } from './components/Admin/FlightAdmin';
+import { BoardingPass } from './components/flight/FlightResultPage/BoardingPass';
+
 
 function App() {
   return (
     <>
-    
-      <Router>
-        <header className='header'>
-          <NavigationBar />
+      <header className='header'>
+        <NavigationBar />
+      </header>
 
-        </header>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/hotels" element={<Hotels />} />
-          <Route path="/flight" element={<Flights />} />
-          <Route path="/car-rentals" element={<CarRentals />} />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Router>
+      <Routes>
+        {/* main navigation  */}
+
+        <Route path="/" element={<Home />} />
+        <Route path="/search-hotel" element={<Hotels />} />
+        <Route path="flight" element={<Flights />} />
+        <Route path="car-rentals" element={<CarRentals />} />
+        <Route path="sign-in" element={<SignIn />} />
+        <Route path="register" element={<Register />} />
+        <Route path="/user-profile" element={<UserProfile />} />
+        <Route path='/ErrorPage' element={<ErrorPage/>} />
+        <Route path='*' element={<PageNotFound />} />
+        <Route path="/admin" element={<AdminHome/>}/>
+        <Route path='/flightAdmin' element={<FlightAdmin/>}/>
+
+        {/* Hotel routes */}
+        <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
+
+        {/* car rental routes */}
+
+        <Route path="/rental-cars/search" element={<CarFindForm />} />
+        <Route path="/rental-cars/booking/:id" element={<CarBookingForm />} />
+        <Route path="/rental-cars/manage" element={<CarManage />} />
+        <Route path="/admin/car" element={<CarAdmin/>}/>
+        {/*flight booking routes */}
+
+        <Route path="/" element={<HeaderComp />} />
+        <Route path="SearchFlight" element={<SearchFlight />} />
+        <Route path="PassengerDetails" element={<PassengerDetails />} />
+        <Route path="PreviewPage" element={<PreviewPage />} />
+        <Route path='BoardingPass' element={<BoardingPass/>}/>
+       
+
+
+      </Routes>
     </>
   );
 }

@@ -6,7 +6,7 @@
     margin-right: 2rem;
 }
 
-.nav-link {
+a.nav-icon.nav-link, a.nav-link {
     color: azure;
 }
 
