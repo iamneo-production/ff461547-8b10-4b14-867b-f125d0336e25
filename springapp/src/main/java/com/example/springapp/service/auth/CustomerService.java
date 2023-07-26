@@ -1,6 +1,7 @@
 package com.example.springapp.service.auth;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -54,6 +55,9 @@ public class CustomerService {
             userResponses.add(userResponse);
         }
         return userResponses;
+    }
+    public Optional<AuthCustomer> getUserById(Long id) {
+        return authRepository.findById(id);
     }
 
     public ResponseEntity<?> updateUser(AuthCustomer customer) {

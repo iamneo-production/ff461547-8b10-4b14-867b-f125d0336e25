@@ -31,8 +31,8 @@ com/example/springapp/model/customer/Customer.class
 com/example/springapp/dto/hotel/bookhotel/RoomDto.class
 com/example/springapp/service/auth/CustomerService.class
 com/example/springapp/service/user/impl/UserServiceImpl.class
-com/example/springapp/model/car/CarFind.class
 com/example/springapp/model/booking/Booking.class
+com/example/springapp/model/car/CarFind.class
 com/example/springapp/controller/CarController.class
 com/example/springapp/model/user/User.class
 com/example/springapp/dto/auth/UserChangeRequest.class
