@@ -46,17 +46,18 @@ public class Customer {
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<Review> reviews= new ArrayList<Review>();
+    private List<Review> reviews = new ArrayList<Review>();
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<Booking> bookings =new ArrayList<>();
+    private List<Booking> bookings = new ArrayList<>();
 
-    public Customer(){
+    public Customer() {
         super();
     }
 
-    public Customer(User user, String firstName, String lastName, String email, String phone, String address) {
+    public Customer(User user, String firstName, String lastName, String email, String phone, String address,
+            List<Review> reviews, List<Booking> bookings) {
         super();
         this.user = user;
         this.firstName = firstName;
@@ -64,6 +65,8 @@ public class Customer {
         this.email = email;
         this.phone = phone;
         this.address = address;
+        this.reviews = reviews;
+        this.bookings = bookings;
     }
 
     public Long getCustomerId() {
@@ -125,5 +128,12 @@ public class Customer {
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
     }
-    
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }

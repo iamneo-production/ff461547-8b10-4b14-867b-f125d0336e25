@@ -2,7 +2,6 @@ package com.example.springapp.service.hotel.impl;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,8 +10,8 @@ import org.springframework.stereotype.Service;
 
 import com.example.springapp.dto.hotel.HotelSearchRequestDto;
 import com.example.springapp.dto.hotel.HotelSearchResponseDto;
-import com.example.springapp.dto.hotel.bookhotel.HotelBookedDto;
 import com.example.springapp.dto.hotel.bookhotel.HotelBookRequestDto;
+import com.example.springapp.dto.hotel.bookhotel.HotelBookedDto;
 import com.example.springapp.dto.hotel.bookhotel.RoomDto;
 import com.example.springapp.model.booking.Booking;
 import com.example.springapp.model.customer.Customer;
@@ -23,7 +22,6 @@ import com.example.springapp.model.travelagent.TravelAgent;
 import com.example.springapp.repository.customer.CustomerRepository;
 import com.example.springapp.repository.hotel.BookedHotelRepository;
 import com.example.springapp.repository.hotel.HotelRepository;
-import com.example.springapp.repository.hotel.RoomRepository;
 import com.example.springapp.repository.travelagent.TravelAgentRepository;
 import com.example.springapp.service.hotel.HotelService;
 
@@ -104,14 +102,14 @@ public class HotelServiceImpl implements HotelService {
                         int roomFound = 0;
                         for (int index = 0; index < vaccantRoomList.size(); index++) {
                             Room room = vaccantRoomList.get(index);
-                            
+
                             for (int i = 0; i < roomCapacity.size(); i++) {
-                                
+
                                 if (roomCapacity.get(i) <= room.getRoomCapacity()) {
                                     roomFound++;
 
                                     break;
-                                    
+
                                 }
                             }
                             if (roomFound == roomCapacity.size()) {
@@ -164,8 +162,12 @@ public class HotelServiceImpl implements HotelService {
         try {
             Customer customer = customerRepository.findById(customerId).get();
             Hotel hotel = hotelRepository.findById(hotelId).get();
-            TravelAgent travelAgent = travelAgentRepository.findById(hotelBookRequestDto.getTravelAgent()).get();
-
+            TravelAgent travelAgent = null;
+            
+            if (hotelBookRequestDto.getTravelAgent() > 0
+                    && travelAgentRepository.existsById(hotelBookRequestDto.getTravelAgent())) {
+                travelAgent = travelAgentRepository.findById(hotelBookRequestDto.getTravelAgent()).get();
+            }
             List<Room> selectedRooms = roomSelector(roomSizes, new ArrayList<>(hotel.getVaccantRoomList()));
 
             Booking booking = new Booking();
@@ -175,6 +177,7 @@ public class HotelServiceImpl implements HotelService {
             booking.setBookingDateTime(LocalDateTime.now());
             booking.setVerficationDocType(hotelBookRequestDto.getIdType());
             booking.setVerificationNumber(hotelBookRequestDto.getIdNumber());
+            booking.setGuestName(hotelBookRequestDto.getName());
 
             BookedHotel bookedHotel = new BookedHotel();
             bookedHotel.setHotel(hotel);
@@ -230,4 +233,5 @@ public class HotelServiceImpl implements HotelService {
         }
         return selectedRooms;
     }
+
 }

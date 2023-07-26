@@ -2,13 +2,15 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { faCaretDown, faLocationDot, faStarHalfStroke, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Card, Form } from 'react-bootstrap';
+import { Card, Form, Button } from 'react-bootstrap';
 import DatePicker from 'react-datetime';
 import moment from 'moment';
 import axios from 'axios';
+import swal from 'sweetalert';
+import { toast } from 'react-toastify';
 import { initialState } from '../HotelContext';
-import { Hotel } from '../../../Constants';
-import ErrorPage from '../../../containers/ErrorPage';
+import { Hotel } from '../HotelConstant';
+import ErrorPage from '../../../containers/ErrorPage'
 import hotel1 from '../../../resources/img/hotel/hotel1.jpg';
 import hotel3 from '../../../resources/img/hotel/hotel3.jpg';
 
@@ -46,8 +48,8 @@ function SelectedHotel() {
       .then(response => {
         reviews.current = response.data;
       })
-      .catch(error => {
-        setError(error.response.data);
+      .catch(e => {
+        setError(e.response.data);
       });
   }
 
@@ -56,8 +58,8 @@ function SelectedHotel() {
       .then(response => {
         setHotel(response.data);
       })
-      .catch(error => {
-        setError(error.response.data);
+      .catch(e => {
+        setError(e.response.data);
       });
   }
 
@@ -66,9 +68,9 @@ function SelectedHotel() {
       .then(response => {
         setTravelAgents(response.data);
       })
-      .catch(error => {
-        console.log(error)
-        setError(error.response.data);
+      .catch(e => {
+        console.log(e)
+        setError(e.response.data);
       });
   }
 
@@ -80,6 +82,9 @@ function SelectedHotel() {
       let { checkInDate, checkOutDate } = props;
       setCriteria({ ...props, checkInDate: moment(checkInDate), checkOutDate: moment(checkOutDate) })
     }
+    return (() => {
+      document.body.style = "background-color: #fff ";
+    })
   }, []);
 
   //Setting Up constats Values
@@ -173,7 +178,7 @@ function SelectedHotel() {
       }
     }
     else {
-      alert("Maximum number of guests allowed in this room reached");
+      swal("Oops!", "Maximum number of guests allowed in this room reached", "warning");
     }
   }
 
@@ -214,23 +219,29 @@ function SelectedHotel() {
     setTravelAgent(e.target.value);
   }
 
-
+  //User Login is required
   async function handleSubmit(e) {
     e.preventDefault();
     const bookinngDetails = prepareJson();
     console.log(bookinngDetails);
-    let submition = false;
     await (axios.post(`/hotels/book-hotel?hotelId=${hotel.hotelId}&customerId=${customerId.current}`, bookinngDetails))
       .then((response) => {
-        console.log(response.data);
-        submition = true;
+        const data = response.data;
+        toast.info('Booking Process initiated', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        navigate(`/book/hotel/confirm/${data.bookingId}`, { state: { valid: true } })
       }).catch((error) => {
         console.log(error);
         setError(error.response.data);
       })
-    if (submition) {
-      alert("Booking process initiated")
-    }
   }
 
   const prepareJson = () => {
@@ -258,7 +269,7 @@ function SelectedHotel() {
               </div>
             </div>
             <div className='bg-emerald-700 p-1 text-white rounded shadow-sm text-center h-16 min-w-min'>
-              <h5 className='text-lg m-0'>{rating}/5</h5>
+              <h5 className='text-lg m-0'>{rating >= 0 ? rating : 0}/5</h5>
               <p className='text-xs m-0'>{hotel.numOfRating} Ratings</p>
             </div>
           </div>
@@ -321,6 +332,7 @@ function SelectedHotel() {
                   ))
                 }
               </div>
+
             </div>
             <Form onSubmit={handleSubmit}>
               <div className='flex gap-10'>
@@ -437,13 +449,22 @@ function SelectedHotel() {
                   </Form.Group>
                 </div>
               </div>
-
               <div className='absolute my-3 right-8'>
                 <button type='submit' className='mb-3 bg-indigo-600 text-white text-base font-medium 
                 border-2 rounded p-2'>Proceed To Book</button>
               </div>
-
             </Form>
+
+          </div>
+          <div className='mx-8 absolute top-[66.66rem]'>
+            <Button variant="success"
+              className=' text-white text-base font-medium border-2 rounded p-2'
+              type="btn"
+              onClick={()=>{
+                navigate(`/hotel/${hotel.hotelName}/review/${hotelId}`);
+              }}
+            >
+              Rate and Review</Button>
           </div>
         </>
       }

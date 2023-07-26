@@ -25,8 +25,8 @@ public class Booking {
     @Column(name = "booking_id")
     private long bookingId;
 
-    @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
-    private BookedHotel bookedHotels;
+    @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL, orphanRemoval = true)
+    private BookedHotel bookedHotel;
 
     @Column(name = "booking_date_time")
     private LocalDateTime bookingDateTime;
@@ -43,33 +43,47 @@ public class Booking {
     @JsonBackReference
     private TravelAgent travelAgent;
 
+    private String guestName;
+
     private String verficationDocType;
 
     private String verificationNumber;
-    
+
     private String bookingType;
 
-    public Booking(){
+    public Booking() {
         super();
     }
 
-    public Booking(LocalDateTime bookingDateTime, String bookingStatus, Customer customer, TravelAgent travelAgent,
-            String verficationDocType, String verificationNumber, String bookingType) {
+    public Booking(BookedHotel bookedHotel, LocalDateTime bookingDateTime, String bookingStatus, Customer customer,
+            TravelAgent travelAgent, String guestName, String verficationDocType, String verificationNumber,
+            String bookingType) {
+                super();
+        this.bookedHotel = bookedHotel;
         this.bookingDateTime = bookingDateTime;
         this.bookingStatus = bookingStatus;
         this.customer = customer;
         this.travelAgent = travelAgent;
+        this.guestName = guestName;
         this.verficationDocType = verficationDocType;
         this.verificationNumber = verificationNumber;
         this.bookingType = bookingType;
     }
 
-    public BookedHotel getBookedHotels() {
-        return bookedHotels;
+    public BookedHotel getBookedHotel() {
+        return bookedHotel;
     }
 
-    public void setBookedHotels(BookedHotel bookedHotels) {
-        this.bookedHotels = bookedHotels;
+    public String getGuestName() {
+        return guestName;
+    }
+
+    public void setGuestName(String guestName) {
+        this.guestName = guestName;
+    }
+
+    public void setBookedHotel(BookedHotel bookedHotels) {
+        this.bookedHotel = bookedHotels;
     }
 
     public LocalDateTime getBookingDateTime() {
@@ -130,5 +144,5 @@ public class Booking {
 
     public long getBookingId() {
         return bookingId;
-    }           
+    }
 }

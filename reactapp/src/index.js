@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 import { BrowserRouter } from 'react-router-dom';
-import { baseUrl } from './Constants';
+import { baseUrl } from './Config';
 import { AuthProvider } from './components/Auth/AuthContext';
 
 import "remixicon/fonts/remixicon.css";
