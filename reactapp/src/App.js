@@ -25,7 +25,7 @@ import AdminHome from './components/Admin/AdminHome';
 import CarAdmin from './components/Admin/CarAdmin'
 import { FlightAdmin } from './components/Admin/FlightAdmin';
 import { BoardingPass } from './components/flight/FlightResultPage/BoardingPass';
-
+import CarFeedbackForm from './components/car_rental/carPages/CarFeedbackPage';
 
 function App() {
   return (
@@ -56,7 +56,8 @@ function App() {
 
         <Route path="/rental-cars/search" element={<CarFindForm />} />
         <Route path="/rental-cars/booking/:id" element={<CarBookingForm />} />
-        <Route path="/rental-cars/manage" element={<CarManage />} />
+        <Route path="/rental-cars/manage" element={<CarManage />} />        
+        <Route path="/rental-cars/feedback" element={<CarFeedbackForm />} />
         <Route path="/admin/car" element={<CarAdmin/>}/>
         {/*flight booking routes */}
 
