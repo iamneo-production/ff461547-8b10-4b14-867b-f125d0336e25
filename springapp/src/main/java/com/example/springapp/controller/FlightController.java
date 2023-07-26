@@ -5,6 +5,7 @@ import com.example.springapp.model.PassengerDetails;
 import com.example.springapp.repository.flight.SearchRepository;
 import com.example.springapp.repository.ContactRepository;
 import com.example.springapp.repository.PassengerRepository;
+import com.example.springapp.service.flight.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,6 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api")
 @CrossOrigin
 public class FlightController {
 
@@ -27,11 +27,15 @@ public class FlightController {
 
     @Autowired
     PassengerRepository passengerRepository;
+    @Autowired
+	private FlightService flightService;
 
     @GetMapping("/flights/search")
-    public List<Search>getAllFlights(){
-        return searchRepository.findAll();
-    }
+		public ResponseEntity<?>getFlightsAll(){
+
+			return ResponseEntity.status(HttpStatus.OK).body(flightService.getAllFlights());
+		}
+
     @PostMapping("/flights")
     public String createNewSearch(@RequestBody Search search) {
         searchRepository.save(search);
@@ -63,6 +67,20 @@ public class FlightController {
             return ResponseEntity.ok("Data created successfully");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error storing data");
+        }
+    }
+
+    @DeleteMapping("/flights/{flightId}")
+    public ResponseEntity<String> deleteFlight(@PathVariable Long flightId) {
+        try {
+            Search search = searchRepository.findById(flightId).orElse(null);
+            if (search == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Flight not found");
+            }
+            searchRepository.delete(search);
+            return ResponseEntity.ok("Flight deleted successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error deleting flight");
         }
     }
 }

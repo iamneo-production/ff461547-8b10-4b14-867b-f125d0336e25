@@ -21,8 +21,14 @@ import UserProfile from './containers/UserProfile';
 import { HeaderComp } from './components/flight/FlightHomePage/HeaderComp';
 import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight';
 import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
+import {PreviewPage} from './components/flight/FlightResultPage/PreviewPage';
 import ErrorPage from './containers/ErrorPage';
 import ConfirmBooking from './components/hotel/bookhotel/ConfirmBooking';
+import AdminHome from './components/Admin/AdminHome';
+import CarAdmin from './components/Admin/CarAdmin'
+import { FlightAdmin } from './components/Admin/FlightAdmin';
+import { BoardingPass } from './components/flight/FlightResultPage/BoardingPass';
+
 
 function App() {
   return (
@@ -43,7 +49,8 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path='/ErrorPage' element={<ErrorPage/>} />
-
+        <Route path="/admin" element={<AdminHome/>}/>
+        <Route path='/flightAdmin' element={<FlightAdmin/>}/>
 
         {/* Hotel routes */}
         <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
@@ -54,13 +61,15 @@ function App() {
         <Route path="/rental-cars/search" element={<CarFindForm />} />
         <Route path="/rental-cars/booking/:id" element={<CarBookingForm />} />
         <Route path="/rental-cars/manage" element={<CarManage />} />
-
+        <Route path="/admin/car" element={<CarAdmin/>}/>
         {/*flight booking routes */}
 
         <Route path="/" element={<HeaderComp />} />
         <Route path="SearchFlight" element={<SearchFlight />} />
         <Route path="PassengerDetails" element={<PassengerDetails />} />
-
+        <Route path="PreviewPage" element={<PreviewPage />} />
+        <Route path='BoardingPass' element={<BoardingPass/>}/>
+       
 
         <Route path='*' element={<PageNotFound />} />
 

@@ -59,7 +59,7 @@ export default function PassengerContacts({ handleNext} ) {
   const storePassengerDetails = () => {
     passengers.forEach((passenger) => {
       axios
-        .post(`/api/details`, passenger)
+        .post(`/details`, passenger)
         .then((response) => {
           console.log('Passenger details stored successfully:', response.data);
         })
@@ -120,7 +120,7 @@ export default function PassengerContacts({ handleNext} ) {
     };
 
     axios
-      .post(`/api/contacts`, newContact)
+      .post(`/contacts`, newContact)
       .then((response) => {
         console.log('Contact details stored successfully:', response.data);
         setSaveButtonClicked(true); 
@@ -159,11 +159,11 @@ export default function PassengerContacts({ handleNext} ) {
       <div className='flight_container1'>
         <div className='flight_container'>
         <div className='flight_form-group'>
-          <div className='uppercase font-bold text-5sm text-center'>
-            <h1>Who's Flying?</h1>
+          <div className='uppercase font-bold text-sm text-center'>
+            <h4>Who's Flying?</h4>
           </div>
-          <div className='font-semibold'>
-            <h1>Contact Details</h1>
+          <div className='font-semibold text-lg'>
+            <h5>Contact Details</h5>
           </div>
           <div className='flight_form-group'>
             <label>Name:</label>
@@ -214,20 +214,20 @@ export default function PassengerContacts({ handleNext} ) {
             </select>
         </div>
         <button onClick={handleSaveContact}>
-          <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg'>
-            <p className='text-white'>SAVE</p>
+          <div className='py-2 px-2 bg-rose-400 text-xl m-3 rounded-lg text-white '>
+            SAVE
           </div>
         </button>
         {saveButtonClicked && (
-           <div className="font-semibold ">
+           <div style={{ fontSize: '1px' }} className="font-semibold text-xxs ">
              <h2 className="text-red-600">Submitted Successfully!</h2>
            </div>
         )}
       </div>  
       <br />
     <div className='flight_container'>
-        <div className='font-semibold'>
-          <h2>Passenger Details</h2>
+        <div className='font-semibold text-lg'>
+          <h5>Passenger Details</h5>
         </div>
     
         {showPassengerList ? (
@@ -281,13 +281,13 @@ export default function PassengerContacts({ handleNext} ) {
                 </div>
                 <div className='flight_form-group'>
                   <button type='submit'>
-                    <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg'>
-                      <p className='text-white'>View Details</p>
+                    <div className='py-2 px-2 bg-rose-400 text-xl m-3 rounded-lg text-white'>
+                      View Details
                     </div>
                   </button>
                   <button type='button' onClick={addPassenger}>
-                    <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg'>
-                      <p className='text-white'>Add Passenger</p>
+                    <div className='py-2 px-2 bg-rose-400 text-xl m-3 rounded-lg text-white'>
+                      Add Passenger
                     </div>
                   </button>
                 </div>
@@ -295,7 +295,7 @@ export default function PassengerContacts({ handleNext} ) {
             </form>
             {passengers.length > 0 && (
               <div className='flight_passenger-details'>
-                <h2>Passenger List</h2>
+                <h5>Passenger List</h5>
                 {passengers.map((passenger, index) => (
                   <div className="border border-black p-4 rounded-md mb-4" key={index}>
                     <p>First Name: {passenger.first_name}</p>
