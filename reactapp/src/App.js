@@ -28,7 +28,7 @@ import AdminHome from './components/Admin/AdminHome';
 import CarAdmin from './components/Admin/CarAdmin'
 import { FlightAdmin } from './components/Admin/FlightAdmin';
 import { BoardingPass } from './components/flight/FlightResultPage/BoardingPass';
-
+import Feedback from './components/Feedback'
 
 function App() {
   return (
@@ -52,6 +52,9 @@ function App() {
         <Route path="/admin" element={<AdminHome/>}/>
         <Route path='/flightAdmin' element={<FlightAdmin/>}/>
 
+        {/* Review and Rating */}
+        <Route path='/:type/:brandName/review/:id' element={<Feedback/>} />
+
         {/* Hotel routes */}
         <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
         <Route path='/book/hotel/confirm/:bookingId' element={<ConfirmBooking />} />
@@ -62,6 +65,7 @@ function App() {
         <Route path="/rental-cars/booking/:id" element={<CarBookingForm />} />
         <Route path="/rental-cars/manage" element={<CarManage />} />
         <Route path="/admin/car" element={<CarAdmin/>}/>
+
         {/*flight booking routes */}
 
         <Route path="/" element={<HeaderComp />} />
