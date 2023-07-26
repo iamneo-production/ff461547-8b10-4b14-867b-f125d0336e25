@@ -69,5 +69,19 @@ public class FlightController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error storing data");
         }
     }
+
+    @DeleteMapping("/flights/{flightId}")
+    public ResponseEntity<String> deleteFlight(@PathVariable Long flightId) {
+        try {
+            Search search = searchRepository.findById(flightId).orElse(null);
+            if (search == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Flight not found");
+            }
+            searchRepository.delete(search);
+            return ResponseEntity.ok("Flight deleted successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error deleting flight");
+        }
+    }
 }
 
