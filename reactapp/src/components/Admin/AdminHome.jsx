@@ -11,7 +11,7 @@ function AdminHome() {
   }
 
   const handleCarClick = () => {
-    navigate("/");
+    navigate("/CarAdmin");
   }
 
   const handleHotelClick = () => {

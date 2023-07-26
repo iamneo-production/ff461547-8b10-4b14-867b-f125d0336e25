@@ -9,7 +9,7 @@
     align-items: center;
     height: 100vh;
     background: linear-gradient(rgba(7, 223, 239, 0.601), rgb(0, 13, 107, 0.5)),
-    url("../../components/Auth/Cover.jpg");
+    url("../Admin/Adminbg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
