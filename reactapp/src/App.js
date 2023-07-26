@@ -25,6 +25,7 @@ import AdminHome from './components/Admin/AdminHome';
 import CarAdmin from './components/Admin/CarAdmin'
 import { FlightAdmin } from './components/Admin/FlightAdmin';
 import { BoardingPass } from './components/flight/FlightResultPage/BoardingPass';
+import FlightFeedback from './components/flight/FlightResultPage/FlightFeedback';
 
 
 function App() {
@@ -65,6 +66,8 @@ function App() {
         <Route path="PassengerDetails" element={<PassengerDetails />} />
         <Route path="PreviewPage" element={<PreviewPage />} />
         <Route path='BoardingPass' element={<BoardingPass/>}/>
+        <Route path='feedback' element={<FlightFeedback />} />
+        
        
 
 

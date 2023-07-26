@@ -5,3 +5,9 @@ export const baseUrl = 'https://8080-dfdddfcaffbedfadefaffbedbdcceeaeaadbdbabf.p
      ADULTS_ALLOWED:3,
      CHILD_ALLOWED:3,
 }
+
+// For Admin login,Please use below credential for sign in and register
+// Mail id : admin123@gmail.com
+// password: admin123
+
+// please first register with this crendial and try to sign in
