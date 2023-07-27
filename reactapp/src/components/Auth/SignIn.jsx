@@ -1,16 +1,20 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext} from 'react';
 import { AuthContext } from './AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from "axios";
+import "../../style/auth.css";
 
 export const Login = () => {
   const { handleAuthenticationSuccess } = useContext(AuthContext);
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
-  const [emailError, setEmailError] = useState('');
-  const [lastClickedButton, setLastClickedButton] = useState('');
+  const initialState = {
+    form: {
+      email: "",
+      password: ""
+      }
+    };
+const [formData, setFormData] = useState(initialState.form); 
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +22,7 @@ export const Login = () => {
   };
 
   const handleAdminLogin = () => {
-    // Replace the adminCredentials with your actual admin credentials
+    
     handleAuthenticationSuccess();
     const adminCredentials = {
       
@@ -27,10 +31,9 @@ export const Login = () => {
     };
 
     if (formData.email === adminCredentials.email && formData.password === adminCredentials.password) {
-      // If the email and password match the admin credentials, redirect to the admin page
       navigate('/admin');
     } else {
-      // If the email and password do not match the admin credentials, handle regular login logic
+      
       handleAuthenticationSuccess();
       const lastClickedButton = localStorage.getItem('lastClickedButton') || '';
       if (!lastClickedButton) {
@@ -42,27 +45,33 @@ export const Login = () => {
       }
     }
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const handleFindCarClick = () => {
-    setLastClickedButton('findCar');
-    localStorage.setItem('lastClickedButton', 'findCar');
+    axios.post("/auth/login", formData)
+      .then(res => {
+        // Assuming the backend returns a success status code upon successful login
+        if (res.status === 200) {
+          handleAdminLogin();
+        } else {
+          console.log("Login failed:", res.data.message);
+        }
+      })
+      .catch((err) => {
+        if (err.response && err.response.status === 400) {
+          alert("Invalid email or password");
+        } else {
+          console.log(err);
+        }
+      });
   };
 
-  const handleFindFlightClick = () => {
-    setLastClickedButton('findFlight');
-    localStorage.setItem('lastClickedButton', 'findFlight');
-  };
-
-  useEffect(() => {
-    const storedLastClickedButton = localStorage.getItem('lastClickedButton') || '';
-    setLastClickedButton(storedLastClickedButton);
-  }, []);
 
   return (
     <div className="register-outer-container">
       <div className="register-container">
         <h2><b>Sign In</b></h2>
-        <form onSubmit={handleAdminLogin}>
+        <form onSubmit={handleSubmit}>
           <div className="input-container">
             <input
               value={formData.email}
@@ -74,7 +83,6 @@ export const Login = () => {
               required
             />
           </div>
-          {emailError && <p className="error-text">{emailError}</p>}
           <div className="input-container">
             <input
               value={formData.password}

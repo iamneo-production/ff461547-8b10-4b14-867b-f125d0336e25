@@ -1,14 +1,28 @@
-import React from "react";
+import React, {useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import FlyInnImage from "../assets/flyin.jpg";
 import { ServiceComp } from "./ServiceComp";
 import { LowestFareComp } from "./LowestFareComp";
 import { ProfessionalExpComp } from "./ProfessionalExpComp";
 import { FooterComp } from "./FooterComp";
+import { AuthContext } from "../../Auth/AuthContext";
 
 
 export const HeaderComp = () =>{
+    const { isAuthenticated } = useContext(AuthContext);
     const navigate = useNavigate();
+
+    const handleFindFlights = () => {
+        localStorage.setItem('lastClickedButton', 'findFlight');
+         
+        if (isAuthenticated) {
+          // Save the last clicked button to localStorage
+          navigate('/SearchFlight');
+        } else {
+          navigate('/sign-in'); // Redirect to the login page if not authenticated
+        }
+      };
+
     return (
         <div>
     <div className="h-500 bg-no-repeat bg-cover " style={{
@@ -27,8 +41,10 @@ export const HeaderComp = () =>{
                     <span className="text-rose-700"> reduce fairs.</span>
                 </p>
                 <div className="flex">
-                <button onClick={()=>navigate('/SearchFlight')}>
-                <div className="uppercase rounded-lg bg-rose-700 text-white font-semibold px-4 py-2">Find Flights</div>
+                  <button onClick={handleFindFlights}>
+                  <div className="flex items-center justify-center py-2 px-4 bg-rose-700" style={{ marginTop: "30px" }}>
+                    <p className="text-white">FIND FLIGHTS</p>
+                  </div>
                 </button>
                 </div>
             </div>
