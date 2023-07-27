@@ -1,7 +1,7 @@
 import React, { useState , useEffect } from "react";
 import axios from 'axios';
 import FlightImage from "../flight/assets/flighticon.png";
-
+import '../../style/Admin_style/flightAdmin.css'
 
 
 export const FlightAdmin = () => {
@@ -96,7 +96,6 @@ export const FlightAdmin = () => {
         setIsFlightAdded(true);
         
 
-        // Update the filteredTickets state with the new flight data
         setFilteredTickets([...filteredTickets, data]);
 
         setTimeout(() => {
@@ -111,14 +110,11 @@ export const FlightAdmin = () => {
 
   const [deleteMessage, setDeleteMessage] = useState("");
 
-  // Function to delete a flight
   const handleDeleteFlight = (flightId) => {
     axios.delete(`/flights/${flightId}`)
       .then((response) => {
         console.log("Flight deleted successfully:", response.data);
-        // Set the response message to show that the flight is deleted
         setDeleteMessage("Flight deleted successfully!");
-        // Remove the deleted flight from the filteredTickets state
         setFilteredTickets(filteredTickets.filter((flight) => flight.flightid !== flightId));
         setTimeout(() => {
           setDeleteMessage("");
@@ -133,12 +129,11 @@ export const FlightAdmin = () => {
 
   return (
     <div>
-        <div className="text-center font-bold text-4xl">FLIGHT DETAILS</div>
-      <div className="bg-yellow-300 max-h-[750px] mt-5 mb-8 mx-500 px-5 py-5 rounded-lg 
-      inset-y-0 right-0 max-w-[740px] shadow-[0px 0px 50px -5px rgba(0,0,0,0.4)] m-auto pt-[25px] pb-[25px] px-[25px] bg-white">
-        <div className="text-center font-bold text-2xl">ADD FLIGHTS</div>
-        <div>
-          Flight Name
+        <div className="text-center font-bold text-2xl">FLIGHT DETAILS</div>
+      <div className="flightAdmin_container">
+        <div className="text-center font-bold text-1xl">ADD FLIGHTS</div>
+        <div className="FlightAdmin-content">
+          <span>Flight Name</span>
           <input
             type="text"
             value={flightName}

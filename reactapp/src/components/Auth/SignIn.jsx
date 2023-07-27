@@ -13,7 +13,6 @@ export const Login = () => {
       password: ""
       }
     };
-const [showLoginForm, setShowLoginForm] = useState(true);
 const [formData, setFormData] = useState(initialState.form); 
 
 
@@ -23,7 +22,7 @@ const [formData, setFormData] = useState(initialState.form);
   };
 
   const handleAdminLogin = () => {
-    // Replace the adminCredentials with your actual admin credentials
+    
     handleAuthenticationSuccess();
     const adminCredentials = {
       
@@ -32,10 +31,9 @@ const [formData, setFormData] = useState(initialState.form);
     };
 
     if (formData.email === adminCredentials.email && formData.password === adminCredentials.password) {
-      // If the email and password match the admin credentials, redirect to the admin page
       navigate('/admin');
     } else {
-      // If the email and password do not match the admin credentials, handle regular login logic
+      
       handleAuthenticationSuccess();
       const lastClickedButton = localStorage.getItem('lastClickedButton') || '';
       if (!lastClickedButton) {
@@ -68,9 +66,6 @@ const [formData, setFormData] = useState(initialState.form);
       });
   };
 
-  if (!showLoginForm) {
-    return null; 
-}
 
   return (
     <div className="register-outer-container">

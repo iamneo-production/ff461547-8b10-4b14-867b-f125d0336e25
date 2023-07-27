@@ -2,7 +2,7 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useState } from 'react';
 import { HotelActions, HotelContext } from '../HotelContext';
-import { Hotel } from '../../../Constants';
+import { Hotel } from '../HotelConstant';
 
 
 function Travelers() {
