@@ -1,0 +1,37 @@
+.flightAdmin_container{
+    background-color: #FFD700; 
+    max-height: 750px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 0.4);
+    max-width: 740px;
+    inset: 0;
+    right: 0;
+}
+
+
+.FlightAdmin-content{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 0.5rem;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+   
+}
+
+
+  
+  .FlightAdmin-content input,
+  .FlightAdmin-content textarea {
+    padding: 6px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }

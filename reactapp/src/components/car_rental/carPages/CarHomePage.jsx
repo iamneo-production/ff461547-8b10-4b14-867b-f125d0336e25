@@ -7,6 +7,7 @@ const CarHome = () => {
  
   return (
     <div>
+      {/* ============= slider section =========== */}
       <section className="p-0 hero__slider-section">
         <Slider />
       </section>

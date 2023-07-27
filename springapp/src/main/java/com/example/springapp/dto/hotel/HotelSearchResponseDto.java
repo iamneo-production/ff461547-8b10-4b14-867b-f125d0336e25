@@ -10,6 +10,8 @@ public class HotelSearchResponseDto {
     private float rating;
     private int numOfRating;
 
+    private String image;
+
     public long getHotelId() {
         return hotelId;
     }
@@ -19,7 +21,7 @@ public class HotelSearchResponseDto {
     }
 
     public HotelSearchResponseDto(long hotelId, String hotelName, String country, String city, int pricePerDay,
-            float rating, int numOfRating) {
+            float rating, int numOfRating, String image) {
         super();
         this.hotelId = hotelId;
         this.hotelName = hotelName;
@@ -28,6 +30,7 @@ public class HotelSearchResponseDto {
         this.pricePerDay = pricePerDay;
         this.rating = rating;
         this.numOfRating = numOfRating;
+        this.image = image;
     }
 
     public void setHotelId(long hotelId) {
@@ -82,4 +85,12 @@ public class HotelSearchResponseDto {
         this.numOfRating = numOfRating;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+    
 }
