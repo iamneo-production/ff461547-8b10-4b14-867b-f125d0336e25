@@ -2,6 +2,8 @@ package com.example.springapp.service.hotel;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.example.springapp.dto.hotel.HotelSearchRequestDto;
 import com.example.springapp.dto.hotel.HotelSearchResponseDto;
 import com.example.springapp.dto.hotel.bookhotel.HotelBookedDto;
@@ -20,4 +22,6 @@ public interface HotelService {
     public List<HotelSearchResponseDto> searcHoteLs(HotelSearchRequestDto searchRequest);
 
     public HotelBookedDto addbooking(long customerId, long hotelId, HotelBookRequestDto hotelBookingDto);
+
+    public boolean uploadImage(MultipartFile image, long hotelId);
 }

@@ -107,7 +107,7 @@ const CarBookingForm = () => {
         
             setPaymentCompleted(true);
             setBookingId(bookingId);
-            window.location.href = "/rental-cars/manage";
+            window.location.href = "/rental-cars/feedback";
           },
           prefill: {
             name: "Krishnapriya k",
@@ -163,7 +163,7 @@ const CarBookingForm = () => {
             <h2>Car Details:</h2>
             <h6>Car Name: {car.carname}</h6>
             <h6>Car Rent: {car.price}/Hr</h6>
-            <p>[Exclusive of Fuel charges + Extra Charges may include after 1 Hour (Rs.300/Hr)] </p>
+            <p>(Fuel Charge + Rs.15/km after 1 hour)</p>
             <h6>Seats: {car.no_of_seat - 1}</h6>
             <h6>Pick-Up Location: {car.location}</h6>
             <img src={require(`../carAssests/img/carList_imgs/${car.carname.toLowerCase().replace(/\s+/g, '')}.jpg`)} alt="Car" className="w-100" />
@@ -241,7 +241,7 @@ const CarBookingForm = () => {
               <div className="d-flex justify-content-center align-items-center">
                 <div>
                   {amount !== "" && (
-                    <p className="car-rent-amount">Car Rent Amount:<b>Rs.{amount}</b></p>
+                    <p className="car-rent-amount">Car Rent Amount(Advance):<b>Rs.{amount}/-</b><p>(Fuel Charge + Rs.15/km after 1 hour)</p></p>
                   )}
                   <button
                     className="booking__form car__item-btn car__btn-rent"

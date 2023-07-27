@@ -21,9 +21,6 @@ export const BoardingPass = () => {
     return new Date(0, 0, 0, hours, minutes, seconds);
   };
 
-  const handleCancel = () => {
-    navigate('/headercomp');
-  };
 
   const calculateBoardingTime = (time) => {
     const dateTime = formatTime(time);
@@ -45,7 +42,7 @@ export const BoardingPass = () => {
           contact,
           passengers
         };
-        navigate('/flights', { state: { flight: flight, contact: contact,passengers: passengers } });
+        navigate('/feedback');
   
       
       })
@@ -126,7 +123,7 @@ export const BoardingPass = () => {
           {isDownloading ? "Downloading..." : "Download Ticket"}
         </button>
         <button
-          onClick={() => navigate('/headercomp')}
+          onClick={() => navigate('/feedback')}
           className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-lg"
           style={{ display: isDownloaded ? 'inline-block' : 'none' }}
         >
