@@ -1,9 +1,9 @@
 package com.example.springapp.model.hotel;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+import com.example.springapp.model.booking.Booking;
+
 
 @Entity
 public class BookedHotel {
@@ -25,14 +29,18 @@ public class BookedHotel {
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 
+    @OneToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name = "booking_id", referencedColumnName = "booking_id")
+    private Booking booking;
+
     @OneToMany(mappedBy = "bookedHotel")
     private List<Room> roomList=new ArrayList<>();
 
     @Column(name = "check_in_date")
-    private LocalDateTime checkInDateTime;
+    private String checkInDate;
 
     @Column(name = "check_out_date")
-    private LocalDateTime checkOutDateTime;
+    private String checkOutDate;
 
     @Column(name = "num_of_rooms_booked")
     private int numOfRoomsBooked;
@@ -50,14 +58,14 @@ public class BookedHotel {
         super();
     }
 
-    public BookedHotel(Hotel hotel, List<Room> roomList, LocalDateTime checkInDateTime,
-            LocalDateTime checkOutDateTime, int numOfRoomsBooked, int numOfAdults, int numOfChilds,
+    public BookedHotel(Hotel hotel, List<Room> roomList, String checkInDate,
+            String checkOutDate, int numOfRoomsBooked, int numOfAdults, int numOfChilds,
             double totalAmount) {
                 super();
         this.hotel = hotel;
         this.roomList = roomList;
-        this.checkInDateTime = checkInDateTime;
-        this.checkOutDateTime = checkOutDateTime;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
         this.numOfRoomsBooked = numOfRoomsBooked;
         this.numOfAdults = numOfAdults;
         this.numOfChilds = numOfChilds;
@@ -68,11 +76,11 @@ public class BookedHotel {
         return hotelBookingId;
     }
     
-    public Hotel getHotelId() {
+    public Hotel getHotel() {
         return hotel;
     }
 
-    public void setHotelId(Hotel hotel) {
+    public void setHotel(Hotel hotel) {
         this.hotel = hotel;
     }
 
@@ -84,20 +92,20 @@ public class BookedHotel {
         this.roomList = roomList;
     }
 
-    public LocalDateTime getCheckInDateTime() {
-        return checkInDateTime;
+    public String getCheckInDateTime() {
+        return checkInDate;
     }
 
-    public void setCheckInDateTime(LocalDateTime checkInDateTime) {
-        this.checkInDateTime = checkInDateTime;
+    public void setCheckInDate(String checkInDate) {
+        this.checkInDate = checkInDate;
     }
 
-    public LocalDateTime getCheckOutDateTime() {
-        return checkOutDateTime;
+    public String getCheckOutDate() {
+        return checkOutDate;
     }
 
-    public void setCheckOutDateTime(LocalDateTime checkOutDateTime) {
-        this.checkOutDateTime = checkOutDateTime;
+    public void setCheckOutDate(String checkOutDate) {
+        this.checkOutDate = checkOutDate;
     }
 
     public int getNumOfRoomsBooked() {
@@ -130,6 +138,14 @@ public class BookedHotel {
 
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
+    }
+
+    public Booking getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
     }
 
 }

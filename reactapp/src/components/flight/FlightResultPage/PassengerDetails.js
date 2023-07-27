@@ -15,8 +15,10 @@ export const PassengerDetails = () => {
 
   return (
     <div>
-      <div className="container">
-        <h2>Flight Details</h2>
+      <div className="flight_container">
+        <div className="text-xs" >
+        <h5>Flight Details</h5>
+        </div>
         {flight ? (
           <div>
             <div className="border border-red-500 px-4 py-4 text-center mr-5 rounded-lg shadow- justify-center">

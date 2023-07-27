@@ -15,7 +15,7 @@ export const SearchFlight =()=>{
     useEffect(() => {
         // Fetch ticket data from the backend
         axios
-          .get('/api/flights')
+          .get('/flights')
           .then(response => {
             setTickets(response.data);
           })
@@ -177,8 +177,8 @@ export const SearchFlight =()=>{
                                                                
                                     <div>
                                         <button onClick={() => handleBook(item)}>
-                                            <div className="py-2 px-2 bg-yellow-400 text-sm m-3 rounded-lg">
-                                                <p className="text-white">BOOK</p>
+                                            <div className="uppercase rounded-lg bg-yellow-500 text-white font-semibold px-4 py-2">
+                                                BOOK
                                             </div>
                                         </button> 
                                     </div>
