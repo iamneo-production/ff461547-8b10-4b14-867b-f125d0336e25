@@ -26,9 +26,9 @@
     
   ;
   }   
-  h1 {
+  .admin-heading{
     font-size: 25px;  
-    margin-top: 0px;
+    margin-top: -50px;
   }
   
   .buttons-container {
