@@ -90,7 +90,10 @@ const ManageBookingForm = () => {
               <h3>Booking Details</h3>
               <p>Name: {bookingDetails.fname} {bookingDetails.lname}</p>
               <p>Pick-up Time: {bookingDetails.pick_up_time}</p>
-              {/* Display other booking details */}
+              <p>Email Id:{bookingDetails.emailid}</p>
+              <p>Pick-up Address: {bookingDetails.pick_up_address}</p>
+              <p>Pick-up Time: {bookingDetails.pick_up_time}</p>
+              <p>Contact Number:{bookingDetails.phone_no}</p>
               
             </div>
           ) : null}

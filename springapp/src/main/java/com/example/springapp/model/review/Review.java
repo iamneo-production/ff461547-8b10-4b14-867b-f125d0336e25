@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 
 import com.example.springapp.model.customer.Customer;
 import com.example.springapp.model.hotel.Hotel;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Review {
@@ -25,12 +25,11 @@ public class Review {
 
     @ManyToOne()
     @JoinColumn(name = "customer_id")
-    @JsonBackReference(value = "customer-revies")
     private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "hotel_id", nullable = true)
-    @JsonBackReference(value = "hotel-reviews")
+    @JsonIgnore
     private Hotel hotel;
 
     public Review() {
@@ -79,5 +78,5 @@ public class Review {
 
     public void setHotel(Hotel hotel) {
         this.hotel = hotel;
-    }    
+    } 
 }

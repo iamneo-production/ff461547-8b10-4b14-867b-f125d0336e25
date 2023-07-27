@@ -2,6 +2,7 @@ package com.example.springapp.model.booking;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import com.example.springapp.model.customer.Customer;
 import com.example.springapp.model.hotel.BookedHotel;
 import com.example.springapp.model.travelagent.TravelAgent;
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -23,79 +25,65 @@ public class Booking {
     @Column(name = "booking_id")
     private long bookingId;
 
-    @Column(name = "customer_id")
-    private long customerId;
-
-    @Column(name = "flight_booking_id")
-    private long flightBookingId;
-
-    @OneToOne
-    @JoinColumn(name = "hotel_booking_id")
-    private BookedHotel bookedHotels;
-
-    @Column(name = "car_booking_id")
-    private long carBookingId;
+    @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL, orphanRemoval = true)
+    private BookedHotel bookedHotel;
 
     @Column(name = "booking_date_time")
     private LocalDateTime bookingDateTime;
 
     @Column(name = "booking_status")
-    private String bookingStatus;
+    private String bookingStatus = "pending";
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "travel_agent_id")
     @JsonBackReference
     private TravelAgent travelAgent;
 
-    public Booking(){
+    private String guestName;
+
+    private String verficationDocType;
+
+    private String verificationNumber;
+
+    private String bookingType;
+
+    public Booking() {
         super();
     }
 
-    public Booking(long customerId, long flightBookingId, BookedHotel bookedHotels, long carBookingId,
-            LocalDateTime bookingDateTime, TravelAgent travelAgent) {
+    public Booking(BookedHotel bookedHotel, LocalDateTime bookingDateTime, String bookingStatus, Customer customer,
+            TravelAgent travelAgent, String guestName, String verficationDocType, String verificationNumber,
+            String bookingType) {
                 super();
-        this.customerId = customerId;
-        this.flightBookingId = flightBookingId;
-        this.bookedHotels = bookedHotels;
-        this.carBookingId = carBookingId;
+        this.bookedHotel = bookedHotel;
         this.bookingDateTime = bookingDateTime;
+        this.bookingStatus = bookingStatus;
+        this.customer = customer;
         this.travelAgent = travelAgent;
+        this.guestName = guestName;
+        this.verficationDocType = verficationDocType;
+        this.verificationNumber = verificationNumber;
+        this.bookingType = bookingType;
     }
 
-    public long getBookingId() {
-        return bookingId;
+    public BookedHotel getBookedHotel() {
+        return bookedHotel;
     }
 
-    public long getCustomerId() {
-        return customerId;
+    public String getGuestName() {
+        return guestName;
     }
 
-    public void setCustomerId(long customerId) {
-        this.customerId = customerId;
+    public void setGuestName(String guestName) {
+        this.guestName = guestName;
     }
 
-    public long getFlightBookingId() {
-        return flightBookingId;
-    }
-
-    public void setFlightBookingId(long flightBookingId) {
-        this.flightBookingId = flightBookingId;
-    }
-
-    public BookedHotel getHotelBookingId() {
-        return bookedHotels;
-    }
-
-    public void setHotelBookingId(BookedHotel bookedHotels) {
-        this.bookedHotels = bookedHotels;
-    }
-
-    public long getCarBookingId() {
-        return carBookingId;
-    }
-
-    public void setCarBookingId(long carBookingId) {
-        this.carBookingId = carBookingId;
+    public void setBookedHotel(BookedHotel bookedHotels) {
+        this.bookedHotel = bookedHotels;
     }
 
     public LocalDateTime getBookingDateTime() {
@@ -106,6 +94,22 @@ public class Booking {
         this.bookingDateTime = bookingDateTime;
     }
 
+    public String getBookingStatus() {
+        return bookingStatus;
+    }
+
+    public void setBookingStatus(String bookingStatus) {
+        this.bookingStatus = bookingStatus;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
     public TravelAgent getTravelAgent() {
         return travelAgent;
     }
@@ -114,5 +118,31 @@ public class Booking {
         this.travelAgent = travelAgent;
     }
 
-    
+    public String getVerficationDocType() {
+        return verficationDocType;
+    }
+
+    public void setVerficationDocType(String verficationDocType) {
+        this.verficationDocType = verficationDocType;
+    }
+
+    public String getVerificationNumber() {
+        return verificationNumber;
+    }
+
+    public void setVerificationNumber(String verificationNumber) {
+        this.verificationNumber = verificationNumber;
+    }
+
+    public String getBookingType() {
+        return bookingType;
+    }
+
+    public void setBookingType(String bookingType) {
+        this.bookingType = bookingType;
+    }
+
+    public long getBookingId() {
+        return bookingId;
+    }
 }
