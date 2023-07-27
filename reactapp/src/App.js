@@ -32,6 +32,7 @@ import FlightFeedback from './components/flight/FlightResultPage/FlightFeedback'
 
 import CarFeedbackForm from './components/car_rental/carPages/CarFeedbackPage';
 import Feedback from './components/Feedback'
+import Support from './components/support/Support';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path='/ErrorPage' element={<ErrorPage/>} />
         <Route path="/admin" element={<AdminHome/>}/>
         <Route path='/flightAdmin' element={<FlightAdmin/>}/>
+        <Route path='/help-support' element={<Support/>}/>
 
         {/* Review and Rating */}
         <Route path='/:type/:brandName/review/:id' element={<Feedback/>} />
