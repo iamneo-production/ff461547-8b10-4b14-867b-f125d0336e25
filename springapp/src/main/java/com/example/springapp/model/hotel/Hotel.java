@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.OrderBy;
 import org.hibernate.annotations.Where;
 
 import com.example.springapp.model.review.Review;
@@ -43,18 +44,19 @@ public class Hotel {
     @Column(name = "price_per_day")
     private int pricePerDay;
 
-    private float rating;
+    private float rating = 0.0f;
 
     @Column(name = "num_rating")
     private int numOfRating;
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     @Where(clause = "status = 'booked'")
-    @JsonManagedReference(value = "hotel-room")
+    @JsonIgnore
     private List<Room> bookedRoomList = new ArrayList<Room>();
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     @Where(clause = "status = 'vaccant'")
+    @OrderBy(clause = "capacity ASC")
     @JsonManagedReference(value = "hotel-room")
     private List<Room> vaccantRoomList = new ArrayList<Room>();
 
@@ -62,16 +64,21 @@ public class Hotel {
     @JsonIgnore
     private List<BookedHotel> bookedHotel;
 
-    @OneToMany(mappedBy = "hotel" , cascade = CascadeType.ALL)
-    @JsonManagedReference(value = "hotel-reviews")
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Review> reviews;
+
+    private String firstImage;
+
+    private String secondImage;
 
     public Hotel() {
         super();
     }
 
     public Hotel(String hotelName, String country, String city, int maxRooms, int availableRooms, int pricePerDay,
-            float rating, int numOfRating) {
+            float rating, int numOfRating, String firstImage, String secondImage) {
+        super();
         this.hotelName = hotelName;
         this.country = country;
         this.city = city;
@@ -80,6 +87,8 @@ public class Hotel {
         this.pricePerDay = pricePerDay;
         this.rating = rating;
         this.numOfRating = numOfRating;
+        this.firstImage = firstImage;
+        this.secondImage = secondImage;
     }
 
     public long getHotelId() {
@@ -133,7 +142,7 @@ public class Hotel {
     public void setNumOfRating(int numOfRating) {
         this.numOfRating = numOfRating;
     }
-    
+
     public List<Room> getBookedRoomList() {
         return bookedRoomList;
     }
@@ -165,7 +174,7 @@ public class Hotel {
     public void setCity(String city) {
         this.city = city;
     }
-    
+
     public List<Review> getReviews() {
         return reviews;
     }
@@ -180,5 +189,21 @@ public class Hotel {
 
     public void setBookedHotel(List<BookedHotel> bookedHotel) {
         this.bookedHotel = bookedHotel;
+    }
+
+    public String getFirstImage() {
+        return firstImage;
+    }
+
+    public void setFirstImage(String firstImage) {
+        this.firstImage = firstImage;
+    }
+
+    public String getSecondImage() {
+        return secondImage;
+    }
+
+    public void setSecondImage(String secondImage) {
+        this.secondImage = secondImage;
     }
 }

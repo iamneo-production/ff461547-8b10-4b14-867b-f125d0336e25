@@ -6,29 +6,34 @@
 
 #settings {
     position: relative;
-
 }
 
-input {
-    width: 30vw;
-}
-
-#save {
+#save,
+#cancel {
+    margin: 10px;
     border-radius: 10px;
-    width: 50%;
+    width: 100%;
     height: 50px;
     border: none;
 }
 
-label {
+.editbutton button {
+    width: 100%;
+    height: 100%;
+}
+
+.accountsettings label {
     font-weight: 500;
     color: black;
+}
+
+.accountsettings input {
+    width: 100%;
 }
 
 .accountsettings {
     display: flex;
     flex-direction: column;
-    width: 70%;
     margin: 50px;
 
 }
@@ -41,8 +46,6 @@ label {
 .accountsettings .form {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 100%;
     padding: 10px 20px;
 }
@@ -50,7 +53,6 @@ label {
 .accountsettings .form .form-group {
     display: flex;
     flex-direction: column;
-    width: 45%;
     margin: 10px;
 }
 
@@ -71,6 +73,9 @@ label {
     border: 1px solid var(--col1);
 }
 
+.changepassword #save {
+    color: black;
+}
 
 @media (max-width: 800px) {
     .accountsettings .form {
@@ -85,7 +90,6 @@ label {
     .accountsettings .form .form-group {
         display: flex;
         flex-direction: column;
-        width: 97%;
         margin: 10px;
     }
 

@@ -14,10 +14,10 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.example.springapp.model.booking.Booking;
 import com.example.springapp.model.review.Review;
 import com.example.springapp.model.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "customers")
@@ -29,6 +29,7 @@ public class Customer {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
+    @JsonIgnore
     private User user;
 
     @Column(name = "first_name")
@@ -44,15 +45,19 @@ public class Customer {
     private String address;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-    @JsonManagedReference
     @JsonIgnore
-    private List<Review> reviews= new ArrayList<Review>();
+    private List<Review> reviews = new ArrayList<Review>();
 
-    public Customer(){
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Booking> bookings = new ArrayList<>();
+
+    public Customer() {
         super();
     }
 
-    public Customer(User user, String firstName, String lastName, String email, String phone, String address) {
+    public Customer(User user, String firstName, String lastName, String email, String phone, String address,
+            List<Review> reviews, List<Booking> bookings) {
         super();
         this.user = user;
         this.firstName = firstName;
@@ -60,6 +65,8 @@ public class Customer {
         this.email = email;
         this.phone = phone;
         this.address = address;
+        this.reviews = reviews;
+        this.bookings = bookings;
     }
 
     public Long getCustomerId() {
@@ -121,5 +128,12 @@ public class Customer {
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
     }
-    
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }
