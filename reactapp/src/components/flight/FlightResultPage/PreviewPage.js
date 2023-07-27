@@ -14,9 +14,13 @@ export const PreviewPage = () => {
   };
 
   const handleCancel = () => {
-    navigate('/');
+    const confirmed = window.confirm('Are you sure you want to cancel?');
+  
+    if (confirmed) {
+      navigate('/');
+    }
   };
-
+  
   const handleGetTickets = () => {
     navigate('/BoardingPass', { state: { flight: flight, contact: contact,passengers: passengers } });
   };
