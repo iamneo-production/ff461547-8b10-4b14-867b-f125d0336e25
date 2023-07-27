@@ -4,12 +4,14 @@ import { faIndianRupeeSign, faCar, faCircle, faStop } from '@fortawesome/free-so
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../../style/yourOrders.css';
-
+import { useNavigate } from 'react-router-dom'
 const Cars = () => {
+    const navigate = useNavigate();
     function toggleDetails() {
         var addDetails = document.getElementById("view-manage")
         if (addDetails.style.display === "none") {
             addDetails.style.display = "block";
+            navigate('/rental-cars/manage');
         }
         else {
             addDetails.style.display = "none";
@@ -22,8 +24,8 @@ const Cars = () => {
                 <div class="orderscontainer">
                     <div className='row'>
                         <div className='col-lg-6 col-md-6 col-sm-12'>
-                            <h4>Destination Place</h4>
-                            <p>Booking ID - xxxxxxx ~ Booked Date<br />Date / <FontAwesomeIcon icon={faIndianRupeeSign} /> Amount</p>
+                        <h4>Please keep your car booking ID ready </h4>
+                        <p>which was provided to you upon successful booking</p>
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12'>
                             <button type="button" class="btn btn-light" onClick={toggleDetails} >View & Manage</button>

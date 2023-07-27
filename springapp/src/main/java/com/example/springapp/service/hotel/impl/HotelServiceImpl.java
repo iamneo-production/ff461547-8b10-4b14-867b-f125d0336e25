@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.example.springapp.dto.hotel.HotelSearchRequestDto;
 import com.example.springapp.dto.hotel.HotelSearchResponseDto;
@@ -23,6 +25,7 @@ import com.example.springapp.repository.customer.CustomerRepository;
 import com.example.springapp.repository.hotel.BookedHotelRepository;
 import com.example.springapp.repository.hotel.HotelRepository;
 import com.example.springapp.repository.travelagent.TravelAgentRepository;
+import com.example.springapp.service.helper.FileUploadHelper;
 import com.example.springapp.service.hotel.HotelService;
 
 @Service
@@ -36,6 +39,8 @@ public class HotelServiceImpl implements HotelService {
     private TravelAgentRepository travelAgentRepository;
     @Autowired
     private BookedHotelRepository bookedHotelRepository;
+    @Autowired
+    private FileUploadHelper fileUploadHelper;
 
     public HotelServiceImpl() {
         super();
@@ -140,6 +145,7 @@ public class HotelServiceImpl implements HotelService {
             hotelSearchResponseDto.setPricePerDay(hotel.getPricePerDay());
             hotelSearchResponseDto.setRating(hotel.getRating());
             hotelSearchResponseDto.setNumOfRating(hotel.getNumOfRating());
+            hotelSearchResponseDto.setImage(hotel.getFirstImage());
             hotelSearchResponseDtos.add(hotelSearchResponseDto);
         }
         return hotelSearchResponseDtos;
@@ -163,7 +169,7 @@ public class HotelServiceImpl implements HotelService {
             Customer customer = customerRepository.findById(customerId).get();
             Hotel hotel = hotelRepository.findById(hotelId).get();
             TravelAgent travelAgent = null;
-            
+
             if (hotelBookRequestDto.getTravelAgent() > 0
                     && travelAgentRepository.existsById(hotelBookRequestDto.getTravelAgent())) {
                 travelAgent = travelAgentRepository.findById(hotelBookRequestDto.getTravelAgent()).get();
@@ -232,6 +238,32 @@ public class HotelServiceImpl implements HotelService {
             }
         }
         return selectedRooms;
+    }
+
+    @Override
+    public boolean uploadImage(MultipartFile image, long hotelId) {
+        boolean status = false;
+        try {
+            Hotel hotel = hotelRepository.findById(hotelId).get();
+            StringBuffer fileName = new StringBuffer("");
+            fileName.append(hotel.getHotelId());
+            fileName.append(image.getOriginalFilename());
+            boolean uploaded = fileUploadHelper.uploadHotelImage(image, fileName.toString());
+            if (uploaded) {
+                String path = ServletUriComponentsBuilder.fromCurrentContextPath().path("/image/")
+                        .path(fileName.toString()).toUriString();
+                if (hotel.getFirstImage() == null) {
+                    hotel.setFirstImage(path);
+                } else {
+                    hotel.setSecondImage(path);
+                }
+                hotelRepository.save(hotel);
+                status = true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return status;
     }
 
 }
