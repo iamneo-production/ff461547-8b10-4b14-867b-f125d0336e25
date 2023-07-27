@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../../../style/flight_style/flightfeedback.css';
 import axios from 'axios';
-import Config from '../../Config';
 import { useNavigate } from 'react-router-dom';
 import FlightIcon from '../assets/flighticon.png';
 import FeedRateImage from '../assets/feedrate.jpg';
@@ -30,7 +29,7 @@ function FlightFeedback() {
     }
 
     axios
-      .post(`${Config.backendURL}/api/flightfeed`, { feedback, rating })
+      .post(`/flightfeed`, { feedback, rating })
       .then((response) => {
         console.log('Feedback stored successfully:', response.data);
         navigate('/headerComp'); 
