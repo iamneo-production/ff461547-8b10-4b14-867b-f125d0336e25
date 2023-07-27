@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import './style/hotel.css';
 import './style/navigationbar.css';
@@ -21,12 +23,14 @@ import { SearchFlight } from './components/flight/FlightResultPage/SearchFlight'
 import {PassengerDetails} from './components/flight/FlightResultPage/PassengerDetails';
 import {PreviewPage} from './components/flight/FlightResultPage/PreviewPage';
 import ErrorPage from './containers/ErrorPage';
+import ConfirmBooking from './components/hotel/bookhotel/ConfirmBooking';
 import AdminHome from './components/Admin/AdminHome';
 import CarAdmin from './components/Admin/CarAdmin'
 import { FlightAdmin } from './components/Admin/FlightAdmin';
 import { BoardingPass } from './components/flight/FlightResultPage/BoardingPass';
 import FlightFeedback from './components/flight/FlightResultPage/FlightFeedback';
 
+import Feedback from './components/Feedback'
 
 function App() {
   return (
@@ -34,6 +38,7 @@ function App() {
       <header className='header'>
         <NavigationBar />
       </header>
+      <ToastContainer />
 
       <Routes>
         {/* main navigation  */}
@@ -46,12 +51,18 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path='/ErrorPage' element={<ErrorPage/>} />
-        <Route path='*' element={<PageNotFound />} />
         <Route path="/admin" element={<AdminHome/>}/>
         <Route path='/flightAdmin' element={<FlightAdmin/>}/>
+<<<<<<< HEAD
+=======
+
+        {/* Review and Rating */}
+        <Route path='/:type/:brandName/review/:id' element={<Feedback/>} />
+>>>>>>> b7d1493acb67f21e29be2cc32412fce5735b8618
 
         {/* Hotel routes */}
         <Route path='/selected-hotel/:hotelId' element={<SelectedHotel />} />
+        <Route path='/book/hotel/confirm/:bookingId' element={<ConfirmBooking />} />
 
         {/* car rental routes */}
 
@@ -59,6 +70,7 @@ function App() {
         <Route path="/rental-cars/booking/:id" element={<CarBookingForm />} />
         <Route path="/rental-cars/manage" element={<CarManage />} />
         <Route path="/admin/car" element={<CarAdmin/>}/>
+
         {/*flight booking routes */}
 
         <Route path="/" element={<HeaderComp />} />
@@ -70,6 +82,7 @@ function App() {
         
        
 
+        <Route path='*' element={<PageNotFound />} />
 
       </Routes>
     </>
