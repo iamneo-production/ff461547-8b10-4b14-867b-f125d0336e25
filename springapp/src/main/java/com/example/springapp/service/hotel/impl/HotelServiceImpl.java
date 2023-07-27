@@ -2,17 +2,18 @@ package com.example.springapp.service.hotel.impl;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.example.springapp.dto.hotel.HotelSearchRequestDto;
 import com.example.springapp.dto.hotel.HotelSearchResponseDto;
-import com.example.springapp.dto.hotel.bookhotel.HotelBookedDto;
 import com.example.springapp.dto.hotel.bookhotel.HotelBookRequestDto;
+import com.example.springapp.dto.hotel.bookhotel.HotelBookedDto;
 import com.example.springapp.dto.hotel.bookhotel.RoomDto;
 import com.example.springapp.model.booking.Booking;
 import com.example.springapp.model.customer.Customer;
@@ -23,8 +24,8 @@ import com.example.springapp.model.travelagent.TravelAgent;
 import com.example.springapp.repository.customer.CustomerRepository;
 import com.example.springapp.repository.hotel.BookedHotelRepository;
 import com.example.springapp.repository.hotel.HotelRepository;
-import com.example.springapp.repository.hotel.RoomRepository;
 import com.example.springapp.repository.travelagent.TravelAgentRepository;
+import com.example.springapp.service.helper.FileUploadHelper;
 import com.example.springapp.service.hotel.HotelService;
 
 @Service
@@ -38,6 +39,8 @@ public class HotelServiceImpl implements HotelService {
     private TravelAgentRepository travelAgentRepository;
     @Autowired
     private BookedHotelRepository bookedHotelRepository;
+    @Autowired
+    private FileUploadHelper fileUploadHelper;
 
     public HotelServiceImpl() {
         super();
@@ -104,14 +107,14 @@ public class HotelServiceImpl implements HotelService {
                         int roomFound = 0;
                         for (int index = 0; index < vaccantRoomList.size(); index++) {
                             Room room = vaccantRoomList.get(index);
-                            
+
                             for (int i = 0; i < roomCapacity.size(); i++) {
-                                
+
                                 if (roomCapacity.get(i) <= room.getRoomCapacity()) {
                                     roomFound++;
 
                                     break;
-                                    
+
                                 }
                             }
                             if (roomFound == roomCapacity.size()) {
@@ -142,6 +145,7 @@ public class HotelServiceImpl implements HotelService {
             hotelSearchResponseDto.setPricePerDay(hotel.getPricePerDay());
             hotelSearchResponseDto.setRating(hotel.getRating());
             hotelSearchResponseDto.setNumOfRating(hotel.getNumOfRating());
+            hotelSearchResponseDto.setImage(hotel.getFirstImage());
             hotelSearchResponseDtos.add(hotelSearchResponseDto);
         }
         return hotelSearchResponseDtos;
@@ -164,8 +168,12 @@ public class HotelServiceImpl implements HotelService {
         try {
             Customer customer = customerRepository.findById(customerId).get();
             Hotel hotel = hotelRepository.findById(hotelId).get();
-            TravelAgent travelAgent = travelAgentRepository.findById(hotelBookRequestDto.getTravelAgent()).get();
+            TravelAgent travelAgent = null;
 
+            if (hotelBookRequestDto.getTravelAgent() > 0
+                    && travelAgentRepository.existsById(hotelBookRequestDto.getTravelAgent())) {
+                travelAgent = travelAgentRepository.findById(hotelBookRequestDto.getTravelAgent()).get();
+            }
             List<Room> selectedRooms = roomSelector(roomSizes, new ArrayList<>(hotel.getVaccantRoomList()));
 
             Booking booking = new Booking();
@@ -175,6 +183,7 @@ public class HotelServiceImpl implements HotelService {
             booking.setBookingDateTime(LocalDateTime.now());
             booking.setVerficationDocType(hotelBookRequestDto.getIdType());
             booking.setVerificationNumber(hotelBookRequestDto.getIdNumber());
+            booking.setGuestName(hotelBookRequestDto.getName());
 
             BookedHotel bookedHotel = new BookedHotel();
             bookedHotel.setHotel(hotel);
@@ -230,4 +239,31 @@ public class HotelServiceImpl implements HotelService {
         }
         return selectedRooms;
     }
+
+    @Override
+    public boolean uploadImage(MultipartFile image, long hotelId) {
+        boolean status = false;
+        try {
+            Hotel hotel = hotelRepository.findById(hotelId).get();
+            StringBuffer fileName = new StringBuffer("");
+            fileName.append(hotel.getHotelId());
+            fileName.append(image.getOriginalFilename());
+            boolean uploaded = fileUploadHelper.uploadHotelImage(image, fileName.toString());
+            if (uploaded) {
+                String path = ServletUriComponentsBuilder.fromCurrentContextPath().path("/image/")
+                        .path(fileName.toString()).toUriString();
+                if (hotel.getFirstImage() == null) {
+                    hotel.setFirstImage(path);
+                } else {
+                    hotel.setSecondImage(path);
+                }
+                hotelRepository.save(hotel);
+                status = true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return status;
+    }
+
 }

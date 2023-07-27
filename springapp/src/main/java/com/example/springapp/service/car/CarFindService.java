@@ -32,5 +32,10 @@ public class CarFindService {
     public Optional<CarFind> getCarFindById(Long carid) {
         return carFindRepo.findById(carid);
     }
+
+    public void deleteById(Long carid) {
+        carFindRepo.deleteById(carid);
+    }
+
 }
 

@@ -7,7 +7,11 @@ function Hotels() {
 
     useEffect(()=>{
         document.title = "Hotels | Travel.com"
+        return(()=>{
+            document.title = "Travel.com"
+        })
     },[])
+    
     return (
         <HotelProvider >
             <div className='mt-10 container flex gap-4'>
