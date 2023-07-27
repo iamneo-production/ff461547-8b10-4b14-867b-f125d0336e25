@@ -34,6 +34,9 @@ const CarFindForm = () => {
       return locationMatch && seatCountMatch;
     });
     setFilteredCars(filteredData);
+    if (filteredData.length === 0) {
+      alert('No cars available in the given location. Please try other near by city!');
+    }
   };
 
   return (
@@ -42,7 +45,6 @@ const CarFindForm = () => {
 
         {/* left side search container code */}
         <div className="flex p-4 item-center justify-center">
-          <React.Fragment>
             <section>
               <form onSubmit={handleSearch} className="flex justify-start">
                 <div>
@@ -61,17 +63,22 @@ const CarFindForm = () => {
                           onChange={e => setLocationQuery(e.target.value)}
                           placeholder="Enter Pick Up City"
                           className="w-full p-2 h-15 rounded-lg border border-gray-300"
+                          required
                         />
                       </div>
                       <div className="relative pt-3">
                         <p  className=" ri-wheelchair-line font-semibold">SEAT COUNT</p>
-                        <input
-                          type="text"
-                          value={seatCountQuery}
-                          onChange={e => setSeatCountQuery(e.target.value)}
-                          placeholder="Enter Seat Count"
-                          className="w-full p-2 h-15 rounded-lg border border-gray-300"
-                        />
+                        <select
+                        value={seatCountQuery}
+                        onChange={e => setSeatCountQuery(e.target.value)}
+                        className="w-full p-2 h-15 rounded-lg border border-gray-300"
+                        required
+                      >
+                        <option value="">Select Seat Count</option>
+                        <option value="5">1-4 seats</option>
+                        <option value="8">5-8 seats</option>
+                        <option value="15">9-14 seats</option>
+                      </select>
                       </div>
                   
                       <div className="relative pt-3 font-semibold flex justify-center">
@@ -84,7 +91,6 @@ const CarFindForm = () => {
                 </div>
               </form>
             </section>
-          </React.Fragment>
         </div>
         
         <div className="p-4 md:col-span-2">
@@ -98,7 +104,7 @@ const CarFindForm = () => {
                  <div className="car__item-content mt-4">
                     <h4 className="section__title text-center">{car.carname}</h4>
                     <h6 className="rent__price text-center mt-">
-                      Rs: {car.price}.00 <span>/ Day</span>
+                      Rs: {car.price}.00 <span>/ Hour</span>
                     </h6>
 
                     <div className="car__item-info d-flex align-items-center justify-content-between mt-3 mb-4">

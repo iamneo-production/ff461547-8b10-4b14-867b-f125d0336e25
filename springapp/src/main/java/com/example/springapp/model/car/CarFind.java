@@ -1,7 +1,6 @@
 package com.example.springapp.model.car;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,7 +13,7 @@ public class CarFind {
 	private Long carid;
 	private String carname;
 	private String location;
-	private Date pickUpDate;
+	private LocalDate pickUpDate;
 	private int no_of_seat;
 	private Long price;
 	private String status;
@@ -45,14 +44,14 @@ public class CarFind {
 		this.location = location;
 	}
 
-    public String getFormattedPickUpDate() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        return (pickUpDate != null) ? dateFormat.format(pickUpDate) : null;
-    }
+	public LocalDate getPickUpDate() {
+		return pickUpDate;
+	}
 
-    public void setPickUpDate(Date pickUpDate) {
-        this.pickUpDate = pickUpDate;
-    }
+	public void setPickUpDate(LocalDate pickUpDate) {
+		this.pickUpDate = pickUpDate;
+	}
+
 	public int getNo_of_seat() {
 		return no_of_seat;
 	}
