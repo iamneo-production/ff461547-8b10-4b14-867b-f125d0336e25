@@ -1,7 +1,6 @@
 com/example/springapp/dto/hotel/HotelSearchRequestDto.class
 com/example/springapp/service/car/CarFindService.class
 com/example/springapp/service/hotel/HotelService.class
-com/example/springapp/model/travelagent/TravelAgent.class
 com/example/springapp/repository/car/CarFindRepo.class
 com/example/springapp/repository/user/UserRepository.class
 com/example/springapp/model/travelagent/TravelAgent.class
@@ -10,8 +9,8 @@ com/example/springapp/model/customer/Customer.class
 com/example/springapp/repository/travelagent/TravelAgentRepository.class
 com/example/springapp/service/user/impl/UserServiceImpl.class
 com/example/springapp/dto/error/ErrorJsonDto.class
-com/example/springapp/model/booking/Booking.class
 com/example/springapp/model/car/CarFind.class
+com/example/springapp/model/booking/Booking.class
 com/example/springapp/controller/CarController.class
 com/example/springapp/model/user/User.class
 com/example/springapp/model/hotel/BookedHotel.class

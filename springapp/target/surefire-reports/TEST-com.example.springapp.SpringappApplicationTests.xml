@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.springapp.SpringappApplicationTests" time="27.466" tests="8" errors="8" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.springapp.SpringappApplicationTests" time="27.033" tests="8" errors="8" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/coder/project/workspace/springapp/target/surefire/surefirebooter17963416364473021085.jar /home/coder/project/workspace/springapp/target/surefire 2023-07-19T09-00-49_981-jvmRun1 surefire16307933057501629358tmp surefire_016899087513416949087tmp"/>
+    <property name="sun.java.command" value="/home/coder/project/workspace/springapp/target/surefire/surefirebooter7193384212845907920.jar /home/coder/project/workspace/springapp/target/surefire 2023-07-19T09-18-37_918-jvmRun1 surefire11756351091524016997tmp surefire_016669387169332639849tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/coder/project/workspace/springapp/target/test-classes:/home/coder/project/workspace/springapp/target/classes:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.7.10/spring-boot-starter-data-jpa-2.7.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.7.10/spring-boot-starter-aop-2.7.10.jar:/home/coder/.m2/repository/org/springframework/spring-aop/5.3.26/spring-aop-5.3.26.jar:/home/coder/.m2/repository/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.7.10/spring-boot-starter-jdbc-2.7.10.jar:/home/coder/.m2/repository/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.jar:/home/coder/.m2/repository/org/springframework/spring-jdbc/5.3.26/spring-jdbc-5.3.26.jar:/home/coder/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/home/coder/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/home/coder/.m2/repository/org/hibernate/hibernate-core/5.6.15.Final/hibernate-core-5.6.15.Final.jar:/home/coder/.m2/repository/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar:/home/coder/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/coder/.m2/repository/org/jboss/jandex/2.4.2.Final/jandex-2.4.2.Final.jar:/home/coder/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/coder/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/home/coder/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.8/jaxb-runtime-2.3.8.jar:/home/coder/.m2/repository/org/glassfish/jaxb/txw2/2.3.8/txw2-2.3.8.jar:/home/coder/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.12/istack-commons-runtime-3.0.12.jar:/home/coder/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/coder/.m2/repository/org/springframework/data/spring-data-jpa/2.7.10/spring-data-jpa-2.7.10.jar:/home/coder/.m2/repository/org/springframework/data/spring-data-commons/2.7.10/spring-data-commons-2.7.10.jar:/home/coder/.m2/repository/org/springframework/spring-orm/5.3.26/spring-orm-5.3.26.jar:/home/coder/.m2/repository/org/springframework/spring-context/5.3.26/spring-context-5.3.26.jar:/home/coder/.m2/repository/org/springframework/spring-tx/5.3.26/spring-tx-5.3.26.jar:/home/coder/.m2/repository/org/springframework/spring-beans/5.3.26/spring-beans-5.3.26.jar:/home/coder/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/coder/.m2/repository/org/springframework/spring-aspects/5.3.26/spring-aspects-5.3.26.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.7.10/spring-boot-starter-web-2.7.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter/2.7.10/spring-boot-starter-2.7.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.7.10/spring-boot-starter-logging-2.7.10.jar:/home/coder/.m2/repository/ch/qos/logback/logback-classic/1.2.11/logback-classic-1.2.11.jar:/home/coder/.m2/repository/ch/qos/logback/logback-core/1.2.11/logback-core-1.2.11.jar:/home/coder/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.17.2/log4j-to-slf4j-2.17.2.jar:/home/coder/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar:/home/coder/.m2/repository/org/slf4j/jul-to-slf4j/1.7.36/jul-to-slf4j-1.7.36.jar:/home/coder/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/home/coder/.m2/repository/org/yaml/snakeyaml/1.30/snakeyaml-1.30.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.7.10/spring-boot-starter-json-2.7.10.jar:/home/coder/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.13.5/jackson-datatype-jdk8-2.13.5.jar:/home/coder/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.5/jackson-datatype-jsr310-2.13.5.jar:/home/coder/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.13.5/jackson-module-parameter-names-2.13.5.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.7.10/spring-boot-starter-tomcat-2.7.10.jar:/home/coder/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.73/tomcat-embed-core-9.0.73.jar:/home/coder/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.73/tomcat-embed-el-9.0.73.jar:/home/coder/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.73/tomcat-embed-websocket-9.0.73.jar:/home/coder/.m2/repository/org/springframework/spring-web/5.3.26/spring-web-5.3.26.jar:/home/coder/.m2/repository/org/springframework/spring-webmvc/5.3.26/spring-webmvc-5.3.26.jar:/home/coder/.m2/repository/org/springframework/spring-expression/5.3.26/spring-expression-5.3.26.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.7.10/spring-boot-starter-test-2.7.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-test/2.7.10/spring-boot-test-2.7.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.7.10/spring-boot-test-autoconfigure-2.7.10.jar:/home/coder/.m2/repository/com/jayway/jsonpath/json-path/2.7.0/json-path-2.7.0.jar:/home/coder/.m2/repository/net/minidev/json-smart/2.4.10/json-smart-2.4.10.jar:/home/coder/.m2/repository/net/minidev/accessors-smart/2.4.9/accessors-smart-2.4.9.jar:/home/coder/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/home/coder/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/coder/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/coder/.m2/repository/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.jar:/home/coder/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/coder/.m2/repository/org/mockito/mockito-junit-jupiter/4.5.1/mockito-junit-jupiter-4.5.1.jar:/home/coder/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/home/coder/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/coder/.m2/repository/org/springframework/spring-core/5.3.26/spring-core-5.3.26.jar:/home/coder/.m2/repository/org/springframework/spring-jcl/5.3.26/spring-jcl-5.3.26.jar:/home/coder/.m2/repository/org/springframework/spring-test/5.3.26/spring-test-5.3.26.jar:/home/coder/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/coder/.m2/repository/com/mysql/mysql-connector-j/8.0.32/mysql-connector-j-8.0.32.jar:/home/coder/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/coder/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/coder/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/home/coder/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/coder/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/coder/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/coder/.m2/repository/org/mockito/mockito-core/4.5.1/mockito-core-4.5.1.jar:/home/coder/.m2/repository/net/bytebuddy/byte-buddy/1.12.23/byte-buddy-1.12.23.jar:/home/coder/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.23/byte-buddy-agent-1.12.23.jar:/home/coder/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:/home/coder/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.5/jackson-databind-2.13.5.jar:/home/coder/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.5/jackson-annotations-2.13.5.jar:/home/coder/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.5/jackson-core-2.13.5.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-devtools/2.7.10/spring-boot-devtools-2.7.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot/2.7.10/spring-boot-2.7.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.7.10/spring-boot-autoconfigure-2.7.10.jar:/home/coder/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/coder/project/workspace/springapp/target/surefire/surefirebooter17963416364473021085.jar"/>
+    <property name="surefire.real.class.path" value="/home/coder/project/workspace/springapp/target/surefire/surefirebooter7193384212845907920.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.18+10-post-Debian-1deb11u1"/>
     <property name="user.name" value="coder"/>
@@ -56,25 +56,25 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testGetRentalCarAll" classname="com.example.springapp.SpringappApplicationTests" time="0.037">
+  <testcase name="testGetRentalCarAll" classname="com.example.springapp.SpringappApplicationTests" time="0.001">
     <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 </error>
-    <system-out><![CDATA[09:00:51.446 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-09:00:51.461 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-09:00:51.556 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.springapp.SpringappApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-09:00:51.573 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.springapp.SpringappApplicationTests], using SpringBootContextLoader
-09:00:51.578 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.springapp.SpringappApplicationTests]: class path resource [com/example/springapp/SpringappApplicationTests-context.xml] does not exist
-09:00:51.579 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.springapp.SpringappApplicationTests]: class path resource [com/example/springapp/SpringappApplicationTestsContext.groovy] does not exist
-09:00:51.580 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.springapp.SpringappApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-09:00:51.700 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.springapp.SpringappApplicationTests]
-09:00:51.887 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.springapp.SpringappApplicationTests]: using defaults.
-09:00:51.888 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-09:00:51.935 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5026735c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b45c0e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@11f0a5a1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@10f7f7de, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@73a8da0f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50dfbc58, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4416d64f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6bf08014, org.springframework.test.context.event.EventPublishingTestExecutionListener@5e3d57c7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@732d0d24, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1fb19a0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6ee4d9ab, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5a5338df, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@418c5a9c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@18e36d14]
-09:00:51.942 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3e74829 testClass = SpringappApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4f6f416f testClass = SpringappApplicationTests, locations = '{}', classes = '{class com.example.springapp.SpringappApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@3b8f0a79 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5d7148e2, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@21e360a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@434a63ab, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@ffaa6af, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@659499f1, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4232c52b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+    <system-out><![CDATA[09:18:39.889 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:18:39.906 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:18:39.997 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.springapp.SpringappApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:18:40.021 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.springapp.SpringappApplicationTests], using SpringBootContextLoader
+09:18:40.046 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.springapp.SpringappApplicationTests]: class path resource [com/example/springapp/SpringappApplicationTests-context.xml] does not exist
+09:18:40.048 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.springapp.SpringappApplicationTests]: class path resource [com/example/springapp/SpringappApplicationTestsContext.groovy] does not exist
+09:18:40.049 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.springapp.SpringappApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:18:40.192 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.springapp.SpringappApplicationTests]
+09:18:40.347 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.springapp.SpringappApplicationTests]: using defaults.
+09:18:40.348 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:18:40.373 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5026735c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b45c0e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@11f0a5a1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@10f7f7de, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@73a8da0f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50dfbc58, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4416d64f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6bf08014, org.springframework.test.context.event.EventPublishingTestExecutionListener@5e3d57c7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@732d0d24, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1fb19a0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6ee4d9ab, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5a5338df, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@418c5a9c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@18e36d14]
+09:18:40.381 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3e74829 testClass = SpringappApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4f6f416f testClass = SpringappApplicationTests, locations = '{}', classes = '{class com.example.springapp.SpringappApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@3b8f0a79 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5d7148e2, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@21e360a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@434a63ab, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@ffaa6af, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@659499f1, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4232c52b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -84,15 +84,15 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.10)
 
-2023-07-19 09:00:52.658  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 9280 (started by coder in /home/coder/project/workspace/springapp)
-2023-07-19 09:00:52.660  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 09:00:54.063  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-19 09:00:54.224  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 8 JPA repository interfaces.
-2023-07-19 09:00:55.529  INFO 9280 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-19 09:00:55.584  INFO 9280 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-07-19 09:00:55.784  INFO 9280 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-07-19 09:00:55.925  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:00:57.227 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:40.984  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 3315 (started by coder in /home/coder/project/workspace/springapp)
+2023-07-19 09:18:40.987  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2023-07-19 09:18:42.357  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-19 09:18:42.498  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130 ms. Found 10 JPA repository interfaces.
+2023-07-19 09:18:43.265  INFO 3315 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-19 09:18:43.350  INFO 3315 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-19 09:18:43.562  INFO 3315 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-19 09:18:43.684  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:45.158 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -214,7 +214,7 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:00:57.234  WARN 9280 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-07-19 09:18:45.161  WARN 3315 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -336,9 +336,9 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:00:57.253  INFO 9280 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-07-19 09:00:58.373  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:00:59.379 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:45.177  INFO 3315 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-07-19 09:18:46.255  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:47.260 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -460,14 +460,14 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:00:59.381  WARN 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
-2023-07-19 09:00:59.381 ERROR 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
-2023-07-19 09:00:59.387 ERROR 9280 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:00:59.388  WARN 9280 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:00:59.413  INFO 9280 --- [           main] ConditionEvaluationReportLoggingListener : 
+2023-07-19 09:18:47.262  WARN 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2023-07-19 09:18:47.262 ERROR 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
+2023-07-19 09:18:47.277 ERROR 3315 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:47.279  WARN 3315 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:47.301  INFO 3315 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-07-19 09:00:59.450 ERROR 9280 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2023-07-19 09:18:47.332 ERROR 3315 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
@@ -602,7 +602,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	... 102 common frames omitted
 
-2023-07-19 09:00:59.453 ERROR 9280 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@774c5e5c]
+2023-07-19 09:18:47.336 ERROR 3315 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@51f4439e]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-5.3.26.jar:5.3.26]
@@ -758,13 +758,13 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.10)
 
-2023-07-19 09:00:59.636  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 9280 (started by coder in /home/coder/project/workspace/springapp)
-2023-07-19 09:00:59.638  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 09:01:00.017  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-19 09:01:00.036  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 8 JPA repository interfaces.
-2023-07-19 09:01:00.235  INFO 9280 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-19 09:01:00.242  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:01.249 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:47.443  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 3315 (started by coder in /home/coder/project/workspace/springapp)
+2023-07-19 09:18:47.444  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2023-07-19 09:18:47.803  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-19 09:18:47.861  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 10 JPA repository interfaces.
+2023-07-19 09:18:48.067  INFO 3315 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-19 09:18:48.072  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:49.075 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -886,7 +886,7 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:01.251  WARN 9280 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-07-19 09:18:49.077  WARN 3315 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -1008,9 +1008,9 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:01.252  INFO 9280 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-07-19 09:01:01.560  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:02.564 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:49.079  INFO 3315 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-07-19 09:18:49.355  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:50.360 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -1132,14 +1132,14 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:02.565  WARN 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
-2023-07-19 09:01:02.566 ERROR 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
-2023-07-19 09:01:02.567 ERROR 9280 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:02.567  WARN 9280 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:02.572  INFO 9280 --- [           main] ConditionEvaluationReportLoggingListener : 
+2023-07-19 09:18:50.361  WARN 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2023-07-19 09:18:50.362 ERROR 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
+2023-07-19 09:18:50.375 ERROR 3315 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:50.376  WARN 3315 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:50.390  INFO 3315 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-07-19 09:01:02.578 ERROR 9280 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2023-07-19 09:18:50.446 ERROR 3315 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
@@ -1274,7 +1274,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	... 102 common frames omitted
 
-2023-07-19 09:01:02.607 ERROR 9280 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@7845ee8a]
+2023-07-19 09:18:50.454 ERROR 3315 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@574f9e36]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-5.3.26.jar:5.3.26]
@@ -1430,13 +1430,13 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.10)
 
-2023-07-19 09:01:02.660  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 9280 (started by coder in /home/coder/project/workspace/springapp)
-2023-07-19 09:01:02.661  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 09:01:02.921  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-19 09:01:02.947  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 8 JPA repository interfaces.
-2023-07-19 09:01:03.156  INFO 9280 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-19 09:01:03.163  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:04.168 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:50.565  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 3315 (started by coder in /home/coder/project/workspace/springapp)
+2023-07-19 09:18:50.566  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2023-07-19 09:18:50.771  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-19 09:18:50.803  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 10 JPA repository interfaces.
+2023-07-19 09:18:51.001  INFO 3315 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-19 09:18:51.007  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:52.012 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -1558,7 +1558,7 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:04.170  WARN 9280 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-07-19 09:18:52.013  WARN 3315 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -1680,9 +1680,9 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:04.170  INFO 9280 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-07-19 09:01:04.372  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:05.376 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:52.014  INFO 3315 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-07-19 09:18:52.242  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:53.246 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -1804,14 +1804,14 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:05.377  WARN 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
-2023-07-19 09:01:05.377 ERROR 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
-2023-07-19 09:01:05.378 ERROR 9280 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:05.378  WARN 9280 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:05.383  INFO 9280 --- [           main] ConditionEvaluationReportLoggingListener : 
+2023-07-19 09:18:53.247  WARN 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2023-07-19 09:18:53.247 ERROR 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
+2023-07-19 09:18:53.247 ERROR 3315 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:53.248  WARN 3315 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:53.250  INFO 3315 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-07-19 09:01:05.387 ERROR 9280 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2023-07-19 09:18:53.255 ERROR 3315 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
@@ -1946,7 +1946,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	... 102 common frames omitted
 
-2023-07-19 09:01:05.389 ERROR 9280 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@426913c4]
+2023-07-19 09:18:53.257 ERROR 3315 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@33563147]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-5.3.26.jar:5.3.26]
@@ -2102,13 +2102,13 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.10)
 
-2023-07-19 09:01:05.428  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 9280 (started by coder in /home/coder/project/workspace/springapp)
-2023-07-19 09:01:05.428  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 09:01:05.721  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-19 09:01:05.737  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 8 JPA repository interfaces.
-2023-07-19 09:01:05.882  INFO 9280 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-19 09:01:05.920  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:06.924 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:53.294  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 3315 (started by coder in /home/coder/project/workspace/springapp)
+2023-07-19 09:18:53.295  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2023-07-19 09:18:53.518  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-19 09:18:53.552  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 10 JPA repository interfaces.
+2023-07-19 09:18:53.692  INFO 3315 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-19 09:18:53.698  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:54.702 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -2230,7 +2230,7 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:06.926  WARN 9280 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-07-19 09:18:54.703  WARN 3315 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -2352,9 +2352,9 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:06.928  INFO 9280 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-07-19 09:01:07.119  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:08.123 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:54.704  INFO 3315 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-07-19 09:18:54.886  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:55.890 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -2476,14 +2476,14 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:08.124  WARN 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
-2023-07-19 09:01:08.124 ERROR 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
-2023-07-19 09:01:08.124 ERROR 9280 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:08.124  WARN 9280 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:08.129  INFO 9280 --- [           main] ConditionEvaluationReportLoggingListener : 
+2023-07-19 09:18:55.892  WARN 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2023-07-19 09:18:55.893 ERROR 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
+2023-07-19 09:18:55.893 ERROR 3315 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:55.894  WARN 3315 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:55.906  INFO 3315 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-07-19 09:01:08.133 ERROR 9280 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2023-07-19 09:18:55.917 ERROR 3315 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
@@ -2618,7 +2618,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	... 102 common frames omitted
 
-2023-07-19 09:01:08.136 ERROR 9280 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@62c42a3]
+2023-07-19 09:18:55.920 ERROR 3315 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@6dcc7696]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-5.3.26.jar:5.3.26]
@@ -2774,13 +2774,13 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.10)
 
-2023-07-19 09:01:08.179  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 9280 (started by coder in /home/coder/project/workspace/springapp)
-2023-07-19 09:01:08.180  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 09:01:08.419  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-19 09:01:08.434  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 8 JPA repository interfaces.
-2023-07-19 09:01:08.577  INFO 9280 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-19 09:01:08.583  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:09.587 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:55.981  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 3315 (started by coder in /home/coder/project/workspace/springapp)
+2023-07-19 09:18:55.982  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2023-07-19 09:18:56.176  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-19 09:18:56.193  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 10 JPA repository interfaces.
+2023-07-19 09:18:56.341  INFO 3315 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-19 09:18:56.348  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:57.352 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -2902,7 +2902,7 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:09.588  WARN 9280 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-07-19 09:18:57.353  WARN 3315 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -3024,9 +3024,9 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:09.589  INFO 9280 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-07-19 09:01:09.750  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:10.758 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:57.354  INFO 3315 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-07-19 09:18:57.513  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:18:58.542 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -3148,14 +3148,14 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:10.758  WARN 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
-2023-07-19 09:01:10.759 ERROR 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
-2023-07-19 09:01:10.759 ERROR 9280 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:10.759  WARN 9280 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:10.769  INFO 9280 --- [           main] ConditionEvaluationReportLoggingListener : 
+2023-07-19 09:18:58.542  WARN 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2023-07-19 09:18:58.543 ERROR 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
+2023-07-19 09:18:58.543 ERROR 3315 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:58.544  WARN 3315 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:18:58.547  INFO 3315 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-07-19 09:01:10.776 ERROR 9280 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2023-07-19 09:18:58.552 ERROR 3315 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
@@ -3290,7 +3290,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	... 102 common frames omitted
 
-2023-07-19 09:01:10.779 ERROR 9280 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@63614cdd]
+2023-07-19 09:18:58.554 ERROR 3315 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@3733b1f4]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-5.3.26.jar:5.3.26]
@@ -3446,13 +3446,13 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.10)
 
-2023-07-19 09:01:10.818  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 9280 (started by coder in /home/coder/project/workspace/springapp)
-2023-07-19 09:01:10.819  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 09:01:11.030  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-19 09:01:11.046  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 8 JPA repository interfaces.
-2023-07-19 09:01:11.216  INFO 9280 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-19 09:01:11.223  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:12.227 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:18:58.597  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 3315 (started by coder in /home/coder/project/workspace/springapp)
+2023-07-19 09:18:58.638  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2023-07-19 09:18:58.977  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-19 09:18:59.053  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 10 JPA repository interfaces.
+2023-07-19 09:18:59.262  INFO 3315 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-19 09:18:59.268  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:19:00.272 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -3574,7 +3574,7 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:12.228  WARN 9280 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-07-19 09:19:00.273  WARN 3315 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -3696,9 +3696,9 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:12.229  INFO 9280 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-07-19 09:01:12.360  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:13.364 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:19:00.274  INFO 3315 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-07-19 09:19:00.394  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:19:01.399 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -3820,14 +3820,14 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:13.365  WARN 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
-2023-07-19 09:01:13.365 ERROR 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
-2023-07-19 09:01:13.365 ERROR 9280 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:13.366  WARN 9280 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:13.369  INFO 9280 --- [           main] ConditionEvaluationReportLoggingListener : 
+2023-07-19 09:19:01.400  WARN 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2023-07-19 09:19:01.400 ERROR 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
+2023-07-19 09:19:01.401 ERROR 3315 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:19:01.401  WARN 3315 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:19:01.404  INFO 3315 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-07-19 09:01:13.374 ERROR 9280 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2023-07-19 09:19:01.408 ERROR 3315 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
@@ -3962,7 +3962,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	... 102 common frames omitted
 
-2023-07-19 09:01:13.376 ERROR 9280 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@4fae4c3b]
+2023-07-19 09:19:01.410 ERROR 3315 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@52c68925]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-5.3.26.jar:5.3.26]
@@ -4118,13 +4118,13 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.10)
 
-2023-07-19 09:01:13.429  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 9280 (started by coder in /home/coder/project/workspace/springapp)
-2023-07-19 09:01:13.429  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 09:01:13.649  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-19 09:01:13.675  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 8 JPA repository interfaces.
-2023-07-19 09:01:13.815  INFO 9280 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-19 09:01:13.826  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:14.831 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:19:01.453  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 3315 (started by coder in /home/coder/project/workspace/springapp)
+2023-07-19 09:19:01.454  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2023-07-19 09:19:01.689  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-19 09:19:01.709  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 10 JPA repository interfaces.
+2023-07-19 09:19:01.823  INFO 3315 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-19 09:19:01.842  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:19:02.846 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -4246,7 +4246,7 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:14.832  WARN 9280 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-07-19 09:19:02.847  WARN 3315 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -4368,9 +4368,9 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:14.833  INFO 9280 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-07-19 09:01:14.970  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:15.974 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:19:02.848  INFO 3315 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-07-19 09:19:03.077  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:19:04.084 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -4492,14 +4492,14 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:15.974  WARN 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
-2023-07-19 09:01:15.975 ERROR 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
-2023-07-19 09:01:15.975 ERROR 9280 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:15.976  WARN 9280 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:15.979  INFO 9280 --- [           main] ConditionEvaluationReportLoggingListener : 
+2023-07-19 09:19:04.085  WARN 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2023-07-19 09:19:04.085 ERROR 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
+2023-07-19 09:19:04.087 ERROR 3315 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:19:04.087  WARN 3315 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:19:04.091  INFO 3315 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-07-19 09:01:15.984 ERROR 9280 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2023-07-19 09:19:04.095 ERROR 3315 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
@@ -4634,7 +4634,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	... 102 common frames omitted
 
-2023-07-19 09:01:15.986 ERROR 9280 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@57fb6900]
+2023-07-19 09:19:04.096 ERROR 3315 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@33f059ad]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-5.3.26.jar:5.3.26]
@@ -4790,13 +4790,13 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.10)
 
-2023-07-19 09:01:16.043  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 9280 (started by coder in /home/coder/project/workspace/springapp)
-2023-07-19 09:01:16.044  INFO 9280 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 09:01:16.337  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-07-19 09:01:16.350  INFO 9280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 8 JPA repository interfaces.
-2023-07-19 09:01:16.455  INFO 9280 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-07-19 09:01:16.464  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:17.468 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:19:04.145  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : Starting SpringappApplicationTests using Java 11.0.18 on bccfbccaacabcefaffbedbdcceeabefcfbc-0 with PID 3315 (started by coder in /home/coder/project/workspace/springapp)
+2023-07-19 09:19:04.145  INFO 3315 --- [           main] c.e.springapp.SpringappApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2023-07-19 09:19:04.355  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-19 09:19:04.373  INFO 3315 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 10 JPA repository interfaces.
+2023-07-19 09:19:04.470  INFO 3315 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-19 09:19:04.477  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:19:05.480 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -4918,7 +4918,7 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:17.470  WARN 9280 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2023-07-19 09:19:05.481  WARN 3315 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -5040,9 +5040,9 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:17.471  INFO 9280 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-07-19 09:01:17.578  INFO 9280 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
-2023-07-19 09:01:18.583 ERROR 9280 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
+2023-07-19 09:19:05.482  INFO 3315 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-07-19 09:19:05.584  INFO 3315 --- [           main] com.zaxxer.hikari.HikariDataSource       : travelbooking - Starting...
+2023-07-19 09:19:06.588 ERROR 3315 --- [           main] com.zaxxer.hikari.pool.HikariPool        : travelbooking - Exception during pool initialization.
 
 java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
@@ -5164,14 +5164,14 @@ java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 
-2023-07-19 09:01:18.584  WARN 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
-2023-07-19 09:01:18.584 ERROR 9280 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
-2023-07-19 09:01:18.584 ERROR 9280 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:18.585  WARN 9280 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
-2023-07-19 09:01:18.589  INFO 9280 --- [           main] ConditionEvaluationReportLoggingListener : 
+2023-07-19 09:19:06.589  WARN 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2023-07-19 09:19:06.589 ERROR 3315 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'travelbooking'
+2023-07-19 09:19:06.590 ERROR 3315 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:19:06.590  WARN 3315 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2023-07-19 09:19:06.594  INFO 3315 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-07-19 09:01:18.593 ERROR 9280 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2023-07-19 09:19:06.597 ERROR 3315 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.26.jar:5.3.26]
@@ -5306,7 +5306,7 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'travelbooking'
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	... 102 common frames omitted
 
-2023-07-19 09:01:18.595 ERROR 9280 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@67836d4]
+2023-07-19 09:19:06.599 ERROR 3315 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5026735c] to prepare test instance [com.example.springapp.SpringappApplicationTests@6461c673]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-5.3.26.jar:5.3.26]
