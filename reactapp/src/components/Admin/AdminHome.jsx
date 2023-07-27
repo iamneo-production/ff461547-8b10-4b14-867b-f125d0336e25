@@ -19,11 +19,11 @@ function AdminHome() {
   }
     return (
       <div className='admin-bg'>
-        <div className='box'>
+        <div className='admin-box'>
            <div className="admin-container">
         <h1>Welcome to the Admin Page</h1>
         <button className='adminbtn' onClick={handleFlightClick}>Flights</button><br />
-        <button className='adminbtn' onClick={handleCarClick}>Cars</button><br />
+        <button className='admincarbtn' onClick={handleCarClick}>Cars</button><br />
         <button className='adminbtn' onClick={handleHotelClick}>Hotels</button><br />
       </div> 
     </div>

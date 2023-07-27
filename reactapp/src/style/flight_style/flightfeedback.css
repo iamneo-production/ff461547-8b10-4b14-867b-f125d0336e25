@@ -1,0 +1,93 @@
+
+.FlightFeedback {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 9px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+  }
+  
+  .FlightFeedback h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .FlightFeedback form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .FlightFeedback label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .FlightFeedback textarea,
+  .FlightFeedback select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+  }
+  
+  .FlightFeedback select {
+    display: none; 
+  }
+  
+  .FlightFeedback .stars {
+    display: flex;
+    align-items: center;
+  }
+  
+  .FlightFeedback .star {
+    font-size: 24px;
+    color: #d3d3d3;
+    cursor: pointer;
+  }
+  
+  .FlightFeedback .star:hover,
+  .FlightFeedback .star:hover ~ .star {
+    color: #ffc107;
+  }
+  
+  .FlightFeedback .star.checked {
+    color: #ffc107;
+  }
+  
+  .Submit-btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Submit-btn:hover {
+    background-color: #0cc9eb;
+  }
+  
+  .Submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+
+  .Submit-btn:disabled {
+    background-color: #ddd;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+
+  .FlightFeedback form {
+    display: flex;
+    flex-direction: column;
+    
+  }

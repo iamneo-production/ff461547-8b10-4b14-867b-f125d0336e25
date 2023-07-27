@@ -93,7 +93,7 @@ export const PreviewPage = () => {
           <p className="uppercase font-bold text-center">Confirm Your Details</p>
         </div>
         <div className="flight_container mx-auto">
-          <h1 className="font-bold mb-4 text-xl">Travel Details</h1>
+          <h1 className="font-bold mb-6 text-xl">Travel Details</h1>
           {flight ? (
             <div className="bg-teal-700 border border-black p-4 rounded">
               <p className="mb-2"><span className="font-semibold">Flight Name:</span> {flight.flight_name}</p>
@@ -110,7 +110,7 @@ export const PreviewPage = () => {
         </div>
         <br></br>
         <div className="flight_container mx-auto">
-          <h1 className="font-bold mb-4 text-xl">Contact Details</h1>
+          <h1 className="font-bold mb-2 text-xl">Contact Details</h1>
           {contact ? (
             <div className="bg-teal-700 border border-black p-4 rounded">
               <p className="mb-2"><span className="font-semibold">Name:</span> {contact.contact_name}</p>
@@ -124,7 +124,7 @@ export const PreviewPage = () => {
         </div>
         <br></br>
         <div className="flight_container mx-auto ">
-          <h1 className="font-bold mb-4 text-xl">Passenger Details</h1>
+          <h1 className="font-bold mb-2 text-xl">Passenger Details</h1>
           {passengers && passengers.length > 0 ? (
             <div>
               {passengers.map((passenger, index) => (
@@ -160,7 +160,7 @@ export const PreviewPage = () => {
         </div>
         {showPaymentSummary && (
           <div className="container mx-auto ">
-            <h1 className="text-2xl font-bold mb-4">Passenger Summary</h1>
+            <h1 className="text-2xl font-bold mt-20 ">Passenger Summary</h1>
             <div className="bg-teal-700 border border-black p-4 rounded-md mb-4">
               <p>Calculation Summary:</p>
               <p>Adult:
