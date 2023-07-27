@@ -2,7 +2,7 @@ package com.example.springapp.controller;
 import com.example.springapp.model.flight.Search;
 import com.example.springapp.model.ContactDetails;
 import com.example.springapp.model.PassengerDetails;
-import com.example.springapp.model.FlightFeedback;
+import com.example.springapp.model.flight.FlightFeedback;
 import com.example.springapp.repository.flight.SearchRepository;
 import com.example.springapp.repository.ContactRepository;
 import com.example.springapp.repository.PassengerRepository;

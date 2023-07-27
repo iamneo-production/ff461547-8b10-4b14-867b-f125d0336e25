@@ -1,7 +1,11 @@
 package com.example.springapp.model.flight;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+import javax.persistence.Column;
 
-
-import jakarta.persistence.*;
 
 @Entity
 @Table(name = "flightfeed")
@@ -40,20 +44,20 @@ public class FlightFeedback {
         this.rating = rating;
     }
 
-    public Feedback(Long feedid, String feedback, int rating) {
+    public FlightFeedback(Long feedid, String feedback, int rating) {
         this.feedid = feedid;
         this.feedback = feedback;
         this.rating = rating;
     }
 
 
-    public Feedback() {
+    public FlightFeedback() {
 
     }
 
     @Override
     public String toString() {
-        return "Feedback{" +
+        return "FlightFeedback{" +
                 "id=" + feedid +
                 ", feedback='" + feedback + '\'' +
                 ", rating=" + rating +
