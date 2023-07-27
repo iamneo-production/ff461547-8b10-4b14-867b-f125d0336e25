@@ -96,7 +96,6 @@ export const FlightAdmin = () => {
         setIsFlightAdded(true);
         
 
-        // Update the filteredTickets state with the new flight data
         setFilteredTickets([...filteredTickets, data]);
 
         setTimeout(() => {
@@ -111,14 +110,11 @@ export const FlightAdmin = () => {
 
   const [deleteMessage, setDeleteMessage] = useState("");
 
-  // Function to delete a flight
   const handleDeleteFlight = (flightId) => {
     axios.delete(`/flights/${flightId}`)
       .then((response) => {
         console.log("Flight deleted successfully:", response.data);
-        // Set the response message to show that the flight is deleted
         setDeleteMessage("Flight deleted successfully!");
-        // Remove the deleted flight from the filteredTickets state
         setFilteredTickets(filteredTickets.filter((flight) => flight.flightid !== flightId));
         setTimeout(() => {
           setDeleteMessage("");
