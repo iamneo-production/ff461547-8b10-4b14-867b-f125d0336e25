@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Country } from 'country-state-city'
 import Form from 'react-bootstrap/Form'
 import axios from 'axios'
+import swal from 'sweetalert'
 import { HotelActions, HotelContext } from '../HotelContext'
 import HotelInputHelper from './HotelInputHelper'
 import Travelers from './Travelers'
@@ -17,7 +18,7 @@ function HotelInput() {
         e.preventDefault();
 
         if (country === '' || city === '') {
-            alert("Please Select Country and City");
+            swal("Wanring!", "Please Select Country and City", "warning");
 
         } else {
             console.log(hotelState)
@@ -31,7 +32,7 @@ function HotelInput() {
             hotelDispatch({ type: HotelActions.SET_SEARCH_RESPONSE, payload: responseData })
         } catch (error) {
             setError(error.response.data);
-            alert('Something Went Wrong , Please Try Again...');
+            swal("Opps!", "Something Went Wrong , Please Try Again...", "error");
         }
     }
     function createSearchCriteria(country, city, rooms) {
