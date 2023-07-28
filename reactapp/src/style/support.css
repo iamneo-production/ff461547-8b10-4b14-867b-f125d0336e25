@@ -1,0 +1,120 @@
+.support-help {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.support-help h2 {
+    position: fixed;
+    top: 30px;
+    background-color: #d96657;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.support-help .btn-danger {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+}
+
+.support-help .questions {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.support-help .contact-form {
+
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px
+}
+
+.contact-form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-form .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+}
+
+.contact-form input {
+    width: 100%;
+    height: 40px;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #d96657;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+}
+
+
+.faq .accordian {
+    background-color: #fafafa;
+    color: #d96657;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid rgb(73, 15, 15);
+    outline: none;
+    transition: 0.4s;
+    border-radius: 10px;
+    margin: 10px 5px;
+}
+
+
+.faq .accordian:hover {
+    background-color: #e0dede;
+}
+
+.panel p {
+    padding: 10px;
+    background-color: #dbdada;
+    overflow: hidden;
+    width: 100%;
+    font-size: 18px;
+    color: black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width : 600px) {
+    .support-help {
+        font-size: 12px;
+    }
+
+    .faq .accordian .panel p {
+        font-size: 14px;
+    }
+
+}
