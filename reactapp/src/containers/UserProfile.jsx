@@ -1,79 +1,72 @@
 import React, { useState } from 'react'
-//import { useParams } from 'react-router-dom';
+//import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCar, faHotel, faUser, faPlaneUp } from '@fortawesome/free-solid-svg-icons'
-import { Banner, AccountSettings, Flights, Cars, Hotels } from '../components/userProfile/index'
-import '../style/banner.css';
-import '../style/userProfile.css';
-import '../style/sideBar.css';
+import { faUser, faCartShopping, faLock } from '@fortawesome/free-solid-svg-icons'
+import { Banner, AccountSettings, Booking ,ChangePassword} from '../components/userProfile/index'
+import '../style/userprofile_style/userProfile.css';
+import '../style/userprofile_style/sideBar.css';
+
 
 const UserProfile = () => {
 
-    //const { activepage } = useParams()
     const [showAccount, setShowAccount] = useState(true);
-    const [showFlights, setShowFlights] = useState(false);
-    const [showCars, setShowCars] = useState(false);
-    const [showHotels, setShowHotels] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const [showBooking, setShowBooking] = useState(false);
 
     const handleAccountClick = () => {
         setShowAccount(true);
-        setShowFlights(false);
-        setShowCars(false);
-        setShowHotels(false);
+        setShowPassword(false);
+        setShowBooking(false);
     };
-    const handleFlightsClick = () => {
+    const handleChangePasswordClick = () => {
         setShowAccount(false);
-        setShowFlights(true);
-        setShowCars(false);
-        setShowHotels(false);
+        setShowPassword(true);
+        setShowBooking(false);
     };
-    const handleCarsClick = () => {
+
+    const handleBookingsClick = () => {
         setShowAccount(false);
-        setShowFlights(false);
-        setShowCars(true);
-        setShowHotels(false);
-    };
-    const handleHotelsClick = () => {
-        setShowAccount(false);
-        setShowFlights(false);
-        setShowCars(false);
-        setShowHotels(true);
-    };
+        setShowPassword(false);
+        setShowBooking(true);
+    }
+
     return (
         <div className='outercontainer bannercontainer'>
             <Banner
                 heading='My profile'
                 image='https://wallpapercave.com/wp/wp2352568.jpg'
             />
-            <div class='container secondcontainer'>
+            <div class='container secondcontainer row'>
+
                 <div class='left col-md-3'>
                     <div className='sideBar'>
                         <div className={`s1 ${showAccount ? 'active' : 'active'}`} id='account' onClick={handleAccountClick}>
                             <FontAwesomeIcon icon={faUser} />
-                            <span>Account Settings</span>
+                            <span> Account Settings</span>
                         </div>
-                        <div className={`s1 ${showFlights ? 'active' : ''}`} id='orders' onClick={handleFlightsClick}>
-                            <FontAwesomeIcon icon={faPlaneUp} />
-                            <span>Flights</span>
+                        <div className={`s1 ${showPassword ? 'active' : 'active'}`} id='account' onClick={handleChangePasswordClick}>
+                            <FontAwesomeIcon icon={faLock} />
+                            <span>Change Password</span>
                         </div>
-                        <div className={`s1 ${showCars ? 'active' : ''}`} id='orders' onClick={handleCarsClick}>
-                            <FontAwesomeIcon icon={faCar} />
-                            <span>Car Rentals</span>
-                        </div>
-                        <div className={`s1 ${showHotels ? 'active' : ''}`} id='orders' onClick={handleHotelsClick}>
-                            <FontAwesomeIcon icon={faHotel} />
-                            <span>My Stays</span>
+                        <div className='bookings'>
+                            <div className={`s1 ${showBooking ? 'active' : ''}`} id='orders' onClick={handleBookingsClick}>
+                                <FontAwesomeIcon icon={faCartShopping} />
+                                <span> Bookings</span>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+
                 <div class='right col-md-9'>
                     {showAccount && <AccountSettings />}
-                    {showFlights && <Flights />}
-                    {showCars && <Cars />}
-                    {showHotels && <Hotels />}
+                    {showPassword && <ChangePassword />}
+                    {showBooking && <Booking />}
                 </div>
+
             </div>
-        </div>
+
+        </div >
 
     )
 }
