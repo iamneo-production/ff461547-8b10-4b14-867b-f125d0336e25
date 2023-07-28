@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -49,7 +50,12 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public List<Hotel> getAllHotels() {
-        return hotelRepository.findAll();
+        List<Hotel> hotels = hotelRepository.findAll();
+        hotels.stream().forEach(hotel->{
+            hotel.setFirstImage(new ClassPathResource("static"+hotel.getFirstImage()).getPath());
+        });
+
+        return hotels;
     }
 
     @Override
@@ -250,12 +256,11 @@ public class HotelServiceImpl implements HotelService {
             fileName.append(image.getOriginalFilename());
             boolean uploaded = fileUploadHelper.uploadHotelImage(image, fileName.toString());
             if (uploaded) {
-                String path = ServletUriComponentsBuilder.fromCurrentContextPath().path("/image/")
-                        .path(fileName.toString()).toUriString();
+                
                 if (hotel.getFirstImage() == null) {
-                    hotel.setFirstImage(path);
+                    hotel.setFirstImage("/images/hotels/" + fileName.toString());
                 } else {
-                    hotel.setSecondImage(path);
+                    hotel.setSecondImage("/images/hotels/" + fileName.toString());
                 }
                 hotelRepository.save(hotel);
                 status = true;
