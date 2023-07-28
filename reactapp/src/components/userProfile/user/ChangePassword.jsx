@@ -3,14 +3,14 @@ import '../../../style/userprofile_style/accountSettings.css';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 
- const ChangePassword = () => {
+const ChangePassword = () => {
 
     const [customer, setCustomer] = useState([])
     const [defaultdetails, setdefaultdetails] = useState([]);
     const [editModePassword, setEditModePassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-
+    const user__Id = 2;
 
     const handleEditPasswordClick = () => {
         setEditModePassword(true);
@@ -21,15 +21,13 @@ import 'bootstrap/dist/css/bootstrap.css';
         getCustomerDetails();
     }, []);
 
-    const getCustomerDetails = async () => {
-        try {
-            const response = await axios.get("/users/1");
+    const getCustomerDetails = async() => {
+        await axios.get(`/users/usersId?userId=${user__Id}`).then(response => {
             setCustomer(response.data);
             setdefaultdetails(response.data);
-        }
-        catch (error) {
+        }).catch(error => {
             console.error('Error fetching user details : ', error)
-        }
+        });
     };
 
     const handleChange = (e) => {
@@ -45,7 +43,7 @@ import 'bootstrap/dist/css/bootstrap.css';
         setEditModePassword(false);
         setShowConfirmPassword(false);
     }
-    const handleSaveChangesClick = async (e) => {
+    const handleSaveChangesClick = (e) => {
         try {
             if (editModePassword) {
                 if (customer.password !== customer.confirmpassword) {
@@ -56,10 +54,8 @@ import 'bootstrap/dist/css/bootstrap.css';
                     alert('Password must be of more than 8 characters, a capital & small letter, a special character and a number.');
                     return;
                 }
-
             }
-
-            await axios.put(`/users/${customer.user_id}`, customer);
+            axios.put(`/users/update/password/userId?userId=${userId}`,{password:""});
 
             setEditModePassword(false);
             setShowConfirmPassword(false);

@@ -11,7 +11,8 @@ const AccountSettings = () => {
     const [editModePhoneNo, setEditModePhoneNo] = useState(false);
     const [editModeAddress, setEditModeAddress] = useState(false);
     const [editModeEmail, setEditModeEmail] = useState(false);
-   
+    const customer_id=2;
+
     const handleEditPhoneNoClick = () => {
         setEditModePhoneNo(true);
     }
@@ -24,7 +25,7 @@ const AccountSettings = () => {
 
     const getCustomerDetails = async () => {
         try {
-            const response = await axios.get("/customers/1");
+            const response = await axios.get(`/customers/${customer_id}`);
             setCustomer(response.data);
             setdefaultdetails(response.data);
         }
@@ -49,7 +50,7 @@ const AccountSettings = () => {
     }
     const handleSaveChangesClick = async (e) => {
         try {
-            await axios.put(`/customers/${customer.customerId}`, customer);
+           await  axios.put(`/customers/${customer.customerId}`, customer);
 
             setEditModeName(false);
             setEditModePhoneNo(false);
@@ -80,10 +81,7 @@ const AccountSettings = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='form-group'>
-                        <label htmlFor='name'>Username</label>
-                        <input type='text' name='userName' id='userName' value={customer.userName} onChange={handleChange} disabled={!editModeName} />
-                    </div>
+                    
                     <div className='form-group emailbutton'>
                         <label htmlFor='email'>Email</label>
                         <input type='email' name='email' id='email' value={customer.email} onChange={handleChange} disabled={!editModeEmail} />

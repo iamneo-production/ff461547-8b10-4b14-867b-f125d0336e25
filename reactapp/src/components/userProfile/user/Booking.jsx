@@ -2,45 +2,40 @@ import React, { useState } from 'react'
 import '../../../style/userprofile_style/yourOrders.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCar, faHotel, faPlaneUp } from '@fortawesome/free-solid-svg-icons'
-import { Flights, Cars, Hotels } from '../index';
+import {  Hotels } from '../index';
+import { useNavigate } from 'react-router-dom';
 
 
 const Booking = () => {
-    const [showFlights, setShowFlights] = useState(false);
-    const [showCars, setShowCars] = useState(false);
+    
     const [showHotels, setShowHotels] = useState(false);
-    const handleFlightsClick = () => {
 
-        setShowFlights(true);
-        setShowCars(false);
-        setShowHotels(false);
-    };
-    const handleCarsClick = () => {
+    const navigate=useNavigate();
 
-        setShowFlights(false);
-        setShowCars(true);
-        setShowHotels(false);
-    };
+    const handleNavigationCars=()=>{
+    navigate('/rental-cars/manage');
+    }
+    const handleNavigationFlights=()=>{
+        navigate('/BoardingPass');
+    }
+
     const handleHotelsClick = () => {
-
-        setShowFlights(false);
-        setShowCars(false);
         setShowHotels(true);
     };
     return (
         <div className='your-bookings'>
             <div className='row'>
                 <div className='col-lg-4 col-md-4 col-sm-12'>
-                    <div className={`s1 ${showFlights ? 'active' : ''}`} id='orders' onClick={handleFlightsClick}>
-                        <button className='btn btn-secondary'>
+                    <div className="s1" id='orders'>
+                        <button className='btn btn-secondary' onClick={handleNavigationFlights}>
                             <FontAwesomeIcon icon={faPlaneUp} />
                             <span> Flights</span>
                         </button>
                     </div>
                 </div>
                 <div className='col-lg-4 col-md-4 col-sm-12'>
-                    <div className={`s1 ${showCars ? 'active' : ''}`} id='orders' onClick={handleCarsClick}>
-                        <button className='btn btn-secondary'>
+                    <div className="s1" id='orders' >
+                        <button className='btn btn-secondary' onClick={handleNavigationCars}>
                             <FontAwesomeIcon icon={faCar} />
                             <span> Car Rentals</span>
                         </button>
@@ -55,8 +50,7 @@ const Booking = () => {
                     </div>
                 </div>
 
-                {showFlights && <Flights />}
-                {showCars && <Cars />}
+               
                 {showHotels && <Hotels />}
 
             </div>

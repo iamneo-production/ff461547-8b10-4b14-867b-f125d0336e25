@@ -16,6 +16,7 @@ import com.example.springapp.exception.UserNotFoundException;
 import com.example.springapp.model.customer.Customer;
 import com.example.springapp.repository.customer.CustomerRepository;
 
+
 import java.util.List;
 import java.util.function.Function;
 
@@ -36,18 +37,12 @@ public class CustomerController {
         return customerRepository.findAll();
     }
 
-    // @GetMapping("/customers/{customerId}")
-    // Customer getCustomerById(@PathVariable Long customerId) {
-    //     return customerRepository.findById(customerId)
-    //             .orElseThrow(() -> new UserNotFoundException(customerId));
-
-    // }
-
     @GetMapping("/customers/{customerId}")
-Customer getCustomerById(@PathVariable Long customerId) {
+    Customer getCustomerById(@PathVariable Long customerId) {
     Optional<Customer> customerOptional = customerRepository.findById(customerId);
     return customerOptional.orElseThrow(() -> new UserNotFoundException(customerId));
 }
+
 
     @PutMapping("/customers/{customerId}")
     Customer updateCustomer(@RequestBody Customer newCustomer, @PathVariable Long customerId) {
@@ -56,11 +51,10 @@ Customer getCustomerById(@PathVariable Long customerId) {
                     customer.setFirstName(newCustomer.getFirstName());
                     customer.setLastName(newCustomer.getLastName());
                     customer.setEmail(newCustomer.getEmail());
-                   // customer.setPassword(newCustomer.getPassword());
                     customer.setPhone(newCustomer.getPhone());
                     customer.setAddress(newCustomer.getAddress());
                     return customerRepository.save(customer);
                 }).orElseThrow(() -> new UserNotFoundException(customerId));
     }
-    
+
 }
