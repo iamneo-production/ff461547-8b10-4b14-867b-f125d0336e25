@@ -45,14 +45,13 @@ com/example/springapp/service/user/impl/UserServiceImpl.class
 com/example/springapp/model/booking/Booking.class
 com/example/springapp/model/car/CarFind.class
 com/example/springapp/controller/CarController.class
-com/example/springapp/controller/CustomerController.class
 com/example/springapp/dto/auth/UserChangeRequest.class
 com/example/springapp/model/user/User.class
 com/example/springapp/model/hotel/BookedHotel.class
 com/example/springapp/model/flight/FlightFeedback.class
 com/example/springapp/controller/AuthController.class
-com/example/springapp/repository/hotel/HotelRepository.class
 com/example/springapp/controller/BookingController.class
+com/example/springapp/repository/hotel/HotelRepository.class
 com/example/springapp/repository/auth/AuthRepository.class
 com/example/springapp/dto/booking/hotel/BookedHotelDetailsDto.class
 com/example/springapp/controller/TravelAgentController.class
