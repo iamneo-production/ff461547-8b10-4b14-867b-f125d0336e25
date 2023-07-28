@@ -65,7 +65,6 @@ function payment(order,bookingId,navigate) {
         }
         axios.post(`/booking/register-payment/bookingId?bookingId=${bookingId}`, data)
             .then(response => {
-                console.log(response.data);
                 toast.success('Paid Successfully, Your Booking Has Completed. You can check your booking in you profile', {
                     position: "top-right",
                     autoClose: 5000,
