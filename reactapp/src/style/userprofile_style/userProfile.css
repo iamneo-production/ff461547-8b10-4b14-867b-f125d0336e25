@@ -7,7 +7,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 3rem;
+    margin: 5%;
 }
 
 
@@ -16,4 +16,10 @@
     border: 1px solid rgb(207, 207, 207);
     border-radius: 5px;
     min-height: 10rem;
+}
+
+@media (max-width: 800px) {
+    .secondcontainer {
+        margin-left: 1%;
+    }
 }
