@@ -32,7 +32,7 @@ function FlightFeedback() {
       .post(`/flightfeed`, { feedback, rating })
       .then((response) => {
         console.log('Feedback stored successfully:', response.data);
-        navigate('/headerComp'); 
+        navigate('/'); 
       })
       .catch((error) => {
         console.error('Error storing data:', error);

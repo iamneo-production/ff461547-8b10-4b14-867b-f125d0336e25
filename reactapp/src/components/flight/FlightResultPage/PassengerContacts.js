@@ -220,7 +220,7 @@ export default function PassengerContacts({ handleNext} ) {
         </button>
         {saveButtonClicked && (
            <div style={{ fontSize: '1px' }} className="font-semibold text-xxs ">
-             <h2 className="text-red-600">Submitted Successfully!</h2>
+             <h2 className="text-red-600 text-sm">Submitted Successfully!</h2>
            </div>
         )}
       </div>  
@@ -303,16 +303,14 @@ export default function PassengerContacts({ handleNext} ) {
                     <p>Gender: {passenger.gender}</p>
                     <p>Passenger Type: {passenger.pass_type}</p>
                     <button onClick={() => handleRemovePassenger(index)}>
-                      <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg'>
-                        <p className='text-white'>REMOVE</p>
+                      <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg text-white'>REMOVE
                       </div>
                     </button>
 
                   </div>
                 ))}
                 <button onClick={storePassengerDetails}>
-                  <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg'>
-                    <p className='text-white'>SUBMIT</p>
+                  <div className='py-2 px-2 bg-rose-400 text-sm m-3 rounded-lg text-white'>SUBMIT
                   </div>
                 </button>
               </div>
@@ -322,7 +320,7 @@ export default function PassengerContacts({ handleNext} ) {
           <>
             {showSuccessMessage && (
               <div className='font-semibold'>
-                <h2 className="text-red-600">Submitted Successfully!</h2>
+                <h2 className="text-red-600 text-sm">Submitted Successfully!</h2>
               </div>
             )}
             <div className='flight_passenger-details'>
@@ -338,8 +336,7 @@ export default function PassengerContacts({ handleNext} ) {
           ))}
         </div>
             <button onClick={handleNextButton}>
-              <div className='py-2 px-2 bg-yellow-400 text-sm m-3 rounded-lg'>
-                <p className='text-white'>NEXT</p>
+              <div className='py-2 px-2 bg-yellow-400 text-sm m-3 rounded-lg text-white'>NEXT
               </div>
             </button>
           </>
