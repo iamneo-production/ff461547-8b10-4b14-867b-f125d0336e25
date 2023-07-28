@@ -28,6 +28,8 @@ import AdminHome from './components/Admin/AdminHome';
 import CarAdmin from './components/Admin/CarAdmin'
 import { FlightAdmin } from './components/Admin/FlightAdmin';
 import { BoardingPass } from './components/flight/FlightResultPage/BoardingPass';
+import FlightFeedback from './components/flight/FlightResultPage/FlightFeedback';
+
 import CarFeedbackForm from './components/car_rental/carPages/CarFeedbackPage';
 import Feedback from './components/Feedback'
 
@@ -75,6 +77,8 @@ function App() {
         <Route path="PassengerDetails" element={<PassengerDetails />} />
         <Route path="PreviewPage" element={<PreviewPage />} />
         <Route path='BoardingPass' element={<BoardingPass/>}/>
+        <Route path='feedback' element={<FlightFeedback />} />
+        
        
 
         <Route path='*' element={<PageNotFound />} />
