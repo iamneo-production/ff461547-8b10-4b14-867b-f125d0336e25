@@ -14,8 +14,8 @@ com/example/springapp/repository/PassengerRepository.class
 com/example/springapp/dto/auth/UserResponse.class
 com/example/springapp/model/hotel/Room.class
 com/example/springapp/service/hotel/impl/HotelServiceImpl.class
-com/example/springapp/model/auth/AuthCustomer.class
 com/example/springapp/model/ContactDetails.class
+com/example/springapp/model/auth/AuthCustomer.class
 com/example/springapp/SpringappApplication.class
 com/example/springapp/repository/payment/PaymentRepository.class
 com/example/springapp/controller/HotelController.class
@@ -29,6 +29,8 @@ com/example/springapp/repository/ContactRepository.class
 com/example/springapp/model/review/Review.class
 com/example/springapp/repository/FlightfeedRepository.class
 com/example/springapp/service/car/CarBookingFormService.class
+com/example/springapp/service/car/CarBookingFormService.class
+com/example/springapp/repository/FlightfeedRepository.class
 com/example/springapp/service/flight/FlightService.class
 com/example/springapp/dto/hotel/HotelSearchRequestDto.class
 com/example/springapp/dto/booking/BookingDto.class
