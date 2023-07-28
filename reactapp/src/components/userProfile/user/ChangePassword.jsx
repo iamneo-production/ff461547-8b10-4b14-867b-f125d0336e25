@@ -10,7 +10,7 @@ const ChangePassword = () => {
     const [editModePassword, setEditModePassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-    const user__Id = 2;
+    const userId = 2;
 
     const handleEditPasswordClick = () => {
         setEditModePassword(true);
@@ -22,7 +22,7 @@ const ChangePassword = () => {
     }, []);
 
     const getCustomerDetails = async() => {
-        await axios.get(`/users/usersId?userId=${user__Id}`).then(response => {
+        await axios.get(`/users/usersId?userId=${userId}`).then(response => {
             setCustomer(response.data);
             setdefaultdetails(response.data);
         }).catch(error => {

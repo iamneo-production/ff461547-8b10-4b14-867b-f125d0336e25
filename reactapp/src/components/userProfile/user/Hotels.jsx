@@ -59,7 +59,7 @@ const customer_id=1;
                     <div className='row'>
                         <div className='col-lg-6 col-md-6 col-sm-12'>
                             <h4>Hotel Name- {booking.hotelName}</h4>
-                            <p>city{booking.city}, country{booking.country}<br/>
+                            <p>{booking.city}, {booking.country}<br/>
                             BookingId - {booking.hotelBookingId}</p>
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12'>
@@ -73,12 +73,12 @@ const customer_id=1;
                         <p>Number of guests - {booking.totalTravellers} <br />Number of Rooms - {booking.totalRooms}</p>
                         <table>
                             <tr>
-                                <th>Verified By -</th>
+                                <th>Booking Id Type -</th>
                                 <th>Total Amount</th>
                             </tr>
                             <tr>
-                                <td>{booking.idType}idType</td>
-                                <td>{booking.totalAmount}total_amount</td>
+                                <td>{booking.idType}</td>
+                                <td>{booking.totalAmount}</td>
                             </tr>
                         </table>
 

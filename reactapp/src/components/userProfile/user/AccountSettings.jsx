@@ -74,17 +74,17 @@ const AccountSettings = () => {
                         <label htmlFor='name'>Name</label>
                         <div className='row'>
                             <div className='col-lg-6 col-md-6 col-sm-6'>
-                                <input type='text' name='firstName' id='firstName' value={customer.firstName} onChange={handleChange} disabled={!editModeName} />
+                                <input type='text' name='firstName' id='firstName' value={customer.firstName}  disabled={!editModeName} />
                             </div>
                             <div className='col-lg-6 col-md-6 col-sm-6'>
-                                <input type='text' name='lastName' id='lastName' value={customer.lastName} onChange={handleChange} disabled={!editModeName} />
+                                <input type='text' name='lastName' id='lastName' value={customer.lastName} disabled={!editModeName} />
                             </div>
                         </div>
                     </div>
                     
                     <div className='form-group emailbutton'>
                         <label htmlFor='email'>Email</label>
-                        <input type='email' name='email' id='email' value={customer.email} onChange={handleChange} disabled={!editModeEmail} />
+                        <input type='email' name='email' id='email' value={customer.email}  disabled={!editModeEmail} />
 
                     </div>
                     <div className='form-group'>
