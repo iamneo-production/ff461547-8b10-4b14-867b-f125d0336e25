@@ -1,6 +1,18 @@
-.cards {
-    margin: 50px;
+.booking-cards {
+    margin: 50px 10px;
     gap: 20px;
+}
+
+.your-bookings button {
+    height: 50px;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.your-bookings {
+    margin: 10px;
+    padding: 10px;
 }
 
 .orderscontainer {
@@ -17,11 +29,11 @@
     margin-bottom: 20px;
 }
 
-.cards table {
+.booking-cards table {
     width: 100%;
 }
 
-.cards .btn {
+.booking-cards .btn {
     border-radius: 10px;
     width: 100%;
     height: 50px;
@@ -38,12 +50,12 @@
     display: none;
 }
 
-.cards th {
+.booking-cards th {
     font-weight: 100;
-    font-size: 12px;
+    font-size: 14px;
 }
 
-.cards td {
+.booking-cards td {
     font-weight: 500;
 }
 
@@ -54,7 +66,7 @@
     margin-bottom: 20px;
 }
 
-.cards ul li {
+.booking-cards ul li {
     list-style-type: none;
     float: left;
     margin-top: 25px;
@@ -75,7 +87,7 @@
     margin-top: 20px;
 }
 
-.cards a {
+.booking-cards a {
     text-decoration: none;
     color: #d96657;
 }
@@ -87,11 +99,11 @@
         display: flex;
     }
 
-    .cards h4 {
+    .booking-cards h4 {
         font-size: 20px;
     }
 
-    .cards p {
+    .booking-cards p {
         font-size: 14px;
     }
 
@@ -104,15 +116,15 @@
         flex-direction: column;
     }
 
-    .cards h5 {
+    .booking-cards h5 {
         font-size: 18px;
     }
 
-    .cards p {
+    .booking-cards p {
         font-size: 12px;
     }
 
-    .cards th {
+    .booking-cards th {
         font-size: 12.5px;
     }
 
@@ -121,7 +133,7 @@
         flex-direction: column;
     }
 
-    .cards ul li {
+    .booking-cards ul li {
         width: 100%;
     }
 
