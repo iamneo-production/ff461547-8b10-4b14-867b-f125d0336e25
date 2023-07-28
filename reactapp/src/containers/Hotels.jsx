@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import HotelInput from '../components/hotel/hotelInput/HotelInput';
-import HotelResults from '../components/hotel/hotelresult/HotelResults';
+import HotelResults from '../components/hotel/hotelresult/HotelResult';
 import { HotelProvider } from '../components/hotel/HotelContext';
 
 function Hotels() {
