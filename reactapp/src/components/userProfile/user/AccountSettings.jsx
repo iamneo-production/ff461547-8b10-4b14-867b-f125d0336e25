@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../../style/accountSettings.css';
+import '../../../style/userprofile_style/accountSettings.css'
 
 const AccountSettings = () => {
 
@@ -9,29 +9,23 @@ const AccountSettings = () => {
     const [defaultdetails, setdefaultdetails] = useState([]);
     const [editModeName, setEditModeName] = useState(false);
     const [editModePhoneNo, setEditModePhoneNo] = useState(false);
+    const [editModeAddress, setEditModeAddress] = useState(false);
     const [editModeEmail, setEditModeEmail] = useState(false);
-    const [editModePassword, setEditModePassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    const customer_id=2;
 
     const handleEditPhoneNoClick = () => {
         setEditModePhoneNo(true);
-    };
-    const handleEditEamilClick = () => {
-        setEditModeEmail(true);
-    };
-    const handleEditPasswordClick = () => {
-        setEditModePassword(true);
-        setShowConfirmPassword(true);
-    };
-
+    }
+    const handleEditAddressClick = () => {
+        setEditModeAddress(true);
+    }
     useEffect(() => {
         getCustomerDetails();
     }, []);
 
     const getCustomerDetails = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/customers/1");
+            const response = await axios.get(`/customers/${customer_id}`);
             setCustomer(response.data);
             setdefaultdetails(response.data);
         }
@@ -47,36 +41,24 @@ const AccountSettings = () => {
             [name]: value,
         }));
     };
+
     const handleCancelChangesClick = () => {
         setCustomer(defaultdetails);
-        setEditModeName(false);
         setEditModePhoneNo(false);
-        setEditModeEmail(false);
-        setEditModePassword(false);
-        setShowConfirmPassword(false);
+        setEditModeAddress(false);
+       
     }
     const handleSaveChangesClick = async (e) => {
         try {
-            if (editModePassword) {
-                if (customer.password !== customer.confirmpassword) {
-                    alert('Password and Confirm Password must match.');
-                    return;
-                }
-                if (!regExp.test(customer.password)) {
-                    alert('Password must be of more than 8 characters, a capital & small letter, a special character and a number.');
-                    return;
-                }
-
-            }
-
-            await axios.put(`http://localhost:8080/customers/${customer.customerId}`, customer);
+           await  axios.put(`/customers/${customer.customerId}`, customer);
 
             setEditModeName(false);
             setEditModePhoneNo(false);
             setEditModeEmail(false);
-            setEditModePassword(false);
-            setShowConfirmPassword(false);
+            
             alert('Changes saved successfully!');
+
+
         } catch (error) {
             console.error('Error saving customer details:', error);
             alert('Error saving changes. Please try again later.');
@@ -91,28 +73,20 @@ const AccountSettings = () => {
                     <div className='form-group'>
                         <label htmlFor='name'>Name</label>
                         <div className='row'>
-                            <div className='row'>
-                                <div className='col-lg-6 col-md-6 col-sm-6'>
-                                    <input type='text' name='firstName' id='firstName' value={customer.firstName} onChange={handleChange} disabled={!editModeName} />
-                                </div>
-                                <div className='col-lg-6 col-md-6 col-sm-6'>
-                                    <input type='text' name='lastName' id='lastName' value={customer.lastName} onChange={handleChange} disabled={!editModeName} />
-                                </div>
+                            <div className='col-lg-6 col-md-6 col-sm-6'>
+                                <input type='text' name='firstName' id='firstName' value={customer.firstName}  disabled={!editModeName} />
+                            </div>
+                            <div className='col-lg-6 col-md-6 col-sm-6'>
+                                <input type='text' name='lastName' id='lastName' value={customer.lastName} disabled={!editModeName} />
                             </div>
                         </div>
                     </div>
-                    <div className='form-group'>
-                        <label htmlFor='name'>Username</label>
-                        <div className='row'>
-                            <div className='row'>
-                                <div className='col-lg-12 col-md-12 col-sm-6'>
-                                    <input type='text' name='userName' id='userName' value={customer.userName} onChange={handleChange} disabled={!editModeName} />
-                                </div>
+                    
+                    <div className='form-group emailbutton'>
+                        <label htmlFor='email'>Email</label>
+                        <input type='email' name='email' id='email' value={customer.email}  disabled={!editModeEmail} />
 
-                            </div>
-                        </div>
                     </div>
-
                     <div className='form-group'>
                         <label htmlFor='phone' >Phone/Mobile Number</label>
                         <div className='row editbutton'>
@@ -124,51 +98,29 @@ const AccountSettings = () => {
                             </div>
                         </div>
                     </div>
-
                     <div className='form-group'>
-                        <label htmlFor='email'>Email</label>
+                        <label htmlFor='address' >Address</label>
                         <div className='row editbutton'>
                             <div className='col-lg-8 col-md-8 col-sm-9'>
-                                <input type='email' name='email' id='email' value={customer.email} onChange={handleChange} disabled={!editModeEmail} />
-                            </div><br />
+                                <input type='text' name='address' id='address' value={customer.address} onChange={handleChange} disabled={!editModeAddress} />
+                            </div>
                             <div className='col-lg-4 col-md-4 col-sm-3'>
-                                <button type="button" class="btn btn-dark" onClick={handleEditEamilClick} >Edit</button>
+                                <button type="button" class="btn btn-dark" onClick={handleEditAddressClick} >Edit</button>
                             </div>
                         </div>
+                    </div>
+
+
+                </div>
+                <div className='row setting-button'>
+                    <div className='col-lg-6 col-md-6 col-sm-12'>
+                        <button type="button" class="btn btn-danger" id='save' onClick={handleSaveChangesClick}>Save Changes</button>
+                    </div>
+                    <div className='col-lg-6 col-md-6 col-sm-12'>
+                        <button type="button" class="btn btn-dark" id='cancel' onClick={handleCancelChangesClick}>Cancel</button>
                     </div>
                 </div>
-                <div className='changepassword'>
-                    <h2 className='mainhead1'>Change Password</h2>
-                    <div className='form'>
-                        <div className='form-group'>
-                            <label>Password </label>
-                            <div className='row editbutton'>
-                                <div className='col-lg-8 col-md-8 col-sm-9'>
-                                    <input type="password" name='password' id='password' value={customer.password} onChange={handleChange} disabled={!editModePassword} />
-                                </div>
-                                <div className='col-lg-4 col-md-4 col-sm-3'>
-                                    <button type="button" class="btn btn-dark" onClick={handleEditPasswordClick}>Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                        {showConfirmPassword && (
-                            <div className='form-group confirm-password'>
-                                <label>Confirm Password</label>
-                                <div className='col-lg-8 col-md-8 col-sm-9'>
-                                    <input type="password" name='confirmpassword' id='confirmpassword' onChange={handleChange} disabled={!editModePassword} />
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                    <div className='row setting-button'>
-                        <div className='col-lg-6 col-md-6 col-sm-12'>
-                            <button type="button" class="btn btn-danger" id='save' onClick={handleSaveChangesClick}>Save Changes</button>
-                        </div>
-                        <div className='col-lg-6 col-md-6 col-sm-12'>
-                            <button type="button" class="btn btn-dark" id='cancel' onClick={handleCancelChangesClick}>Cancel</button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     )

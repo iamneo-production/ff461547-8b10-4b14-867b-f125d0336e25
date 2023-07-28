@@ -1,47 +1,47 @@
 package com.example.springapp.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springapp.repository.UserRepo;
-import com.example.springapp.model.User;
+import org.springframework.web.bind.annotation.PutMapping;
+
+import com.example.springapp.model.user.User;
+import com.example.springapp.service.user.UserService;
 
 @RestController
-@RequestMapping("/users")
 public class UserController {
-	
-	@Autowired
-	UserRepo userrepo;
-	@GetMapping("/users")
-	 List<User> getUserAll(){
-		return userrepo.findAll();
-	}
-	@PostMapping("/users")
-	 User create(@RequestBody User user) {
-		 return userrepo.save(user);
-	 }
-	@GetMapping("/users/{id}")
-	 User getUserById(@PathVariable("id") Long id) {
-		 return userrepo.getById(id);
-	 }
-	@PutMapping("/users/{id}")
-	 User update(@PathVariable("id")  Long id,@RequestBody User user) {
-		 return userrepo.updateUser(id,user);
-		 
-	 }
-     @DeleteMapping("/users/{id}")
-     void deleteUser(@PathVariable("id") Long id) {
-         userrepo.deleteById(id);
-     }
-     
+    @Autowired
+    private UserService userServiceImpl;
+
+    @GetMapping("/users")
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> users = userServiceImpl.getALLUsers();
+        return ResponseEntity.status(HttpStatus.OK).body(users);
+    }
+
+    @GetMapping("/users/usersId")
+    public ResponseEntity<?> getUserByUserId(@RequestParam("userId") long userId) {
+        User user = userServiceImpl.getUserById(userId);
+        return user == null ? ResponseEntity.status(HttpStatus.NOT_FOUND).body("Try Again")
+                : ResponseEntity.status(HttpStatus.FOUND).body(user);
+    }
+
+    @PostMapping("/users")
+    public ResponseEntity<?> addUser(@RequestBody User user) {
+        User createdUser = userServiceImpl.addUser(user);
+        return createdUser == null ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Try Again")
+                : ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
+    }
+
 
 }

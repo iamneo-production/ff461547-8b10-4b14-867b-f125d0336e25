@@ -1,0 +1,67 @@
+.admin-container {
+    text-align: center;
+    margin-top: 150px; 
+   
+  } 
+  .admin-bg
+  {display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(7, 223, 239, 0.601), rgb(0, 13, 107, 0.5)),
+    url("../Admin/Adminbg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .admin_box 
+  {
+    border: 1px solid rgb(235, 224, 224);  
+    margin-top: 200px;  
+    padding-bottom: 20px;
+    margin-left: 450px;
+    margin-right: 450px; 
+    background-color : #d3d3d3;
+    border-radius: 10px; 
+    
+  ;
+  }   
+  .admin-heading{
+    font-size: 25px;  
+    margin-top: -50px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .adminbtn {
+  
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;  
+    
+  } 
+
+
+  .admincarbtn {
+  
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;  
+    
+  } 
+
+ 
