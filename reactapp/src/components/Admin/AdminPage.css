@@ -28,7 +28,7 @@
   }   
   h1 {
     font-size: 25px;  
-    margin-top: -50px;
+    margin-top: 0px;
   }
   
   .buttons-container {
@@ -41,6 +41,20 @@
   
     padding: 10px 20px;
     margin: 10px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;  
+    
+  } 
+
+
+  .admincarbtn {
+  
+    padding: 10px 20px;
+    margin: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -49,11 +63,5 @@
     cursor: pointer;  
     
   } 
-  .box button 
-  {
-    width: 30%;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+
+ 

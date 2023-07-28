@@ -6,7 +6,7 @@ const CarHome = () => {
  
   return (
     <div>
-      {/* ============= hero section =========== */}
+      {/* ============= slider section =========== */}
       <section className="p-0 hero__slider-section">
         <Slider />
       </section>
