@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { HotelContext } from "../HotelContext";
 import "./hotelResult.css"; // You can define the styles in a separate CSS file
@@ -13,10 +13,6 @@ const HotelResults = () => {
     const handleClick=(hotelId)=>{
         navigate(`/selected-hotel/${hotelId}`, { state: props })
     }
-
-    useEffect(()=>{
-        console.log(searchResponseData)
-    })
 
     return (
         <div className="rightSide container basis-2/3 bg-[#fff] p-[0.7rem]
