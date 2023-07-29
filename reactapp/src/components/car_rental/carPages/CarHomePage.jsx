@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from "../CarUIs/Sliders";
 import CarList from '../CarUIs/CarListing';
 
+
 const CarHome = () => {
  
   return (
@@ -11,11 +12,10 @@ const CarHome = () => {
         <Slider />
       </section>
 
-      {/* =========== car list section ============= */}
       <section>
         <CarList/> 
       </section>
-
+      
     </div>
     
     
