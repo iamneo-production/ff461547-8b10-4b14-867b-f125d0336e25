@@ -253,7 +253,7 @@ public class HotelServiceImpl implements HotelService {
             fileName.append(image.getOriginalFilename());
             boolean uploaded = fileUploadHelper.uploadHotelImage(image, fileName.toString());
             if (uploaded) {
-                String path = ServletUriComponentsBuilder.fromCurrentContextPath().path("/images/hotels")
+                String path = ServletUriComponentsBuilder.fromCurrentContextPath().path("/images/hotels/")
                         .path(fileName.toString()).toUriString();
                 if (hotel.getFirstImage() == null) {
                     hotel.setFirstImage(path);
