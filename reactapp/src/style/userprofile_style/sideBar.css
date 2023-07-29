@@ -1,0 +1,34 @@
+.sideBar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideBar .s1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.sideBar .s1 svg {
+    width: 30px;
+    height: 30px;
+    color: gray;
+}
+
+
+.sideBar .s1:hover {
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    cursor: pointer;
+    color: #d96657;
+}
+
+
+@media (max-width: 800px) {
+    .sideBar span {
+        font-size: 12px;
+    }
+}

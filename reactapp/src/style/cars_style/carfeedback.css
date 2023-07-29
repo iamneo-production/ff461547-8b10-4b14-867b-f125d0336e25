@@ -1,0 +1,79 @@
+/* CSS for CarFeedback component */
+.CarFeedback {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+  }
+  
+  .CarFeedback h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .CarFeedback form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .CarFeedback label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .CarFeedback textarea,
+  .CarFeedback select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+  }
+  
+  .CarFeedback select {
+    display: none; /* Hide the actual select element */
+  }
+  
+  .CarFeedback .stars {
+    display: flex;
+    align-items: center;
+  }
+  
+  .CarFeedback .star {
+    font-size: 24px;
+    color: #d3d3d3;
+    cursor: pointer;
+  }
+  
+  .CarFeedback .star:hover,
+  .CarFeedback .star:hover ~ .star {
+    color: #ffc107;
+  }
+  
+  .CarFeedback .star.checked {
+    color: #ffc107;
+  }
+  
+  .CarFeedback .Submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .CarFeedback .Submit-btn:hover {
+    background-color: #0cc9eb;
+  }
+  
+  .CarFeedback .Submit-btn:focus {
+    outline: none;
+  }
+  

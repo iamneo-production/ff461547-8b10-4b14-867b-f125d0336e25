@@ -28,7 +28,11 @@ import AdminHome from './components/Admin/AdminHome';
 import CarAdmin from './components/Admin/CarAdmin'
 import { FlightAdmin } from './components/Admin/FlightAdmin';
 import { BoardingPass } from './components/flight/FlightResultPage/BoardingPass';
+import FlightFeedback from './components/flight/FlightResultPage/FlightFeedback';
+
+import CarFeedbackForm from './components/car_rental/carPages/CarFeedbackPage';
 import Feedback from './components/Feedback'
+import Support from './components/support/Support';
 
 function App() {
   return (
@@ -51,6 +55,7 @@ function App() {
         <Route path='/ErrorPage' element={<ErrorPage/>} />
         <Route path="/admin" element={<AdminHome/>}/>
         <Route path='/flightAdmin' element={<FlightAdmin/>}/>
+        <Route path='/help-support' element={<Support/>}/>
 
         {/* Review and Rating */}
         <Route path='/:type/:brandName/review/:id' element={<Feedback/>} />
@@ -63,7 +68,8 @@ function App() {
 
         <Route path="/rental-cars/search" element={<CarFindForm />} />
         <Route path="/rental-cars/booking/:id" element={<CarBookingForm />} />
-        <Route path="/rental-cars/manage" element={<CarManage />} />
+        <Route path="/rental-cars/manage" element={<CarManage />} />        
+        <Route path="/rental-cars/feedback" element={<CarFeedbackForm />} />
         <Route path="/admin/car" element={<CarAdmin/>}/>
 
         {/*flight booking routes */}
@@ -73,6 +79,8 @@ function App() {
         <Route path="PassengerDetails" element={<PassengerDetails />} />
         <Route path="PreviewPage" element={<PreviewPage />} />
         <Route path='BoardingPass' element={<BoardingPass/>}/>
+        <Route path='feedback' element={<FlightFeedback />} />
+        
        
 
         <Route path='*' element={<PageNotFound />} />
