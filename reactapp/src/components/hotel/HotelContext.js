@@ -13,7 +13,7 @@ export const initialState = {
         }
     ],
     travelers: 1,
-    searchResponseData:{}
+    searchResponseData:[]
 };
 export const HotelActions = {
     SET_CHECK_IN_DATE: 'SET_CHECK_IN_DATE',
