@@ -12,6 +12,7 @@ import com.example.springapp.dto.auth.UserChangeRequest;
 import com.example.springapp.dto.auth.UserResponse;
 import com.example.springapp.model.auth.AuthCustomer;
 import com.example.springapp.repository.auth.AuthRepository;
+import com.example.springapp.exception.UserNotFoundException;
 
 @Service
 public class CustomerService {
@@ -90,4 +91,5 @@ public class CustomerService {
 
         return authRepository.save(cus);
     }
+
 }
