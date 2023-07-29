@@ -221,7 +221,6 @@ function SelectedHotel() {
   async function handleSubmit(e) {
     e.preventDefault();
     const bookinngDetails = prepareJson();
-    console.log(bookinngDetails);
     await (axios.post(`/hotels/book-hotel?hotelId=${hotel.hotelId}&customerId=${customerId.current}`, bookinngDetails))
       .then((response) => {
         const data = response.data;
