@@ -51,10 +51,6 @@ public class HotelServiceImpl implements HotelService {
     @Override
     public List<Hotel> getAllHotels() {
         List<Hotel> hotels = hotelRepository.findAll();
-        hotels.stream().forEach(hotel->{
-            hotel.setFirstImage(new ClassPathResource("static"+hotel.getFirstImage()).getPath());
-            hotel.setSecondImage(new ClassPathResource("static"+hotel.getSecondImage()).getPath());
-        });
 
         return hotels;
     }
@@ -257,11 +253,12 @@ public class HotelServiceImpl implements HotelService {
             fileName.append(image.getOriginalFilename());
             boolean uploaded = fileUploadHelper.uploadHotelImage(image, fileName.toString());
             if (uploaded) {
-                
+                String path = ServletUriComponentsBuilder.fromCurrentContextPath().path("/images/hotels")
+                        .path(fileName.toString()).toUriString();
                 if (hotel.getFirstImage() == null) {
-                    hotel.setFirstImage("/images/hotels/" + fileName.toString());
+                    hotel.setFirstImage(path);
                 } else {
-                    hotel.setSecondImage("/images/hotels/" + fileName.toString());
+                    hotel.setSecondImage(path);
                 }
                 hotelRepository.save(hotel);
                 status = true;
