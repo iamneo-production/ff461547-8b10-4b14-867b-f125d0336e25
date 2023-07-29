@@ -28,7 +28,6 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/flight/FlightService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/payment/Payment.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/flight/FlightfeedRepository.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/flight/FlightFeedback.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/user/User.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/flight/FlightFeedback.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/booking/hotel/BookedHotelDetailsDto.java
@@ -58,11 +57,7 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/auth/UserChangeRequest.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/review/ReviewService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/customer/CustomerRepository.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/auth/UserChangeRequest.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/review/ReviewService.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/flight/ContactRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/dto/hotel/bookhotel/RoomDto.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/customer/CustomerRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/booking/BookingRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/car/CarFeedbackService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/auth/CustomerService.java
