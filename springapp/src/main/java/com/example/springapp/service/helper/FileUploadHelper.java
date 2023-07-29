@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class FileUploadHelper {
 
-    public final String IMAGE_UPLOAD_DIR = new ClassPathResource("static/image/").getFile().getAbsolutePath();
+    public final String IMAGE_UPLOAD_DIR = "src/main/resources/static/images/hotels/";
 
     public FileUploadHelper() throws IOException {
         super();
