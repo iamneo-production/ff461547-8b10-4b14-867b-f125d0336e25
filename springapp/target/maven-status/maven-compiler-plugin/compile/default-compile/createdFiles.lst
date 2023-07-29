@@ -64,12 +64,9 @@ com/example/springapp/service/user/UserService.class
 com/example/springapp/model/PassengerDetails.class
 com/example/springapp/repository/car/CarBookingFormRepo.class
 com/example/springapp/model/car/CarBookingForm.class
-com/example/springapp/dto/hotel/bookhotel/HotelBookRequestDto.class
-<<<<<<< HEAD
 com/example/springapp/dto/hotel/HotelSearchResponseDto.class
-=======
+com/example/springapp/dto/hotel/bookhotel/HotelBookRequestDto.class
 com/example/springapp/exception/UserNotFoundException.class
->>>>>>> 6ab345d76e22dc9aa60f219fc631d0e36da5df77
 com/example/springapp/model/flight/Search.class
 com/example/springapp/repository/flight/SearchRepository.class
 com/example/springapp/model/hotel/Hotel.class
