@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { HotelContext } from "../HotelContext";
 import "./hotelResult.css"; // You can define the styles in a separate CSS file
-import { baseUrl } from "../../../Config";
 
 const HotelResults = () => {
     const { hotelState } = useContext(HotelContext)
@@ -25,7 +24,7 @@ const HotelResults = () => {
                 <div key={hotel.hotelID} className="card hotel-card">
                     
                     <img
-                        src={hotel.image? baseUrl+hotel.image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTg5hXGv_ut5tItRx_6gOS_u-JjsoWY143YQ&usqp=CAU"}
+                        src={hotel.image?hotel.image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTg5hXGv_ut5tItRx_6gOS_u-JjsoWY143YQ&usqp=CAU"}
                         alt=""
                         width="150px"
                         height="200px"
