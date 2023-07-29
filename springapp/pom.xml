@@ -67,6 +67,12 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>com.razorpay</groupId>
+			<artifactId>razorpay-java</artifactId>
+			<version>1.4.4</version>
+		</dependency>
+
 
 
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
