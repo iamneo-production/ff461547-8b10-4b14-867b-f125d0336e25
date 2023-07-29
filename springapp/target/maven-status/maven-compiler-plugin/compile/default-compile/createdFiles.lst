@@ -31,8 +31,8 @@ com/example/springapp/model/review/Review.class
 com/example/springapp/service/car/CarBookingFormService.class
 com/example/springapp/repository/FlightfeedRepository.class
 com/example/springapp/service/flight/FlightService.class
-com/example/springapp/dto/booking/BookingDto.class
 com/example/springapp/dto/hotel/HotelSearchRequestDto.class
+com/example/springapp/dto/booking/BookingDto.class
 com/example/springapp/service/car/CarFindService.class
 com/example/springapp/model/travelagent/TravelAgent.class
 com/example/springapp/repository/car/CarFindRepo.class
@@ -54,8 +54,8 @@ com/example/springapp/controller/AuthController.class
 com/example/springapp/controller/BookingController.class
 com/example/springapp/repository/hotel/HotelRepository.class
 com/example/springapp/repository/auth/AuthRepository.class
-com/example/springapp/controller/TravelAgentController.class
 com/example/springapp/dto/booking/hotel/BookedHotelDetailsDto.class
+com/example/springapp/controller/TravelAgentController.class
 com/example/springapp/service/review/ReviewService.class
 com/example/springapp/service/travelagent/TravelAgentService.class
 com/example/springapp/repository/review/ReviewRepository.class
@@ -64,9 +64,12 @@ com/example/springapp/service/user/UserService.class
 com/example/springapp/model/PassengerDetails.class
 com/example/springapp/repository/car/CarBookingFormRepo.class
 com/example/springapp/model/car/CarBookingForm.class
-com/example/springapp/dto/hotel/HotelSearchResponseDto.class
 com/example/springapp/dto/hotel/bookhotel/HotelBookRequestDto.class
+<<<<<<< HEAD
+com/example/springapp/dto/hotel/HotelSearchResponseDto.class
+=======
 com/example/springapp/exception/UserNotFoundException.class
+>>>>>>> 6ab345d76e22dc9aa60f219fc631d0e36da5df77
 com/example/springapp/model/flight/Search.class
 com/example/springapp/repository/flight/SearchRepository.class
 com/example/springapp/model/hotel/Hotel.class
