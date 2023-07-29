@@ -7,10 +7,10 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-@Component
+@Service
 public class FileUploadHelper {
 
     public final String IMAGE_UPLOAD_DIR = new ClassPathResource("static/image/").getFile().getAbsolutePath();
