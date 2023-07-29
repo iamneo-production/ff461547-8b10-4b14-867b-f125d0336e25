@@ -13,6 +13,7 @@ com/example/springapp/service/booking/BookingService.class
 com/example/springapp/repository/PassengerRepository.class
 com/example/springapp/dto/auth/UserResponse.class
 com/example/springapp/model/hotel/Room.class
+com/example/springapp/controller/UserController.class
 com/example/springapp/service/hotel/impl/HotelServiceImpl.class
 com/example/springapp/model/ContactDetails.class
 com/example/springapp/model/auth/AuthCustomer.class
@@ -44,6 +45,7 @@ com/example/springapp/service/user/impl/UserServiceImpl.class
 com/example/springapp/model/booking/Booking.class
 com/example/springapp/model/car/CarFind.class
 com/example/springapp/controller/CarController.class
+com/example/springapp/controller/CustomerController.class
 com/example/springapp/model/user/User.class
 com/example/springapp/dto/auth/UserChangeRequest.class
 com/example/springapp/model/hotel/BookedHotel.class
@@ -64,6 +66,7 @@ com/example/springapp/repository/car/CarBookingFormRepo.class
 com/example/springapp/model/car/CarBookingForm.class
 com/example/springapp/dto/hotel/HotelSearchResponseDto.class
 com/example/springapp/dto/hotel/bookhotel/HotelBookRequestDto.class
+com/example/springapp/exception/UserNotFoundException.class
 com/example/springapp/model/flight/Search.class
 com/example/springapp/repository/flight/SearchRepository.class
 com/example/springapp/model/hotel/Hotel.class

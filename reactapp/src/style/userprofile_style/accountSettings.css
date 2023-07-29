@@ -1,0 +1,103 @@
+:root {
+    --col1: #d96657;
+    --col2: gray;
+    --col3: #cecece;
+}
+
+#settings {
+    position: relative;
+}
+
+#save,
+#cancel {
+    margin: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+}
+
+.editbutton button {
+    width: 100%;
+    height: 100%;
+}
+
+.accountsettings label {
+    font-weight: 500;
+    color: black;
+}
+
+.accountsettings input {
+    width: 100%;
+}
+
+.accountsettings {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.accountsettings h1 {
+    padding: 10px 20px;
+}
+
+
+.accountsettings .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.accountsettings .form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.accountsettings .form .form-group label {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.accountsettings .form .form-group input {
+    padding: 10px 20px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    outline: none;
+}
+
+.accountsettings .form .form-group input:focus {
+    border: 1px solid var(--col1);
+}
+
+.changepassword #save {
+    color: black;
+}
+
+@media (max-width: 800px) {
+    .accountsettings .form {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .accountsettings .form .form-group {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .accountsettings h1 {
+        font-size: 20px;
+    }
+
+    .accountsettings .form .form-group label {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 5px;
+    }
+}
