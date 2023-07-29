@@ -30,8 +30,8 @@ com/example/springapp/repository/FlightfeedRepository.class
 com/example/springapp/service/car/CarBookingFormService.class
 com/example/springapp/model/review/Review.class
 com/example/springapp/service/flight/FlightService.class
-com/example/springapp/dto/booking/BookingDto.class
 com/example/springapp/dto/hotel/HotelSearchRequestDto.class
+com/example/springapp/dto/booking/BookingDto.class
 com/example/springapp/service/car/CarFindService.class
 com/example/springapp/repository/car/CarFindRepo.class
 com/example/springapp/model/travelagent/TravelAgent.class
