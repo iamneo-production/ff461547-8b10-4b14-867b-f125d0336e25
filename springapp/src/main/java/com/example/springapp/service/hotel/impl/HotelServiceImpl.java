@@ -53,6 +53,7 @@ public class HotelServiceImpl implements HotelService {
         List<Hotel> hotels = hotelRepository.findAll();
         hotels.stream().forEach(hotel->{
             hotel.setFirstImage(new ClassPathResource("static"+hotel.getFirstImage()).getPath());
+            hotel.setSecondImage(new ClassPathResource("static"+hotel.getSecondImage()).getPath());
         });
 
         return hotels;
