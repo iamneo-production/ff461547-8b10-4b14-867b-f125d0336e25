@@ -71,7 +71,7 @@ public class BookingController {
                                 : ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                                                 .body(new ErrorJsonDto("Order creation aborted with unknown reason",
                                                                 500));
-        }
+}
 
         @PostMapping("/booking/register-payment/bookingId")
         public ResponseEntity<?> registerPayment(@RequestBody Map<String, Object> data,
