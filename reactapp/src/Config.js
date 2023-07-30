@@ -1,4 +1,4 @@
-export const baseUrl = 'https://8080-accbaddbabffbfaeeefaffbedbdcceeaeaadbdbabf.project.examly.io';
+export const baseUrl = 'https://8080-fbdcbeaadbefaffbedbdcceeabefcfbc.project.examly.io';
 
 //RazorPay Keyshttps:
 export const RazorPay = {
