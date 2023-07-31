@@ -5,7 +5,6 @@ import axios from "axios";
 import { RiEyeLine, RiEyeOffLine } from 'react-icons/ri';
 
 const Register = (props) => {
-  const [showLoginForm, setShowLoginForm] = useState(true);
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [passwordsMatch, setPasswordsMatch] = useState(true);
@@ -27,7 +26,7 @@ const Register = (props) => {
     setFormData(updatedFormData);
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
     if (formData.password !== confirmPassword) {
@@ -57,9 +56,6 @@ const Register = (props) => {
     setShowPassword((prevState) => !prevState);
   };
 
-  if (!showLoginForm) {
-    return null;
-  }
 
   return (
     <div className="register-outer-container">
